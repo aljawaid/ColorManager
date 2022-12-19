@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanboard\Plugin\PluginNameExampleStudlyCaps;
+namespace Kanboard\Plugin\KBColours;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
@@ -51,7 +51,7 @@ class Plugin extends Base
     {
         // Plugin Name MUST be identical to namespace for Plugin Directory to detect updated versions
         // Do not translate the plugin name here
-        return 'PluginNameExampleStudlyCaps';
+        return 'KBColours';
     }
 
     public function getPluginDescription()
@@ -80,6 +80,6 @@ class Plugin extends Base
 
     public function getPluginHomepage()
     {
-        return 'https://github.com/aljawaid/url';
+        return 'https://github.com/aljawaid/KBColours';
     }
 }
