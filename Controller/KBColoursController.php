@@ -11,7 +11,7 @@ use Kanboard\Core\Plugin\Directory;
  * @author aljawaid
  */
 
-class KBColoursController extends \Kanboard\Controller\PluginController
+class KBColoursController extends \Kanboard\Controller\ConfigController
 {
     /**
      * Display the Settings Page
@@ -25,8 +25,8 @@ class KBColoursController extends \Kanboard\Controller\PluginController
 
     public function show()
     {
-        $this->response->html($this->helper->layout->config('pluginNameExampleCamelCase:folder/filename', array(
-            'title' => t('PluginNameExampleStudlyCaps').' &#10562; '.t('Settings'),
+        $this->response->html($this->helper->layout->config('kBColours:config/colours', array(
+            'title' => t('KBColours').' &#10562; '.t('Settings'),
         )));
     }
 }
