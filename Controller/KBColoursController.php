@@ -26,7 +26,7 @@ class KBColoursController extends \Kanboard\Controller\ConfigController
     public function show()
     {
         $this->response->html($this->helper->layout->config('kBColours:config/colours', array(
-            'title' => t('KBColours').' &#10562; '.t('Settings'),
+            'title' => t('KBColours').' &#10562; '.t('Default Colours'),
         )));
     }
 }
