@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanboard\Plugin\PluginNameExampleStudlyCaps\Controller;
+namespace Kanboard\Plugin\KBColours\Controller;
 
 use Kanboard\Controller\BaseController;
 use Kanboard\Core\Plugin\Directory;
@@ -11,7 +11,7 @@ use Kanboard\Core\Plugin\Directory;
  * @author aljawaid
  */
 
-class MyController extends \Kanboard\Controller\PluginController
+class KBColoursController extends \Kanboard\Controller\PluginController
 {
     /**
      * Display the Settings Page
