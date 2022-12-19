@@ -17,7 +17,7 @@ class Plugin extends Base
 
         // CSS - Asset Hook
         //  - Keep filename lowercase
-        $this->hook->on('template:layout:css', array('template' => 'plugins/PluginNameExampleStudlyCaps/Assets/css/plugin-name.css'));
+        $this->hook->on('template:layout:css', array('template' => 'plugins/PluginNameExampleStudlyCaps/Assets/css/kb-colours.css'));
 
         // JS - Asset Hook
         //  - Keep filename lowercase
