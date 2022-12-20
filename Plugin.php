@@ -17,11 +17,11 @@ class Plugin extends Base
 
         // CSS - Asset Hook
         //  - Keep filename lowercase
-        $this->hook->on('template:layout:css', array('template' => 'plugins/PluginNameExampleStudlyCaps/Assets/css/kb-colours.css'));
+        $this->hook->on('template:layout:css', array('template' => 'plugins/KBColours/Assets/css/kb-colours.css'));
 
         // JS - Asset Hook
         //  - Keep filename lowercase
-        $this->hook->on('template:layout:js', array('template' => 'plugins/PluginNameExampleStudlyCaps/Assets/js/kb-colours.js'));
+        $this->hook->on('template:layout:js', array('template' => 'plugins/KBColours/Assets/js/kb-colours.js'));
 
         // Views - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
