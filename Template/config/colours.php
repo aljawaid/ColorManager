@@ -14,36 +14,13 @@
         </ul>
     </div>
 
-    <?php foreach ($defaultColours as $color_id => $color): ?>
-        <div class="colour-wrapper">
-            <div class="colour-name"><?= $color['name'] ?></div>
-            <div class="colour-background"><?= $color['background'] ?></div>
-            <div class="colour-border"><?= t('Border') ?>: <?= strtoupper($color['border']) ?></div>
-        </div>
-    <?php endforeach ?>
-
-
-<table id="" class="colour-table">
-    <thead>
-        <tr class="">
-            <th class="">Colour</th>
-            <th class="">CSS Background</th>
-            <th class="">CSS Border</th>
-            <th class="">Example</th>
-        </tr>
-    </thead>
-    <tbody>
+    <div class="colour-boxes">
         <?php foreach ($defaultColours as $color_id => $color): ?>
-        <tr class="">
-            <td class=""><?= $color['name'] ?></td>
-            <td class=""><?= $color['background'] ?></td>
-            <td class=""><?= $color['border'] ?></td>
-            <td class="">
-                <span class="colour-example"><?= $color['name'] ?></span>
-            </td>
-        </tr>
+            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
+                <div class="colour-name"><?= $color['name'] ?></div>
+                <div class="colour-background"><?= $color['background'] ?></div>
+                <div class="colour-border"><?= t('Border') ?>: <?= strtoupper($color['border']) ?></div>
+            </div>
         <?php endforeach ?>
-    </tbody>
-</table>
-
+    </div>
 </div>
