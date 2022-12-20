@@ -16,13 +16,13 @@
     --border-radius: 3px;
     --button-blue-gradient: linear-gradient(to bottom, #7892c2 80%, #476e9e 100%);
     --blue-border-gradient-match: #476E9E;
-    --header-page-margin: 5px 15px 10px 15px;
-    --page-margin: 0px 15px 0px 15px;
-    --title-margin: 0px 15px 0px 15px;
+    --header-page-margin-kbcolours: 5px 15px 10px 15px;
+    --page-margin-kbcolours: 0px 15px 0px 15px;
+    --title-margin-kbcolours: 0px 15px 0px 15px;
     --button-background-delete: #D05C84;
     --link-color-primary: #36C;
     --blue-icon-dark: #034CA6;
-    --panel-background: #EEEEEE;
+    --panel-background-kbcolours: #EEEEEE;
 }
 
 .pp-blue { color: var(--pp-blue); fill: var(--pp-blue); }
@@ -51,3 +51,17 @@ a:hover { color: var(--pp-red-alt-2) !important; }
 .text-center { text-align: center; }
 
 .relative { position: relative; }
+
+.kbc-page-header {
+    margin: var(--header-page-margin-kbcolours);
+}
+
+.default-colour {}
+
+.colour-wrapper {}
+
+.colour-name {}
+
+.colour-background {}
+
+.colour-border {}
