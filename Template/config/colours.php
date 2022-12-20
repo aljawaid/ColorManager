@@ -11,7 +11,8 @@
     <div class="colour-section">
         <ul class="">
             <li class="">
-                <strong><?= t('Default Colour') ?>:</strong> <span><?= $this->task->colorModel->getDefaultColor(); ?></span>
+                <strong><?= t('Default Colour') ?>:</strong>
+                <span class="default-box-colour"><?= $this->task->colorModel->getDefaultColor(); ?></span>
             </li>
             <li class="">
                 <strong><?= t('Total Colours') ?>:</strong> <?= count($defaultColours) ?>
