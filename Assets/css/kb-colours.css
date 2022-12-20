@@ -68,10 +68,30 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     margin-top: 10px;
 }
 
-.colour-wrapper {}
+.colour-wrapper {
+    border: 1px solid var(--pp-black);
+    padding: 10px;
+    width: 13em;
+    margin: 10px;
+    display: inline-block;
+    border-radius-kbcolours: var(--border-radius);
+}
 
-.colour-name {}
+.colour-boxes {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
 
-.colour-background {}
+.colour-name {
+    text-align: left;
+    font-weight: bold;
+}
 
-.colour-border {}
+.colour-background {
+    text-align: left;
+}
+
+.colour-border {
+    text-align: left;
+}
