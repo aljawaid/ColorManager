@@ -1,25 +1,26 @@
 <?php $defaultColours = $this->task->colorModel->getDefaultColors(); ?>
 
-<div class="page-header">
+<div class="kbc-page-header">
     <h2><?= t('Available Colours') ?></h2>
-</div>
 
-<div class="default-colour">
-    <ul>
-        <li>
-            default colour: <span><?= $this->task->colorModel->getDefaultColor(); ?></span>
-        </li>
-        <li>
-            <?= count($defaultColours) ?>
-        </li>
-    </ul>
-</div>
+    <div class="colour-section">
+        <ul class="">
+            <li class="">
+                <strong><?= t('Default Colour') ?>:</strong> <span><?= $this->task->colorModel->getDefaultColor(); ?></span>
+            </li>
+            <li class="">
+                <strong><?= t('Total Colours') ?>:</strong> <?= count($defaultColours) ?>
+            </li>
+        </ul>
+    </div>
 
-
-<div class=""></div>
-
-
-
+    <?php foreach ($defaultColours as $color_id => $color): ?>
+        <div class="colour-wrapper">
+            <div class="colour-name"><?= $color['name'] ?></div>
+            <div class="colour-background"><?= $color['background'] ?></div>
+            <div class="colour-border"><?= t('Border') ?>: <?= strtoupper($color['border']) ?></div>
+        </div>
+    <?php endforeach ?>
 
 
 <table id="" class="colour-table">
@@ -45,3 +46,4 @@
     </tbody>
 </table>
 
+</div>
