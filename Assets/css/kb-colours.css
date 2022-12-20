@@ -56,6 +56,12 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     margin: var(--header-page-margin-kbcolours);
 }
 
+.kbc-page-header h2 svg {
+    vertical-align: sub;
+    width: 1.4em;
+    height: 1em;
+}
+
 .colour-section {}
 
 .colour-section ul {}
