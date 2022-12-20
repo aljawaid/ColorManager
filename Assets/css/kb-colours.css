@@ -95,12 +95,23 @@ a:hover { color: var(--pp-red-alt-2) !important; }
 .colour-name {
     text-align: left;
     font-weight: bold;
+    display: block;
 }
 
 .colour-background {
     text-align: left;
+    display: block;
+}
+
+.colour-background span, .colour-border span {
+    display: block;
+}
+
+.colour-background code, .colour-border code {
+    display: block;
 }
 
 .colour-border {
     text-align: left;
+    display: block;
 }
