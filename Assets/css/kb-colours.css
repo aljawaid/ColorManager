@@ -56,7 +56,17 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     margin: var(--header-page-margin-kbcolours);
 }
 
-.default-colour {}
+.colour-section {}
+
+.colour-section ul {}
+
+.colour-section ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
 
 .colour-wrapper {}
 
