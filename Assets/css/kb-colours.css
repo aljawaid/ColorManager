@@ -81,6 +81,9 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     margin: 10px;
     display: inline-block;
     border-radius: var(--border-radius-kbcolours);
+    /*height: 6em;*/
+    vertical-align: middle;
+    box-sizing: content-box;
 }
 
 .colour-boxes {
