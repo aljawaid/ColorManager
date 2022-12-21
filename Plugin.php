@@ -9,10 +9,6 @@ class Plugin extends Base
 {
     public function initialize()
     {
-        // Template Override
-        //  - Override name should be camelCase e.g. pluginNameExampleCamelCase
-        $this->template->setTemplateOverride('action/index', 'pluginNameExampleCamelCase:action/index');
-
         // CSS - Asset Hook
         //  - Keep filename lowercase
         $this->hook->on('template:layout:css', array('template' => 'plugins/KBColours/Assets/css/kb-colours.css'));
