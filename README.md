@@ -17,9 +17,9 @@ Features
 Screenshots
 ----------
 
-**title**  
+**Kanboard Settings**  
 
-![Screenshot Name](../master/Screenshots/screenshot-name.png "Read Screenshot Name")
+![Default Colours](../master/screenshot-kbcolours.png "Default Colours")
 
 
 Usage
