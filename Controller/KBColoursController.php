@@ -6,8 +6,8 @@ use Kanboard\Controller\BaseController;
 use Kanboard\Core\Plugin\Directory;
 
 /**
- * Plugin PluginNameExampleStudlyCaps
- * Class myController
+ * Plugin KBColours
+ * Class KBColoursController
  * @author aljawaid
  */
 
