@@ -29,10 +29,10 @@
             <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
                 <div class="colour-name"><?= $color['name'] ?></div>
                 <div class="colour-background">
-                    <span><?= t('Background Colour') ?>:</span> <code><?= $color['background'] ?></code>
+                    <span><?= t('Background Colour') ?></span>
                 </div>
                 <div class="colour-border">
-                    <span><?= t('Border Colour') ?>:</span> <code><?= strtoupper($color['border']) ?></code>
+                    <span><?= t('Border Colour') ?></span>
                 </div>
             </div>
         <?php endforeach ?>
