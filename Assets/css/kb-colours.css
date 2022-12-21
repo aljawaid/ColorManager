@@ -63,7 +63,9 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     height: 1em;
 }
 
-.colour-section {}
+.colour-section {
+    margin-bottom: 20px;
+}
 
 .colour-section ul {}
 
