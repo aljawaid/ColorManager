@@ -152,3 +152,83 @@ a:hover { color: var(--pp-red-alt-2) !important; }
 div.note > a.note-link {
     font-weight: 600;
 }
+
+select#form-default_color option[value="yellow"] {
+    background-color: rgb(245, 247, 196);
+    border-color: rgb(223, 227, 45);
+}
+
+select#form-default_color option[value="blue"] {
+    background-color: rgb(219, 235, 255);
+    border-color: rgb(168, 207, 255);
+}
+
+select#form-default_color option[value="green"] {
+    background-color: rgb(189, 244, 203);
+    border-color: rgb(74, 227, 113);
+}
+
+select#form-default_color option[value="purple"] {
+    background-color: rgb(223, 176, 255);
+    border-color: rgb(205, 133, 254);
+}
+
+select#form-default_color option[value="red"] {
+    background-color: rgb(255, 187, 187);
+    border-color: rgb(255, 151, 151);
+}
+
+select#form-default_color option[value="orange"] {
+    background-color: rgb(255, 215, 179);
+    border-color: rgb(255, 172, 98);
+}
+
+select#form-default_color option[value="grey"] {
+    background-color: rgb(238, 238, 238);
+    border-color: rgb(204, 204, 204);
+}
+
+select#form-default_color option[value="brown"] {
+    background-color: #D7CCC8;
+    border-color: #4E342E;
+}
+
+select#form-default_color option[value="deep_orange"] {
+    background-color: #FFAB91;
+    border-color: #E64A19;
+}
+
+select#form-default_color option[value="dark_grey"] {
+    background-color: #CFD8DC;
+    border-color: #455A64;
+}
+
+select#form-default_color option[value="pink"] {
+    background-color: #F48FB1;
+    border-color: #D81B60;
+}
+
+select#form-default_color option[value="teal"] {
+    background-color: #80CBC4;
+    border-color: #00695C;
+}
+
+select#form-default_color option[value="cyan"] {
+    background-color: #B2EBF2;
+    border-color: #00BCD4;
+}
+
+select#form-default_color option[value="lime"] {
+    background-color: #E6EE9C;
+    border-color: #AFB42B;
+}
+
+select#form-default_color option[value="light_green"] {
+    background-color: #dcedc8;
+    border-color: #689F38;
+}
+
+select#form-default_color option[value="amber"] {
+    background-color: #FFE082;
+    border-color: #FFA000;
+}
