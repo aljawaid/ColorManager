@@ -23,6 +23,7 @@
     --link-color-primary: #36C;
     --blue-icon-dark: #034CA6;
     --panel-background-kbcolours: #EEEEEE;
+    --box-shadow-kbcolours: 1px 1px 1px 0px #000;
 }
 
 .pp-blue { color: var(--pp-blue); fill: var(--pp-blue); }
