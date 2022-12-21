@@ -15,7 +15,7 @@
                 <span class="default-box-colour"><?= $this->task->colorModel->getDefaultColor(); ?></span>
             </li>
             <li class="">
-                <strong><?= t('Total Colours') ?>:</strong> <?= count($defaultColours) ?>
+                <strong><?= t('Total Colours') ?>:</strong> <?= count($defaultColours); ?>
             </li>
         </ul>
     </div>
