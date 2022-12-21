@@ -2,7 +2,7 @@
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-`Brief intro`
+This plugin shows the actual colour values (background and matching border) for all the default Kanboard colours in the application settings.
 
 
 Features

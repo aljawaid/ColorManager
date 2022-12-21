@@ -41,7 +41,7 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return t('description text');
+        return t('This plugin shows the actual colour values (background and matching border) for all the default Kanboard colours in the application settings.');
     }
 
     public function getPluginAuthor()
