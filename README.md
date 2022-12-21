@@ -23,6 +23,14 @@ Screenshots
 
 ![Default Colours](../master/screenshot-kbcolours.png "Default Colours")
 
+**Project Settings**  
+
+![Default Task Colour](../master/screenshot-default-colour-list.png "Default Task Colour List")
+
+**Automatic Actions - Creation**  
+
+![Automatic Action Creation](../master/screenshot-automatic-action-colour-list.png "Automatic Action Colour List")
+
 
 Usage
 -------------
