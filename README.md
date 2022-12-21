@@ -8,8 +8,10 @@ This plugin shows the actual colour values (background and matching border) for 
 Features
 -------------
 
-- `main features list`
-- `main features list`
+- Show colour values as box examples
+- Show available default colour values instead of just colour names
+- Show total available default colour count
+- Show default colour as value instead of just colour name (in Project Settings)
 
 
 Screenshots
@@ -23,7 +25,7 @@ Screenshots
 Usage
 -------------
 
-Go to `Settings` &#10562;
+Go to `Settings` &#10562; `Default Colours`
 
 
 Compatibility
@@ -34,7 +36,7 @@ Compatibility
 #### Other Plugins & Action Plugins
 - _No known issues_
 #### Core Files & Templates
-- `01` Template override
+- _No template overrides_
 - _No database changes_
 
 
