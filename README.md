@@ -12,6 +12,7 @@ Features
 - Show available default colour values instead of just colour names
 - Show total available default colour count
 - Show default colour as value instead of just colour name (in Project Settings)
+- Show actual colours in (Project Settings) dropdown list
 
 
 Screenshots
