@@ -106,6 +106,8 @@ a:hover { color: var(--pp-red-alt-2) !important; }
 
 .colour-background span, .colour-border span {
     display: block;
+    font-size: .8em;
+    margin-top: 5px;
 }
 
 .colour-background code, .colour-border code {
