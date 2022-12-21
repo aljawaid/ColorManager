@@ -1,4 +1,6 @@
 <?php $defaultColours = $this->task->colorModel->getDefaultColors(); ?>
+<?php $defaultBackground = $this->task->colorModel->getBackgroundColor($this->task->colorModel->getDefaultColor()); ?>
+<?php $defaultBorder = $this->task->colorModel->getBorderColor($this->task->colorModel->getDefaultColor()); ?>
 
 <div class="kbc-page-header">
     <h2 class="">
@@ -12,7 +14,9 @@
         <ul class="">
             <li class="">
                 <strong><?= t('Default Colour') ?>:</strong>
-                <span class="default-box-colour"><?= $this->task->colorModel->getDefaultColor(); ?></span>
+                <span class="default-box-colour" style="background-color: <?= $defaultBackground ?>; border-color: <?= $defaultBorder ?>;">
+                    <?= ucfirst($this->task->colorModel->getDefaultColor()); ?>
+                </span>
             </li>
             <li class="">
                 <strong><?= t('Total Colours') ?>:</strong> <?= count($defaultColours); ?>

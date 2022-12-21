@@ -115,3 +115,11 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     text-align: left;
     display: block;
 }
+
+.default-box-colour {
+    padding: 2px 10px;
+    border-radius: var(--border-radius-kbcolours);
+    border: 1px solid var(--pp-black);
+    box-shadow: var(--box-shadow-kbcolours);
+    margin-left: 5px;
+}
