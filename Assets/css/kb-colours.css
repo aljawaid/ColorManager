@@ -112,6 +112,16 @@ a:hover { color: var(--pp-red-alt-2) !important; }
 
 .colour-background code, .colour-border code {
     display: block;
+    width: fit-content;
+    margin: 3px 0 0 0 !important;
+    color: var(--pp-black) !important;
+    background-color: rgb(179, 179, 179) !important;
+    text-rendering: optimizelegibility;
+    font-family: Monospace !important;
+    letter-spacing: 0.08rem;
+    padding: 1px 3px 3px 3px !important;
+    border-radius: var(--border-radius-kbcolours);
+    font-size: 0.9rem !important;
 }
 
 .colour-border {

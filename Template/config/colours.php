@@ -30,9 +30,23 @@
                 <div class="colour-name"><?= $color['name'] ?></div>
                 <div class="colour-background">
                     <span><?= t('Background Colour') ?></span>
+                    <code>
+                        <?php if (strpos($color['background'], '#') !== false): ?>
+                            <?= strtoupper($color['background']) ?>
+                        <?php else: ?>
+                            <?= $color['background'] ?>
+                        <?php endif ?>
+                    </code>
                 </div>
                 <div class="colour-border">
                     <span><?= t('Border Colour') ?></span>
+                    <code>
+                        <?php if (strpos($color['border'], '#') !== false): ?>
+                            <?= strtoupper($color['border']) ?>
+                        <?php else: ?>
+                            <?= $color['border'] ?>
+                        <?php endif ?>
+                    </code>
                 </div>
             </div>
         <?php endforeach ?>
