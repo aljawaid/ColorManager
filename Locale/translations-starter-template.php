@@ -13,6 +13,9 @@ return array(
   //
   'Available Colours' => '',
   'Default Colour' => '',
+  'Change the default colour in' => '',
+  'Project Settings' => '',
+  'Go to Project Settings' => '',
   'Total Colours' => '',
   'Background Colour' => '',
   'Border Colour' => '',
