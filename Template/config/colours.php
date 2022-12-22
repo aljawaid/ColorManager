@@ -57,5 +57,6 @@
 
     <div class="">
         <h3>Custom Colours</h3>
+        <strong><?= t('Total Custom Colours') ?>:</strong> <?= $customColours; ?>
     </div>
 </div>

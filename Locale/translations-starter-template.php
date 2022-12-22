@@ -19,4 +19,5 @@ return array(
   'Total Default Colours' => '',
   'Background Colour' => '',
   'Border Colour' => '',
+  'Total Custom Colours' => '',
 );
