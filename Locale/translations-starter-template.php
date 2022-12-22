@@ -12,7 +12,7 @@ return array(
   // config/colours.php
   //
   'Available Colours' => '',
-  'Default Colour' => '',
+  'Default Task Colour' => '',
   'Change the default colour in' => '',
   'Project Settings' => '',
   'Go to Project Settings' => '',

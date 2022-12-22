@@ -13,7 +13,7 @@
     <div class="colour-section">
         <ul class="">
             <li class="">
-                <strong><?= t('Default Colour') ?>:</strong>
+                <strong><?= t('Default Task Colour') ?>:</strong>
                 <span class="default-box-colour" style="background-color: <?= $defaultBackground ?>; border-color: <?= $defaultBorder ?>;">
                     <?= ucfirst($this->task->colorModel->getDefaultColor()); ?>
                 </span>
