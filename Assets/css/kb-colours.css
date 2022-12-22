@@ -153,6 +153,8 @@ div.note > a.note-link {
     font-weight: 600;
 }
 
+.total-count {}
+
 select#form-default_color option[value="yellow"], option[value="yellow"] {
     background-color: rgb(245, 247, 196);
     border-color: rgb(223, 227, 45);
