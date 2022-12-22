@@ -21,6 +21,21 @@ class Plugin extends Base
         //  - Example: $this->route->addRoute('/my/custom/route', 'myController', 'show', 'PluginNameExampleStudlyCaps');
         //  - Must have the corresponding action in the matching controller
         $this->route->addRoute('/settings/colours', 'KBColoursController', 'show', 'KBColours');
+
+        $this->hook->on('model:color:get-list', function (&$listing) {
+            $new_colors = array(
+                'maroon' => array(
+                    'name' => 'Maroon',
+                ),
+            );
+            $new_list = array();
+            foreach ($new_colors as $color_id => $color) {
+                $new_list[$color_id] = t($color['name']);
+            }
+            $listing = array_merge($listing, $new_list);
+            return $listing;
+
+        });
     }
 
     public function onStartup()
