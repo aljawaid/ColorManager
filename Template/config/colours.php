@@ -1,6 +1,7 @@
 <?php $defaultColours = $this->task->colorModel->getDefaultColors(); ?>
 <?php $defaultBackground = $this->task->colorModel->getBackgroundColor($this->task->colorModel->getDefaultColor()); ?>
 <?php $defaultBorder = $this->task->colorModel->getBorderColor($this->task->colorModel->getDefaultColor()); ?>
+<?php $customColours = (count($this->task->colorModel->getList())) - (count($this->task->colorModel->getDefaultColors())); ?>
 
 <div class="kbc-page-header">
     <h2 class="">
