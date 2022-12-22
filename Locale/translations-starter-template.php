@@ -16,7 +16,7 @@ return array(
   'Change the default colour in' => '',
   'Project Settings' => '',
   'Go to Project Settings' => '',
-  'Total Colours' => '',
+  'Total Default Colours' => '',
   'Background Colour' => '',
   'Border Colour' => '',
 );
