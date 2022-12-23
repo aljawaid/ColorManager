@@ -4,7 +4,7 @@ namespace Kanboard\Plugin\KBColours;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
-use Kanboard\Plugin\KBColours\Model\NewColorModel;
+use Kanboard\Plugin\KBColours\Model\ColorModelExt;
 
 class Plugin extends Base
 {
@@ -17,7 +17,6 @@ class Plugin extends Base
         // Views - Add Menu Item - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
         $this->template->hook->attach('template:config:sidebar', 'kBColours:config/sidebar');
-        $this->template->hook->attach('template:layout:bottom', 'kBColours:layout/css_ext');
 
         // Extra Page - Routes
         //  - Example: $this->route->addRoute('/my/custom/route', 'myController', 'show', 'PluginNameExampleStudlyCaps');
@@ -25,17 +24,18 @@ class Plugin extends Base
         $this->route->addRoute('/settings/colours', 'KBColoursController', 'show', 'KBColours');
 
         $this->helper->register('customColorHelper', '\Kanboard\Plugin\KBColours\Helper\CustomColorHelper');
+        $this->template->hook->attach('template:layout:bottom', 'kBColours:layout/css_ext');
+        
 
-        if ($this->configModel->get('kbcolour_ids','') != '') {
             
-            $this->hook->on('model:color:get-list', function (&$listing) {
+        $this->hook->on('model:color:get-list', function (&$listing) {
                 
-                $new_colors = [];
-                $custom_colors = $this->configModel->get('kbcolour_ids','');
-                $custom_colors_array = explode(',',$custom_colors);
-
+            $new_colors = [];
+            $custom_colors = $this->configModel->get('kbcolour_ids','');
+            $custom_colors_array = explode(',',$custom_colors);
+            
+            if ($custom_colors != '') {
                 foreach($custom_colors_array as $val) {
-                    error_log('colorname:'.$this->configModel->get('kbcolour_name_'.$val,''),0);
                     $new_color = array(
                         $val => array(
                             'name' => $this->configModel->get('kbcolour_name_'.$val,''),
@@ -43,15 +43,20 @@ class Plugin extends Base
                     );
                     $new_colors = array_merge($new_colors, $new_color);
                 }
+                
                 $new_list = array();
                 foreach ($new_colors as $color_id => $color) {
                     $new_list[$color_id] = t($color['name']);
                 }
-                $listing = array_merge($listing, $new_list);
-                return $listing;
+            }
+            $preinstalledColors = $this->colorModelExt->getStaticList();
+                
+            $listing = array_merge($listing, $preinstalledColors, isset($new_list) ? $new_list : array());
             
-            });
-        }
+            return $listing;
+            
+        });
+        
     }
 
     public function onStartup()
