@@ -32,6 +32,11 @@ class ColorModelExt extends ColorModel
         return $combine_colors;
     }
     
+    public function getCustomColors()
+    {
+        return $this->custom_colors;
+    }
+    
     public function getCssExt()
     {
         $buffer = '';
