@@ -26,6 +26,12 @@ class Plugin extends Base
             $new_colors = array(
                 'maroon' => array(
                     'name' => 'Maroon',
+                    'background' => '#e6ee9c',
+                    'border' => '#afb42b',
+                    'text-color' => '#e6ee9c',
+                ),
+                'white' => array(
+                    'name' => 'White',
                 ),
             );
             $new_list = array();
