@@ -144,9 +144,6 @@ a:hover { color: var(--pp-red-alt-2) !important; }
 }
 
 .note {
-    position: absolute;
-    left: 0;
-    bottom: -4px;
     font-size: .8em;
     font-style: italic;
 }
