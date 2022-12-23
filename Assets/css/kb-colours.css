@@ -59,8 +59,9 @@ a:hover { color: var(--pp-red-alt-2) !important; }
 
 .kbc-page-header h2 svg {
     vertical-align: sub;
-    width: 1.4em;
+    /*width: 1.4em;*/
     height: 1em;
+    margin-right: 3px;
 }
 
 .colour-section {
