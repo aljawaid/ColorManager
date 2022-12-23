@@ -82,9 +82,9 @@ a:hover { color: var(--pp-red-alt-2) !important; }
 
 .colour-wrapper {
     border: 1px solid var(--pp-black);
-    padding: 10px;
-    width: 13em;
-    margin: 10px;
+    padding: 5px;
+    width: 150px;
+    margin: 5px;
     display: inline-block;
     border-radius: var(--border-radius-kbcolours);
     /*height: 6em;*/
@@ -100,8 +100,9 @@ a:hover { color: var(--pp-red-alt-2) !important; }
 
 .colour-name {
     text-align: left;
-    font-weight: bold;
+    font-weight: 600;
     display: block;
+    font-size: .85em;
 }
 
 .colour-background {
@@ -123,10 +124,10 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     background-color: rgb(179, 179, 179) !important;
     text-rendering: optimizelegibility;
     font-family: Monospace !important;
-    letter-spacing: 0.08rem;
+    letter-spacing: 0.06rem;
     padding: 1px 3px 3px 3px !important;
     border-radius: var(--border-radius-kbcolours);
-    font-size: 0.9rem !important;
+    font-size: 0.9em !important;
 }
 
 .colour-border {
