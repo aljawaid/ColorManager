@@ -60,4 +60,33 @@
         <h3>Custom Colours</h3>
         <strong><?= t('Total Custom Colours') ?>:</strong> <?= $customColours; ?>
     </div>
+
+    <div class="colour-boxes">
+        <?php foreach ($this->task->colorModel->getList() as $color_id => $color): ?>
+            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
+                <div class="colour-name"><?= $color['name'] ?></div>
+                <div class="colour-background">
+                    <span><?= t('Background Colour') ?></span>
+                    <code>
+                        <?php if (strpos($color['background'], '#') !== false): ?>
+                            <?= strtoupper($color['background']) ?>
+                        <?php else: ?>
+                            <?= $color['background'] ?>
+                        <?php endif ?>
+                    </code>
+                </div>
+                <div class="colour-border">
+                    <span><?= t('Border Colour') ?></span>
+                    <code>
+                        <?php if (strpos($color['border'], '#') !== false): ?>
+                            <?= strtoupper($color['border']) ?>
+                        <?php else: ?>
+                            <?= $color['border'] ?>
+                        <?php endif ?>
+                    </code>
+                </div>
+            </div>
+        <?php endforeach ?>
+    </div>
+
 </div>
