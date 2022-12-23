@@ -12,8 +12,8 @@
         </svg>
         <?= t('Available Colours') ?> <span class="total-count"><?= count($this->task->colorModel->getList()) ?></span>
     </h2>
-
-    <div class="">
+    <hr>
+    <div class="kbc-section">
         <h3>Default Colours<span class="total-count"><?= count($defaultColours); ?></span></h3>
     </div>
 
@@ -62,7 +62,7 @@
         <?php endforeach ?>
     </div>
 
-    <div class="">
+    <div class="kbc-section">
         <h3>Custom Colours<span class="total-count"><?= $customColours; ?></span></h3>
     </div>
 

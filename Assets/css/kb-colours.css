@@ -155,6 +155,10 @@ div.note > a.note-link {
     font-weight: 600;
 }
 
+.kbc-section {
+    margin-top: 35px;
+}
+
 .total-count {
     font-size: .6em;
     vertical-align: super;
