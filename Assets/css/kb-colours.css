@@ -156,14 +156,21 @@ li.note > a.note-link {
     margin-top: 20px;
 }
 
-.total-count {
+.total-count, .total-count-section {
     font-size: .6em;
     vertical-align: super;
     margin-left: 5px;
     padding: 1px 3px;
-    background-color: var(--pp-green-dark);
     border-radius: var(--border-radius-kbcolours);
     color: var(--pp-white);
+}
+
+.total-count {
+    background-color: var(--pp-green-dark);
+}
+
+.total-count-section {
+    background-color: var(--blue-icon-dark);
 }
 
 div.color-picker-square {
