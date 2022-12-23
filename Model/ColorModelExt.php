@@ -14,16 +14,16 @@ class ColorModelExt extends ColorModel
 {
     
     protected $custom_colors = array(
-        'maroon' => array(
-            'name' => 'Maroon',
-            'background' => '#D03D56',
-            'border' => '#800000',
-        ),    
         'white' => array(
             'name' => 'White',
             'background' => '#FFFFFF',
             'border' => '#EEEEEE',
-        ),    
+        ),
+        'maroon' => array(
+            'name' => 'Maroon',
+            'background' => '#D03D56',
+            'border' => '#800000',
+        ),
     );
     
     public function getAllColors()
