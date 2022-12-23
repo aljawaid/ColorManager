@@ -27,15 +27,11 @@ class Plugin extends Base
         
         $this->template->hook->attach('template:layout:bottom', 'kBColours:layout/css_ext');
 
-        
+        // To add colours to the colour dropdown lists
         $this->hook->on('model:color:get-list', function (&$listing) {
             $new_colors = array(
-                'maroon' => array(
-                    'name' => 'Maroon',
-                ),
-                'white' => array(
-                    'name' => 'White',
-                ),    
+                'maroon' => array('name' => 'Maroon',),
+                'white' => array('name' => 'White',),
             );
             $new_list = array();
             foreach ($new_colors as $color_id => $color) {
