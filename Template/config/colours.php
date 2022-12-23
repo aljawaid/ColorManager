@@ -1,8 +1,8 @@
 <?php $defaultColours = $this->task->colorModel->getDefaultColors(); ?>
 <?php $preinstalledColors = $this->task->colorModelExt->getStaticColors(); ?>
 <?php $customColors = $this->task->colorModelExt->getCustomColors(); ?>
-<?php $defaultBackground = $this->task->colorModel->getBackgroundColor($this->task->colorModel->getDefaultColor()); ?>
-<?php $defaultBorder = $this->task->colorModel->getBorderColor($this->task->colorModel->getDefaultColor()); ?>
+<?php $defaultBackground = $this->task->colorModelExt->getAllColors()[$this->task->colorModel->getDefaultColor()]['background']; ?>
+<?php $defaultBorder = $this->task->colorModelExt->getAllColors()[$this->task->colorModel->getDefaultColor()]['border']; ?>
 <?php $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ? 0 : count($this->task->colorModelExt->getCustomColors()); ?>
 
 <div class="kbc-page-header">

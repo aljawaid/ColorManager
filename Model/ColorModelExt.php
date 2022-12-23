@@ -46,7 +46,7 @@ class ColorModelExt extends ColorModel
             return $new_colors;
         }
         
-        return '';
+        return $new_colors;
         
     }
     
@@ -66,7 +66,6 @@ class ColorModelExt extends ColorModel
     
     public function getStaticColors()
     {
-
         return $this->static_colors;
     }
     
