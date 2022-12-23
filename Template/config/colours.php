@@ -1,4 +1,4 @@
-<?php $defaultColours = $this->task->colorModel->getDefaultColors(); ?>
+<?php $defaultColours = $this->task->colorModelExt->getAllColors(); ?>
 <?php $defaultBackground = $this->task->colorModel->getBackgroundColor($this->task->colorModel->getDefaultColor()); ?>
 <?php $defaultBorder = $this->task->colorModel->getBorderColor($this->task->colorModel->getDefaultColor()); ?>
 <?php $customColours = (count($this->task->colorModel->getList())) - (count($this->task->colorModel->getDefaultColors())); ?>
