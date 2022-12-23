@@ -63,8 +63,19 @@ class ColorModelExt extends ColorModel
                 $buffer .= '}';
                 $buffer .= 'td.color-'.$color.' { background-color: '.$values['background'].'}';
                 $buffer .= '.table-list-row.color-'.$color.' {border-left: 5px solid '.$values['border'].'}';
+                $buffer .= 'select#form-default_color option[value="'.$color.'"], option[value="'.$color.'"] {';
+                $buffer .= 'background-color: '.$values['background'].';';
+                $buffer .= 'border-color: '.$values['border'];
+                $buffer .= '}';
             }
+        }
+        foreach ($this->default_colors as $color => $values) {
+            $buffer .= 'select#form-default_color option[value="'.$color.'"], option[value="'.$color.'"] {';
+            $buffer .= 'background-color: '.$values['background'].';';
+            $buffer .= 'border-color: '.$values['border'];
+            $buffer .= '}';
         }
         return $buffer;
     }
+    
 }
