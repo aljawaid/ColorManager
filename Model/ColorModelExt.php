@@ -29,6 +29,11 @@ class ColorModelExt extends ColorModel
             'background' => '#F8D210',
             'border' => '#A48900',
         ),
+        'mint_green' => array(
+            'name' => 'Mint Green',
+            'background' => '#2CF760',
+            'border' => '#BDF4CB',
+        ),
     );
     
     public function getAllColors()

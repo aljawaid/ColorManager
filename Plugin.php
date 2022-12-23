@@ -33,6 +33,7 @@ class Plugin extends Base
                 'maroon' => array('name' => 'Maroon',),
                 'white' => array('name' => 'White',),
                 'gold' => array('name' => 'Gold',),
+                'mint_green' => array('name' => 'Mint Green',),
             );
             $new_list = array();
             foreach ($new_colors as $color_id => $color) {
