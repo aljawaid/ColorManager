@@ -34,6 +34,12 @@ class ColorModelExt extends ColorModel
             'background' => '#2CF760',
             'border' => '#BDF4CB',
         ),
+        'white_on_maroon' => array(
+            'name' => 'White on Maroon',
+            'background' => '#D03D56',
+            'border' => '#800000',
+            'font' => '#FFFFFF',
+        ),
     );
     
     public function getAllColors()
