@@ -11,6 +11,7 @@ Features
 - New dedicated settings page
 - Show colour values as box examples
 - Show total colour count
+- Sort colours alphabetically
 
 **Default Colour Palette**   
 - Show default colour example instead of just colour name (in Project Settings)

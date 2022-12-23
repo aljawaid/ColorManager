@@ -17,6 +17,7 @@ class Plugin extends Base
         // Views - Add Menu Item - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
         $this->template->hook->attach('template:config:sidebar', 'kBColours:config/sidebar');
+        $this->template->hook->attach('template:layout:bottom', 'kBColours:layout/css_ext');
 
         // Extra Page - Routes
         //  - Example: $this->route->addRoute('/my/custom/route', 'myController', 'show', 'PluginNameExampleStudlyCaps');
@@ -24,9 +25,8 @@ class Plugin extends Base
         $this->route->addRoute('/settings/colours', 'KBColoursController', 'show', 'KBColours');
 
         $this->helper->register('customColorHelper', '\Kanboard\Plugin\KBColours\Helper\CustomColorHelper');
-        $this->template->hook->attach('template:layout:bottom', 'kBColours:layout/css_ext');
-        if ($this->configModel->get('kbcolour_ids','') != '') {
 
+        if ($this->configModel->get('kbcolour_ids','') != '') {
             
             $this->hook->on('model:color:get-list', function (&$listing) {
                 
