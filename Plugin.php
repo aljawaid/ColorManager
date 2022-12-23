@@ -38,6 +38,7 @@ class Plugin extends Base
                 $new_list[$color_id] = t($color['name']);
             }
             $listing = array_merge($listing, $new_list);
+            asort($listing);
             return $listing;
         
         });
