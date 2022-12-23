@@ -12,7 +12,7 @@ class Plugin extends Base
     {
         // CSS - Asset Hook
         //  - Keep filename lowercase
-        //$this->hook->on('template:layout:css', array('template' => 'plugins/KBColours/Assets/css/kb-colours.css'));
+        $this->hook->on('template:layout:css', array('template' => 'plugins/KBColours/Assets/css/kb-colours.css'));
 
         // Views - Add Menu Item - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
