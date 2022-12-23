@@ -34,7 +34,7 @@ class Plugin extends Base
                     'name' => 'Maroon',
                 ),
                 'white' => array(
-                'name' => 'White',
+                    'name' => 'White',
                 ),    
             );
             $new_list = array();

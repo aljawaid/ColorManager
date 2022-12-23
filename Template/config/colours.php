@@ -28,9 +28,6 @@
             <div class="note">
                 <?= t('Change the default colour in') ?> <?= $this->url->link(t('Project Settings'), 'ConfigController', 'project', array(), false, 'note-link', t('Go to Project Settings')) ?>
             </div>
-            <li class="">
-                <strong><?= t('Total Default Colours') ?>:</strong> <?= count($defaultColours); ?>
-            </li>
         </ul>
     </div>
 
