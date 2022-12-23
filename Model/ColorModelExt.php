@@ -65,6 +65,9 @@ class ColorModelExt extends ColorModel
                 $buffer .= 'color: '.$values['font'];
             }
             $buffer .= '}';
+            if ($values['font']) {
+                $buffer .= '.color-picker-square.color-'.$color.':before { content: "\2609"; text-align: center; display: block;}';
+            }
             $buffer .= 'td.color-'.$color.' { background-color: '.$values['background'].'}';
             $buffer .= '.table-list-row.color-'.$color.' {border-left: 5px solid '.$values['border'].'}';
         }

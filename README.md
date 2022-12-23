@@ -16,10 +16,12 @@ Features
 
 **Custom Colours**  
 - xx New colours included
+- Solid `White` colour included
+- Extended colours including text colour
 
 **Dropdown Colour Lists**  
 - Sort colours alphabetically
-- Add 'double' colour square (left colour = border, right colour = background)
+- Redesign colour square (left colour = border, right colour = background, centre dot = font color)
 - Show colour examples in (Automatic Action creation) dropdown list
 - Show colour examples in (Project Settings) dropdown list
 

@@ -167,7 +167,7 @@ li.note > a.note-link {
 }
 
 .color-picker-square {
-    border-left-width: 15px;
+    border-left-width: 5px;
 }
 
 select#form-default_color option[value="yellow"], option[value="yellow"] {
