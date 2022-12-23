@@ -12,10 +12,6 @@
         </svg>
         <?= t('Available Colours') ?> <span class="total-count"><?= count($this->task->colorModel->getList()) ?></span>
     </h2>
-    <hr>
-    <div class="kbc-section">
-        <h3>Default Colours<span class="total-count"><?= count($defaultColours); ?></span></h3>
-    </div>
 
     <div class="colour-section">
         <ul class="">
@@ -25,16 +21,18 @@
                     <?= ucfirst($this->task->colorModel->getDefaultColor()); ?>
                 </span>
             </li>
-            <li class="note">
+            <div class="note">
                 <?= t('Change the default colour in') ?> <?= $this->url->link(t('Project Settings'), 'ConfigController', 'project', array(), false, 'note-link', t('Go to Project Settings')) ?>
+            </div>
+            <li class="">
+                <strong><?= t('Total Default Colours') ?>:</strong> <?= count($defaultColours); ?>
             </li>
         </ul>
     </div>
 
     <div class="colour-boxes">
-        <?php asort($defaultColours) ?>
         <?php foreach ($defaultColours as $color_id => $color): ?>
-            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
+            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
                 <div class="colour-name"><?= $color['name'] ?></div>
                 <div class="colour-background">
                     <span><?= t('Background Colour') ?></span>
@@ -60,15 +58,19 @@
         <?php endforeach ?>
     </div>
 
-    <div class="kbc-section">
-        <h3>Custom Colours<span class="total-count"><?= $customColours; ?></span></h3>
+    <div class="">
+        <h3>Custom Colours</h3>
+        <strong><?= t('Total Custom Colours') ?>:</strong> <?= $customColours; ?>
     </div>
+    
+    <button><?= $this->modal->small('add', t('Add Color'), 'KBColoursController', 'add', ['plugin' => 'kBColours'], false, 'popover') ?></button>
 
     <div class="colour-boxes">
-        <?php asort($customColors) ?>
+        <?php if ($customColors !== ''): ?>
         <?php foreach ($customColors as $color_id => $color): ?>
-            <div class="colour-wrapper" style="<?php if ($color['font']): ?>color: <?= $color['font'] ?>;<?php endif ?> background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
-                <div class="colour-name"><?= $color['name'] ?></div>
+            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
+                <div class="colour-name"><?= $color['name'] ?>
+                <span style='float:right'><?= $this->url->icon('trash', '', 'KBColoursController', 'remove', ['plugin' => 'kBColours', 'key' => $color_id]) ?></span></div>
                 <div class="colour-background">
                     <span><?= t('Background Colour') ?></span>
                     <code>
@@ -91,6 +93,7 @@
                 </div>
             </div>
         <?php endforeach ?>
+        <?php endif ?>
     </div>
 
 </div>

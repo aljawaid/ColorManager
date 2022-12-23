@@ -24,27 +24,34 @@ class Plugin extends Base
         $this->route->addRoute('/settings/colours', 'KBColoursController', 'show', 'KBColours');
 
         $this->helper->register('customColorHelper', '\Kanboard\Plugin\KBColours\Helper\CustomColorHelper');
-        
         $this->template->hook->attach('template:layout:bottom', 'kBColours:layout/css_ext');
+        if ($this->configModel->get('kbcolour_ids','') != '') {
 
-        // To add colours to the colour dropdown lists
-        $this->hook->on('model:color:get-list', function (&$listing) {
-            $new_colors = array(
-                'maroon' => array('name' => 'Maroon',),
-                'white' => array('name' => 'White',),
-                'gold' => array('name' => 'Gold',),
-                'mint_green' => array('name' => 'Mint Green',),
-                'white_on_maroon' => array('name' => 'White on Maroon',),
-            );
-            $new_list = array();
-            foreach ($new_colors as $color_id => $color) {
-                $new_list[$color_id] = t($color['name']);
-            }
-            $listing = array_merge($listing, $new_list);
-            asort($listing);
-            return $listing;
-        
-        });
+            
+            $this->hook->on('model:color:get-list', function (&$listing) {
+                
+                $new_colors = [];
+                $custom_colors = $this->configModel->get('kbcolour_ids','');
+                $custom_colors_array = explode(',',$custom_colors);
+
+                foreach($custom_colors_array as $val) {
+                    error_log('colorname:'.$this->configModel->get('kbcolour_name_'.$val,''),0);
+                    $new_color = array(
+                        $val => array(
+                            'name' => $this->configModel->get('kbcolour_name_'.$val,''),
+                        ),
+                    );
+                    $new_colors = array_merge($new_colors, $new_color);
+                }
+                $new_list = array();
+                foreach ($new_colors as $color_id => $color) {
+                    $new_list[$color_id] = t($color['name']);
+                }
+                $listing = array_merge($listing, $new_list);
+                return $listing;
+            
+            });
+        }
     }
 
     public function onStartup()

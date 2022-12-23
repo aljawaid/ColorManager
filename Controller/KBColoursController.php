@@ -8,7 +8,7 @@ use Kanboard\Core\Plugin\Directory;
 /**
  * Plugin KBColours
  * Class KBColoursController
- * @author aljawaid
+ * @authors aljawaid & Craig Crosby
  */
 
 class KBColoursController extends \Kanboard\Controller\ConfigController
@@ -26,7 +26,74 @@ class KBColoursController extends \Kanboard\Controller\ConfigController
     public function show()
     {
         $this->response->html($this->helper->layout->config('kBColours:config/colours', array(
-            'title' => 'KBColours &#10562; '.t('All Colours'),
+            'title' => 'KBColours &#10562; '.t('Default Colours'),
         )));
+    }
+    
+    public function add()
+    {
+        $errors = [];
+        $values = [];
+        
+        $this->response->html($this->helper->layout->config('kBColours:config/add_pop', [
+            'errors' => $errors,
+            'values'  => $values,
+            'title'  => t('Custom Colors').' &gt; '.t('Add Color'),
+         ])); 
+    }
+    
+    public function remove()
+    {
+        $key = $this->request->getStringParam('key');
+        $errors = [];
+        $values = [];
+        
+        $custom_colors = $this->configModel->get('kbcolour_ids','');
+        if ($custom_colors == '') {
+                    $custom_colors_array = array();
+        } else {
+                    $custom_colors_array = explode(',', $custom_colors);
+        }
+        if (($k = array_search($key, $custom_colors_array)) !== false) {
+            unset($custom_colors_array[$k]);
+        }
+        if (is_array($custom_colors_array)) { $custom_colors_string = implode(',', $custom_colors_array); } else { $custom_colors_string = $color_id; }
+        $this->configModel->save(['kbcolour_ids' => $custom_colors_string]);
+        
+        $this->configModel->remove('kbcolour_name_'.$key);
+        $this->configModel->remove('kbcolour_backgroundcolor_'.$key);
+        $this->configModel->remove('kbcolour_bordercolor_'.$key);
+        
+        $this->response->redirect($this->helper->url->to('KBColoursController', 'show', ['plugin' => 'KBColours']));
+
+    }
+    
+    public function save()
+    {
+        $errors = [];
+        $values = [];
+
+        if ($this->request->isPost()) {
+            $values = $this->request->getValues();
+            if (isset($values['color_name'])) { 
+                $color_id = str_replace(' ', '_', strtolower($values['color_name']));
+                $custom_colors = $this->configModel->get('kbcolour_ids','');
+                if ($custom_colors == '') {
+                    $custom_colors_array = array();
+                } else {
+                    $custom_colors_array = explode(',', $custom_colors);
+                }
+                array_push($custom_colors_array, $color_id);
+                $custom_colors_array = array_unique($custom_colors_array);
+                if (is_array($custom_colors_array)) { $custom_colors_string = implode(',', $custom_colors_array); } else { $custom_colors_string = $color_id; }
+                $this->configModel->save(['kbcolour_ids' => $custom_colors_string]);
+                $this->configModel->save(['kbcolour_name_'.$color_id => $values['color_name']]);
+                $this->configModel->save(['kbcolour_backgroundcolor_'.$color_id => $values['background_color']]);
+                $this->configModel->save(['kbcolour_bordercolor_'.$color_id => $values['border_color']]);
+            }
+        }
+        
+        $this->response->redirect($this->helper->url->to('KBColoursController', 'show', ['plugin' => 'KBColours']));
+        
     }
 }
