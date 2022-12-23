@@ -13,8 +13,10 @@ Features
 - Show available default colour examples and values instead of just colour names
 - Show total available default colour count
 - Show default colour example instead of just colour name (in Project Settings)
+
 **Custom Colours**  
 - xx New colours included
+
 **Dropdown Colour Lists**  
 - Sort colours alphabetically
 - Add 'double' colour square (left colour = border, right colour = background)
