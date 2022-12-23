@@ -4,6 +4,7 @@ namespace Kanboard\Plugin\KBColours;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
+use Kanboard\Plugin\KBColours\Model\NewColorModel;
 
 class Plugin extends Base
 {
@@ -11,7 +12,7 @@ class Plugin extends Base
     {
         // CSS - Asset Hook
         //  - Keep filename lowercase
-        $this->hook->on('template:layout:css', array('template' => 'plugins/KBColours/Assets/css/kb-colours.css'));
+        //$this->hook->on('template:layout:css', array('template' => 'plugins/KBColours/Assets/css/kb-colours.css'));
 
         // Views - Add Menu Item - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
@@ -22,17 +23,19 @@ class Plugin extends Base
         //  - Must have the corresponding action in the matching controller
         $this->route->addRoute('/settings/colours', 'KBColoursController', 'show', 'KBColours');
 
+        $this->helper->register('customColorHelper', '\Kanboard\Plugin\KBColours\Helper\CustomColorHelper');
+        
+        $this->template->hook->attach('template:layout:bottom', 'kBColours:layout/css_ext');
+
+        
         $this->hook->on('model:color:get-list', function (&$listing) {
             $new_colors = array(
                 'maroon' => array(
                     'name' => 'Maroon',
-                    'background' => '#e6ee9c',
-                    'border' => '#afb42b',
-                    'text-color' => '#e6ee9c',
                 ),
                 'white' => array(
-                    'name' => 'White',
-                ),
+                'name' => 'White',
+                ),    
             );
             $new_list = array();
             foreach ($new_colors as $color_id => $color) {
@@ -40,13 +43,22 @@ class Plugin extends Base
             }
             $listing = array_merge($listing, $new_list);
             return $listing;
-
+        
         });
     }
 
     public function onStartup()
     {
         Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
+    }
+    
+    public function getClasses()
+    {
+        return [
+            'Plugin\KBColours\Model' => [
+                'ColorModelExt', 
+            ],
+        ];
     }
 
     public function getPluginName()
