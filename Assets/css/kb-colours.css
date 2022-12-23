@@ -155,6 +155,10 @@ div.note > a.note-link {
 
 .total-count {}
 
+.color-picker-square {
+    border-left-width: 15px;
+}
+
 select#form-default_color option[value="yellow"], option[value="yellow"] {
     background-color: rgb(245, 247, 196);
     border-color: rgb(223, 227, 45);
