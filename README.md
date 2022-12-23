@@ -95,6 +95,7 @@ Authors & Contributors
 ----------------------
 
 - [@aljawaid](https://github.com/aljawaid) - Author
+- [Craig Crosby](https://github.com/creecros) - Contributor
 - _Contributors welcome_
 
 
