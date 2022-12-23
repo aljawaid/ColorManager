@@ -8,13 +8,18 @@ This plugin shows the actual colour values (background and matching border) for 
 Features
 -------------
 
+**New Dedicated Colours Settings**  
 - Show colour values as box examples
-- Show available default colour values instead of just colour names
+- Show available default colour examples and values instead of just colour names
 - Show total available default colour count
-- Show default colour as value instead of just colour name (in Project Settings)
-- Show actual colours in (Project Settings) dropdown list
-- Show actual colours in (Automatic Action creation) dropdown list
-
+- Show default colour example instead of just colour name (in Project Settings)
+**Custom Colours**  
+- xx New colours included
+**Dropdown Colour Lists**  
+- Sort colours alphabetically
+- Add 'double' colour square (left colour = border, right colour = background)
+- Show colour examples in (Automatic Action creation) dropdown list
+- Show colour examples in (Project Settings) dropdown list
 
 Screenshots
 ----------
@@ -35,7 +40,7 @@ Screenshots
 Usage
 -------------
 
-Go to `Settings` &#10562; `Default Colours`
+Go to `Settings` &#10562; `Colours`
 
 
 Compatibility
