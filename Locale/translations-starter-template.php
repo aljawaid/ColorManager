@@ -9,6 +9,10 @@ return array(
   //
   'Default Colours' => '',
   //
+  // config/sidebar.php
+  //
+  'Colors' => '',
+  //
   // config/colours.php
   //
   'Available Colours' => '',
