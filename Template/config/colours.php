@@ -14,7 +14,7 @@
     </h2>
     <hr>
     <div class="kbc-section">
-        <h3>Default Colours<span class="total-count"><?= count($defaultColours); ?></span></h3>
+        <h3>Default Colour Palette<span class="total-count"><?= count($defaultColours); ?></span></h3>
     </div>
     <div class="colour-section">
         <ul class="">
@@ -60,7 +60,11 @@
     </div>
 
     <div class="kbc-section">
-        <h3 class="">Custom Colours<span class="total-count"><?= $customColours; ?></span></h3>
+        <h3 class="">Extra Colour Palette<span class="total-count">00</span></h3>
+    </div>
+
+    <div class="kbc-section">
+        <h3 class="">Custom Colour Palette<span class="total-count"><?= $customColours; ?></span></h3>
     </div>
     
     <button><?= $this->modal->small('plus', t('Add Color'), 'KBColoursController', 'add', ['plugin' => 'kBColours'], false, 'popover') ?></button>
