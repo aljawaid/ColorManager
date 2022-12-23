@@ -153,7 +153,15 @@ div.note > a.note-link {
     font-weight: 600;
 }
 
-.total-count {}
+.total-count {
+    font-size: .6em;
+    vertical-align: super;
+    margin-left: 5px;
+    padding: 1px 3px;
+    background-color: var(--pp-green-dark);
+    border-radius: var(--border-radius-kbcolours);
+    color: var(--pp-white);
+}
 
 .color-picker-square {
     border-left-width: 15px;

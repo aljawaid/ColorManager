@@ -13,6 +13,10 @@
         <?= t('Available Colours') ?> <span class="total-count"><?= count($this->task->colorModel->getList()) ?></span>
     </h2>
 
+    <div class="">
+        <h3>Default Colours<span class="total-count"><?= count($defaultColours); ?></span></h3>
+    </div>
+
     <div class="colour-section">
         <ul class="">
             <li class="">
@@ -59,8 +63,7 @@
     </div>
 
     <div class="">
-        <h3>Custom Colours</h3>
-        <strong><?= t('Total Custom Colours') ?>:</strong> <?= $customColours; ?>
+        <h3>Custom Colours<span class="total-count"><?= $customColours; ?></span></h3>
     </div>
 
     <div class="colour-boxes">
