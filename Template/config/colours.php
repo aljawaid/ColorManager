@@ -32,6 +32,7 @@
     </div>
 
     <div class="colour-boxes">
+        <?php asort($defaultColours) ?>
         <?php foreach ($defaultColours as $color_id => $color): ?>
             <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
                 <div class="colour-name"><?= $color['name'] ?></div>
@@ -64,6 +65,7 @@
     </div>
 
     <div class="colour-boxes">
+        <?php asort($customColors) ?>
         <?php foreach ($customColors as $color_id => $color): ?>
             <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
                 <div class="colour-name"><?= $color['name'] ?></div>
