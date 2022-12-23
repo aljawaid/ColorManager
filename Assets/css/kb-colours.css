@@ -166,7 +166,7 @@ li.note > a.note-link {
     color: var(--pp-white);
 }
 
-.color-picker-square {
+div.color-picker-square {
     border-left-width: 5px;
 }
 
