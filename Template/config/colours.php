@@ -12,7 +12,10 @@
         </svg>
         <?= t('Available Colours') ?> <span class="total-count"><?= count($this->task->colorModel->getList()) ?></span>
     </h2>
-
+    <hr>
+    <div class="kbc-section">
+        <h3>Default Colours<span class="total-count"><?= count($defaultColours); ?></span></h3>
+    </div>
     <div class="colour-section">
         <ul class="">
             <li class="">
@@ -21,22 +24,20 @@
                     <?= ucfirst($this->task->colorModel->getDefaultColor()); ?>
                 </span>
             </li>
-            <div class="note">
+            <li class="note">
                 <?= t('Change the default colour in') ?> <?= $this->url->link(t('Project Settings'), 'ConfigController', 'project', array(), false, 'note-link', t('Go to Project Settings')) ?>
-            </div>
-            <li class="">
-                <strong><?= t('Total Default Colours') ?>:</strong> <?= count($defaultColours); ?>
             </li>
         </ul>
     </div>
 
     <div class="colour-boxes">
+        <?php asort($defaultColours) ?>
         <?php foreach ($defaultColours as $color_id => $color): ?>
-            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
+            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
                 <div class="colour-name"><?= $color['name'] ?></div>
                 <div class="colour-background">
-                    <span><?= t('Background Colour') ?></span>
-                    <code>
+                    <span class=""><?= t('Background Colour') ?></span>
+                    <code class="">
                         <?php if (strpos($color['background'], '#') !== false): ?>
                             <?= strtoupper($color['background']) ?>
                         <?php else: ?>
@@ -45,8 +46,8 @@
                     </code>
                 </div>
                 <div class="colour-border">
-                    <span><?= t('Border Colour') ?></span>
-                    <code>
+                    <span class=""><?= t('Border Colour') ?></span>
+                    <code class="">
                         <?php if (strpos($color['border'], '#') !== false): ?>
                             <?= strtoupper($color['border']) ?>
                         <?php else: ?>
@@ -58,42 +59,44 @@
         <?php endforeach ?>
     </div>
 
-    <div class="">
-        <h3>Custom Colours</h3>
-        <strong><?= t('Total Custom Colours') ?>:</strong> <?= $customColours; ?>
+    <div class="kbc-section">
+        <h3 class="">Custom Colours<span class="total-count"><?= $customColours; ?></span></h3>
     </div>
     
     <button><?= $this->modal->small('add', t('Add Color'), 'KBColoursController', 'add', ['plugin' => 'kBColours'], false, 'popover') ?></button>
 
     <div class="colour-boxes">
         <?php if ($customColors !== ''): ?>
-        <?php foreach ($customColors as $color_id => $color): ?>
-            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
-                <div class="colour-name"><?= $color['name'] ?>
-                <span style='float:right'><?= $this->url->icon('trash', '', 'KBColoursController', 'remove', ['plugin' => 'kBColours', 'key' => $color_id]) ?></span></div>
-                <div class="colour-background">
-                    <span><?= t('Background Colour') ?></span>
-                    <code>
-                        <?php if (strpos($color['background'], '#') !== false): ?>
-                            <?= strtoupper($color['background']) ?>
-                        <?php else: ?>
-                            <?= $color['background'] ?>
-                        <?php endif ?>
-                    </code>
+            <?php asort($customColors) ?>
+            <?php foreach ($customColors as $color_id => $color): ?>
+                <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
+                    <div class="colour-name"><?= $color['name'] ?>
+                        <span class="" style="float:right">
+                            <?= $this->url->icon('trash', '', 'KBColoursController', 'remove', ['plugin' => 'kBColours', 'key' => $color_id]) ?>
+                        </span>
+                    </div>
+                    <div class="colour-background">
+                        <span class=""><?= t('Background Colour') ?></span>
+                        <code class="">
+                            <?php if (strpos($color['background'], '#') !== false): ?>
+                                <?= strtoupper($color['background']) ?>
+                            <?php else: ?>
+                                <?= $color['background'] ?>
+                            <?php endif ?>
+                        </code>
+                    </div>
+                    <div class="colour-border">
+                        <span class=""><?= t('Border Colour') ?></span>
+                        <code class="">
+                            <?php if (strpos($color['border'], '#') !== false): ?>
+                                <?= strtoupper($color['border']) ?>
+                            <?php else: ?>
+                                <?= $color['border'] ?>
+                            <?php endif ?>
+                        </code>
+                    </div>
                 </div>
-                <div class="colour-border">
-                    <span><?= t('Border Colour') ?></span>
-                    <code>
-                        <?php if (strpos($color['border'], '#') !== false): ?>
-                            <?= strtoupper($color['border']) ?>
-                        <?php else: ?>
-                            <?= $color['border'] ?>
-                        <?php endif ?>
-                    </code>
-                </div>
-            </div>
-        <?php endforeach ?>
+            <?php endforeach ?>
         <?php endif ?>
     </div>
-
 </div>
