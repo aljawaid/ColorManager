@@ -148,7 +148,7 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     font-style: italic;
 }
 
-div.note > a.note-link {
+li.note > a.note-link {
     font-weight: 600;
 }
 
