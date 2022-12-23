@@ -8,20 +8,27 @@ This plugin shows the actual colour values (background and matching border) for 
 Features
 -------------
 
-**New Dedicated Colours Settings**  
+- New dedicated settings page
 - Show colour values as box examples
-- Show available default colour examples and values instead of just colour names
-- Show total available default colour count
-- Show default colour example instead of just colour name (in Project Settings)
+- Show total colour count
 
-**Custom Colours**  
+**Default Colour Palette**   
+- Show default colour example instead of just colour name (in Project Settings)
+- Display CSS properties for each colour (background colour, border colour)
+
+**Extra Colour Palette**  
 - xx New colours included
-- Solid `White` colour included
+- Solid `white` colour included
 - Extended colours including text colour
+- Display CSS properties for each colour (background colour, border colour, font colour)
+
+**Custom Colour Palette**  
+- Create your own favourite colours
+- Display CSS properties for each colour (background colour, border colour)
 
 **Dropdown Colour Lists**  
 - Sort colours alphabetically
-- Redesign colour square (left colour = border, right colour = background, centre dot = font color)
+- Redesign colour square (left colour = border, right colour = background, centre dot = font colour)
 - Show colour examples in (Automatic Action creation) dropdown list
 - Show colour examples in (Project Settings) dropdown list
 
@@ -44,7 +51,7 @@ Screenshots
 Usage
 -------------
 
-Go to `Settings` &#10562; `Colours`
+Go to `Settings` &#10562; `Colors`
 
 
 Compatibility
