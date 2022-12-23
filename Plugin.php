@@ -32,6 +32,7 @@ class Plugin extends Base
             $new_colors = array(
                 'maroon' => array('name' => 'Maroon',),
                 'white' => array('name' => 'White',),
+                'gold' => array('name' => 'Gold',),
             );
             $new_list = array();
             foreach ($new_colors as $color_id => $color) {

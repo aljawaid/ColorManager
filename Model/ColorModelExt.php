@@ -24,6 +24,11 @@ class ColorModelExt extends ColorModel
             'background' => '#D03D56',
             'border' => '#800000',
         ),
+        'gold' => array(
+            'name' => 'Gold',
+            'background' => '#F8D210',
+            'border' => '#A48900',
+        ),
     );
     
     public function getAllColors()
