@@ -1,4 +1,6 @@
-<?php $defaultColours = $this->task->colorModelExt->getAllColors(); ?>
+<?php $defaultColours = $this->task->colorModel->getDefaultColors(); ?>
+<?php $customColors = $this->task->colorModelExt->getCustomColors(); ?>
+
 <?php $defaultBackground = $this->task->colorModel->getBackgroundColor($this->task->colorModel->getDefaultColor()); ?>
 <?php $defaultBorder = $this->task->colorModel->getBorderColor($this->task->colorModel->getDefaultColor()); ?>
 <?php $customColours = (count($this->task->colorModel->getList())) - (count($this->task->colorModel->getDefaultColors())); ?>
@@ -62,7 +64,7 @@
     </div>
 
     <div class="colour-boxes">
-        <?php foreach ($this->task->colorModel->getList() as $color_id => $color): ?>
+        <?php foreach ($customColors as $color_id => $color): ?>
             <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
                 <div class="colour-name"><?= $color['name'] ?></div>
                 <div class="colour-background">
