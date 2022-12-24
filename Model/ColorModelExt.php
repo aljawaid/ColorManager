@@ -24,6 +24,21 @@ class ColorModelExt extends ColorModel
             'background' => '#DC143C',
             'border' => '#800000',
         ),
+        'white_on_maroon' => array(
+            'name' => 'White on Maroon',
+            'background' => '#800000',
+            'border' => '#4F0404',
+            'font' => '#FFFFFF',
+        ),
+        'mint_green' => array(
+            'name' => 'Mint Green',
+            'background' => '#2CF760',
+            'border' => '#BDF4CB',
+        ),
+        'gold' => array(
+            'name' => 'Gold',
+            'background' => '#F8D210',
+            'border' => '#A48900',
         ),
     );
     
