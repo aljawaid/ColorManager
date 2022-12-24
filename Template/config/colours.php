@@ -12,7 +12,10 @@
         </svg>
         <?= t('Available Colours') ?> <span class="total-count"><?= count($this->task->colorModel->getList()) ?></span>
     </h2>
-
+    <hr>
+    <div class="kbc-section">
+        <h3 class=""><?= t('Default Color Palette') ?><span class="total-count-section"><?= count($defaultColours); ?></span></h3>
+    </div>
     <div class="colour-section">
         <ul class="">
             <li class="">
@@ -58,9 +61,8 @@
         <?php endforeach ?>
     </div>
 
-    <div class="">
-        <h3>KBColours Preinstalled Colours</h3>
-        <strong><?= t('Total Preinstalled KBColours') ?>:</strong> <?= count($this->task->colorModelExt->getStaticColors()); ?>
+    <div class="kbc-section">
+        <h3 class=""><?= t('Extra Color Palette') ?> <span class="total-count-section"><?= count($this->task->colorModelExt->getStaticColors()); ?></span></h3>
     </div>
 
     <div class="colour-boxes">
@@ -91,9 +93,8 @@
         <?php endforeach ?>
     </div>
 
-    <div class="">
-        <h3>Custom Colours</h3>
-        <strong><?= t('Total Custom Colours') ?>:</strong> <?= $customColours; ?>
+    <div class="kbc-section">
+        <h3 class=""><?= t('Custom Color Palette') ?><span class="total-count-section"><?= $customColours; ?></span></h3>
     </div>
     
     <button><?= $this->modal->small('add', t('Add Color'), 'KBColoursController', 'add', ['plugin' => 'kBColours'], false, 'popover') ?></button>
