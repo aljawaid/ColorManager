@@ -101,16 +101,16 @@ class ColorModelExt extends ColorModel
             }
         }
         foreach ($this->static_colors as $color => $values) {
-                $buffer .= '.task-board.color-'.$color.', .task-summary-container.color-'.$color.', .color-picker-square.color-'.$color.', .task-board-category.color-'.$color.', .table-list-category.color-'.$color.', .task-tag.color-'.$color.' {';
-                $buffer .= 'background-color: '.$values['background'].';';
-                $buffer .= 'border-color: '.$values['border'];
-                $buffer .= '}';
-                $buffer .= 'td.color-'.$color.' { background-color: '.$values['background'].'}';
-                $buffer .= '.table-list-row.color-'.$color.' {border-left: 5px solid '.$values['border'].'}';
-                $buffer .= 'select#form-default_color option[value="'.$color.'"], option[value="'.$color.'"] {';
-                $buffer .= 'background-color: '.$values['background'].';';
-                $buffer .= 'border-color: '.$values['border'];
-                $buffer .= '}';
+            $buffer .= '.task-board.color-'.$color.', .task-summary-container.color-'.$color.', .color-picker-square.color-'.$color.', .task-board-category.color-'.$color.', .table-list-category.color-'.$color.', .task-tag.color-'.$color.' {';
+            $buffer .= 'background-color: '.$values['background'].';';
+            $buffer .= 'border-color: '.$values['border'].';';
+            $buffer .= '}';
+            $buffer .= 'td.color-'.$color.' { background-color: '.$values['background'].'}';
+            $buffer .= '.table-list-row.color-'.$color.' {border-left: 5px solid '.$values['border'].'}';
+            $buffer .= 'select#form-default_color option[value="'.$color.'"], option[value="'.$color.'"] {';
+            $buffer .= 'background-color: '.$values['background'].';';
+            $buffer .= 'border-color: '.$values['border'];
+            $buffer .= '}';
         }
         foreach ($this->default_colors as $color => $values) {
             $buffer .= 'select#form-default_color option[value="'.$color.'"], option[value="'.$color.'"] {';
