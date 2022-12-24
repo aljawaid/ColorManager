@@ -32,7 +32,7 @@
 
     <div class="colour-boxes">
         <?php foreach ($defaultColours as $color_id => $color): ?>
-            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
+            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
                 <div class="colour-name"><?= $color['name'] ?></div>
                 <div class="colour-background">
                     <span class=""><?= t('Background Colour') ?></span>
@@ -64,7 +64,7 @@
 
     <div class="colour-boxes">
         <?php foreach ($preinstalledColors as $color_id => $color): ?>
-            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
+            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
                 <div class="colour-name"><?= $color['name'] ?></div>
                 <div class="colour-background">
                     <span class=""><?= t('Background Colour') ?></span>
@@ -99,7 +99,7 @@
     <div class="colour-boxes">
         <?php if ($customColors != ''): ?>
             <?php foreach ($customColors as $color_id => $color): ?>
-                <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
+                <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
                     <div class="colour-name"><?= $color['name'] ?>
                     <span class="delete-icon-wrapper" style="border-color: <?= $color['border'] ?>;">
                         <?= $this->url->icon('trash', '', 'KBColoursController', 'remove', ['plugin' => 'kBColours', 'key' => $color_id]) ?>
