@@ -105,9 +105,12 @@ class ColorModelExt extends ColorModel
             $buffer .= 'background-color: '.$values['background'].';';
             $buffer .= 'border-color: '.$values['border'].';';
             if ($values['font']) {
-                $buffer .= 'color: '.$values['font'];
+                $buffer .= 'color: '.$values['font'].'; position: relative;';
             }
             $buffer .= '}';
+            if ($values['font']) {
+                $buffer .= '.color-picker-square.color-'.$color.':before { content: "\2609"; text-align: center; display: block; position: absolute; margin-top: -4px; margin-left: 1px;}';
+            }
             $buffer .= 'td.color-'.$color.' { background-color: '.$values['background'].'}';
             $buffer .= '.table-list-row.color-'.$color.' {border-left: 5px solid '.$values['border'].'}';
             $buffer .= 'select#form-default_color option[value="'.$color.'"], option[value="'.$color.'"] {';
