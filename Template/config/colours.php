@@ -58,6 +58,7 @@
             </div>
         <?php endforeach ?>
     </div>
+    <hr>
 
     <div class="kbc-section">
         <h3 class=""><?= t('Extra Color Palette') ?> <span class="total-count-section"><?= count($this->task->colorModelExt->getStaticColors()); ?></span></h3>
@@ -91,6 +92,7 @@
             </div>
         <?php endforeach ?>
     </div>
+    <hr>
 
     <div class="kbc-section">
         <h3 class=""><?= t('Custom Color Palette') ?><span class="total-count-section"><?= $customColours; ?></span></h3>
