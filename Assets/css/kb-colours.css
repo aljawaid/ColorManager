@@ -101,6 +101,12 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     border-bottom-left-radius: var(--border-radius-kbcolours);
     border-left: 1px solid;
     border-bottom: 1px solid;
+    opacity: 0;
+    transition: ease-in-out all .3s;
+}
+
+.colour-wrapper:hover .delete-icon-wrapper {
+    opacity: 1;
 }
 
 .colour-boxes {
