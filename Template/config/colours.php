@@ -105,7 +105,7 @@
                 <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
                     <div class="colour-name"><?= $color['name'] ?>
                     <span class="delete-icon-wrapper" style="border-color: <?= $color['border'] ?>;">
-                        <?= $this->url->icon('trash', '', 'KBColoursController', 'remove', ['plugin' => 'kBColours', 'key' => $color_id]) ?>
+                        <?= $this->url->icon('trash', '', 'KBColoursController', 'remove', ['plugin' => 'kBColours', 'key' => $color_id], false, 'delete-icon', t('Delete Color')) ?>
                         </span>
                     </div>
                     <div class="colour-background">
