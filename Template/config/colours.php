@@ -98,35 +98,35 @@
 
     <div class="colour-boxes">
         <?php if ($customColors != ''): ?>
-        <?php foreach ($customColors as $color_id => $color): ?>
-            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
-                <div class="colour-name"><?= $color['name'] ?>
-                <span class="delete-icon-wrapper" style="border-color: <?= $color['border'] ?>;">
-                    <?= $this->url->icon('trash', '', 'KBColoursController', 'remove', ['plugin' => 'kBColours', 'key' => $color_id]) ?>
-                    </span>
+            <?php foreach ($customColors as $color_id => $color): ?>
+                <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
+                    <div class="colour-name"><?= $color['name'] ?>
+                    <span class="delete-icon-wrapper" style="border-color: <?= $color['border'] ?>;">
+                        <?= $this->url->icon('trash', '', 'KBColoursController', 'remove', ['plugin' => 'kBColours', 'key' => $color_id]) ?>
+                        </span>
+                    </div>
+                    <div class="colour-background">
+                        <span class=""><?= t('Background Colour') ?></span>
+                        <code class="">
+                            <?php if (strpos($color['background'], '#') !== false): ?>
+                                <?= strtoupper($color['background']) ?>
+                            <?php else: ?>
+                                <?= $color['background'] ?>
+                            <?php endif ?>
+                        </code>
+                    </div>
+                    <div class="colour-border">
+                        <span class=""><?= t('Border Colour') ?></span>
+                        <code class="">
+                            <?php if (strpos($color['border'], '#') !== false): ?>
+                                <?= strtoupper($color['border']) ?>
+                            <?php else: ?>
+                                <?= $color['border'] ?>
+                            <?php endif ?>
+                        </code>
+                    </div>
                 </div>
-                <div class="colour-background">
-                    <span class=""><?= t('Background Colour') ?></span>
-                    <code class="">
-                        <?php if (strpos($color['background'], '#') !== false): ?>
-                            <?= strtoupper($color['background']) ?>
-                        <?php else: ?>
-                            <?= $color['background'] ?>
-                        <?php endif ?>
-                    </code>
-                </div>
-                <div class="colour-border">
-                    <span class=""><?= t('Border Colour') ?></span>
-                    <code class="">
-                        <?php if (strpos($color['border'], '#') !== false): ?>
-                            <?= strtoupper($color['border']) ?>
-                        <?php else: ?>
-                            <?= $color['border'] ?>
-                        <?php endif ?>
-                    </code>
-                </div>
-            </div>
-        <?php endforeach ?>
+            <?php endforeach ?>
         <?php endif ?>
     </div>
 
