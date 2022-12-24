@@ -103,7 +103,10 @@
         <?php foreach ($customColors as $color_id => $color): ?>
             <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;">
                 <div class="colour-name"><?= $color['name'] ?>
-                <span style='float:right'><?= $this->url->icon('trash', '', 'KBColoursController', 'remove', ['plugin' => 'kBColours', 'key' => $color_id]) ?></span></div>
+                <span class="delete-icon-wrapper" style="border-color: <?= $color['border'] ?>;">
+                    <?= $this->url->icon('trash', '', 'KBColoursController', 'remove', ['plugin' => 'kBColours', 'key' => $color_id]) ?>
+                    </span>
+                </div>
                 <div class="colour-background">
                     <span><?= t('Background Colour') ?></span>
                     <code>

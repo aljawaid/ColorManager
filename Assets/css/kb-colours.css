@@ -92,6 +92,17 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     box-sizing: content-box;
 }
 
+.delete-icon-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 2px 0 2px 3px;
+    background-color: var(--pp-white);
+    border-bottom-left-radius: var(--border-radius-kbcolours);
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+}
+
 .colour-boxes {
     margin: auto;
     display: block;
