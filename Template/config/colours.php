@@ -31,6 +31,7 @@
     </div>
 
     <div class="colour-boxes">
+        <?php asort($defaultColours) ?>
         <?php foreach ($defaultColours as $color_id => $color): ?>
             <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
                 <div class="colour-name"><?= $color['name'] ?></div>
@@ -63,6 +64,7 @@
     </div>
 
     <div class="colour-boxes">
+        <?php asort($preinstalledColors) ?>
         <?php foreach ($preinstalledColors as $color_id => $color): ?>
             <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
                 <div class="colour-name"><?= $color['name'] ?></div>
@@ -97,6 +99,7 @@
     <button class=""><?= $this->modal->small('plus', t('Add Color'), 'KBColoursController', 'add', ['plugin' => 'kBColours'], false, 'popover') ?></button>
 
     <div class="colour-boxes">
+        <?php asort($customColors) ?>
         <?php if ($customColors != ''): ?>
             <?php foreach ($customColors as $color_id => $color): ?>
                 <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">

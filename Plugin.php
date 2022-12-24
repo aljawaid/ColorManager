@@ -26,10 +26,7 @@ class Plugin extends Base
         $this->helper->register('customColorHelper', '\Kanboard\Plugin\KBColours\Helper\CustomColorHelper');
         $this->template->hook->attach('template:layout:bottom', 'kBColours:layout/css_ext');
         
-
-            
         $this->hook->on('model:color:get-list', function (&$listing) {
-                
             $new_colors = [];
             $custom_colors = $this->configModel->get('kbcolour_ids','');
             $custom_colors_array = explode(',',$custom_colors);
@@ -43,20 +40,21 @@ class Plugin extends Base
                     );
                     $new_colors = array_merge($new_colors, $new_color);
                 }
-                
+
                 $new_list = array();
                 foreach ($new_colors as $color_id => $color) {
                     $new_list[$color_id] = t($color['name']);
                 }
             }
+
             $preinstalledColors = $this->colorModelExt->getStaticList();
                 
             $listing = array_merge($listing, $preinstalledColors, isset($new_list) ? $new_list : array());
             
+            asort($listing);
+
             return $listing;
-            
         });
-        
     }
 
     public function onStartup()
