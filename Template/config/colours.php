@@ -94,7 +94,7 @@
         <h3 class=""><?= t('Custom Color Palette') ?><span class="total-count-section"><?= $customColours; ?></span></h3>
     </div>
     
-    <button class=""><?= $this->modal->small('add', t('Add Color'), 'KBColoursController', 'add', ['plugin' => 'kBColours'], false, 'popover') ?></button>
+    <button class=""><?= $this->modal->small('plus', t('Add Color'), 'KBColoursController', 'add', ['plugin' => 'kBColours'], false, 'popover') ?></button>
 
     <div class="colour-boxes">
         <?php if ($customColors != ''): ?>
