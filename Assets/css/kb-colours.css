@@ -87,7 +87,7 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     margin: 5px;
     display: inline-block;
     border-radius: var(--border-radius-kbcolours);
-    /*height: 6em;*/
+    position: relative;
     vertical-align: middle;
     box-sizing: content-box;
 }
