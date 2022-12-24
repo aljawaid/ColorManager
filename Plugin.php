@@ -51,7 +51,7 @@ class Plugin extends Base
                 
             $listing = array_merge($listing, $preinstalledColors, isset($new_list) ? $new_list : array());
             
-            asort($listing);
+            array_multisort($listing, SORT_ASC, SORT_STRING );
 
             return $listing;
         });
