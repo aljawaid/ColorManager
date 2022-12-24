@@ -120,11 +120,11 @@ class ColorModelExt extends ColorModel
             $buffer .= '.task-board.color-'.$color.', .task-summary-container.color-'.$color.', .color-picker-square.color-'.$color.', .task-board-category.color-'.$color.', .table-list-category.color-'.$color.', .task-tag.color-'.$color.' {';
             $buffer .= 'background-color: '.$values['background'].';';
             $buffer .= 'border-color: '.$values['border'].';';
-            if ($values['font']) {
+            if (isset($values['font']) {
                 $buffer .= 'color: '.$values['font'].'; position: relative;';
             }
             $buffer .= '}';
-            if ($values['font']) {
+            if (isset($values['font']) {
                 $buffer .= '.color-picker-square.color-'.$color.':before { content: "\2609"; text-align: center; display: block; position: absolute; margin-top: -4px; margin-left: 1px;}';
             }
             $buffer .= 'td.color-'.$color.' { background-color: '.$values['background'].'}';
