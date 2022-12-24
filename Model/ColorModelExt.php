@@ -19,10 +19,11 @@ class ColorModelExt extends ColorModel
             'background' => '#FFFFFF',
             'border' => '#EEEEEE',
         ),
-        'maroon' => array(
-            'name' => 'Maroon',
-            'background' => 'rgb(220, 20, 60)',
-            'border' => 'rgb(128, 0, 0)',
+        'crimson' => array(
+            'name' => 'Crimson',
+            'background' => '#DC143C',
+            'border' => '#800000',
+        ),
         ),
     );
     
