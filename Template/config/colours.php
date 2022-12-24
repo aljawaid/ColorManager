@@ -19,13 +19,13 @@
     <div class="colour-section">
         <ul class="">
             <li class="">
-                <strong><?= t('Default Task Colour') ?>:</strong>
+                <strong><?= t('Task Colour') ?>:</strong>
                 <span class="default-box-colour" style="background-color: <?= $defaultBackground ?>; border-color: <?= $defaultBorder ?>;">
                     <?= ucfirst($this->task->colorModel->getDefaultColor()); ?>
                 </span>
             </li>
             <li class="note">
-                <?= t('Change the default colour in') ?> <?= $this->url->link(t('Project Settings'), 'ConfigController', 'project', array(), false, 'note-link', t('Go to Project Settings')) ?>
+                <?= t('Change the default task colour in') ?> <?= $this->url->link(t('Project Settings'), 'ConfigController', 'project', array(), false, 'note-link', t('Go to Project Settings')) ?>
             </li>
         </ul>
     </div>
