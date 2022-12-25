@@ -1,3 +1,3 @@
-<li <?= $this->app->checkMenuSelection('KBColoursController', 'show', 'KBColours') ?>>
-    <?= $this->url->link(t('Colors'), 'KBColoursController', 'show', ['plugin' => 'KBColours']) ?>
+<li <?= $this->app->checkMenuSelection('ColorManagerController', 'show', 'ColorManager') ?>>
+    <?= $this->url->link(t('Colors'), 'ColorManagerController', 'show', ['plugin' => 'ColorManager']) ?>
 </li>
