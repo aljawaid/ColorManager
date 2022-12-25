@@ -19,7 +19,7 @@ return array(
   'Border Color' => 'Border Colour',
   'Save Color' => 'Save Colour',
   //
-  // config/colours.php
+  // config/colors.php
   //
   'Available Colors' => 'Available Colours',
   'Default Color Palette' => 'Default Colour Palette',
