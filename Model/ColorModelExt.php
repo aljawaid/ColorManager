@@ -1,11 +1,11 @@
 <?php
 
-namespace Kanboard\Plugin\KBColours\Model;
+namespace Kanboard\Plugin\ColorManager\Model;
 
 use Kanboard\Model\ColorModel;
 
 /**
- * Color model ext
+ * ColorModelExt
  *
  * @package  Kanboard\Model
  * @author   Craig Crosby
