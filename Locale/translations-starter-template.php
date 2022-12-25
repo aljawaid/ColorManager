@@ -10,7 +10,7 @@ return array(
   'Settings' => '',
   'Color Manager' => '',
   'Custom Colors' => '',
-  'Add Color' => 'text',
+  'Add Color' => '',
   //
   // config/add_custom_color.php
   //
