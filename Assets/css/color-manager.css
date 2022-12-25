@@ -207,7 +207,7 @@ li.color-manager-note > a.note-link {
     font-size: .6em;
     vertical-align: super;
     margin-left: 5px;
-    padding: 1px 3px;
+    padding: 1px 4px 1px 4px;
     border-radius: var(--border-radius-color-manager);
     color: var(--pp-white);
 }
