@@ -35,7 +35,7 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
         $errors = [];
         $values = [];
         
-        $this->response->html($this->helper->layout->config('colorManager:config/add_pop', [
+        $this->response->html($this->helper->layout->config('colorManager:config/add_custom_color', [
             'errors' => $errors,
             'values'  => $values,
             'title'  => t('Custom Colors').' &gt; '.t('Add Color'),
