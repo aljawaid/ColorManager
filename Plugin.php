@@ -1,10 +1,10 @@
 <?php
 
-namespace Kanboard\Plugin\KBColours;
+namespace Kanboard\Plugin\ColorManager;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
-use Kanboard\Plugin\KBColours\Model\ColorModelExt;
+use Kanboard\Plugin\ColorManager\Model\ColorModelExt;
 
 class Plugin extends Base
 {
@@ -12,19 +12,19 @@ class Plugin extends Base
     {
         // CSS - Asset Hook
         //  - Keep filename lowercase
-        $this->hook->on('template:layout:css', array('template' => 'plugins/KBColours/Assets/css/kb-colours.css'));
+        $this->hook->on('template:layout:css', array('template' => 'plugins/ColorManager/Assets/css/kb-colours.css'));
 
         // Views - Add Menu Item - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
-        $this->template->hook->attach('template:config:sidebar', 'kBColours:config/sidebar');
+        $this->template->hook->attach('template:config:sidebar', 'colorManager:config/sidebar');
 
         // Extra Page - Routes
         //  - Example: $this->route->addRoute('/my/custom/route', 'myController', 'show', 'PluginNameExampleStudlyCaps');
         //  - Must have the corresponding action in the matching controller
-        $this->route->addRoute('/settings/colours', 'KBColoursController', 'show', 'KBColours');
+        $this->route->addRoute('/settings/colours', 'KBColoursController', 'show', 'ColorManager');
 
-        $this->helper->register('customColorHelper', '\Kanboard\Plugin\KBColours\Helper\CustomColorHelper');
-        $this->template->hook->attach('template:layout:bottom', 'kBColours:layout/css_ext');
+        $this->helper->register('customColorHelper', '\Kanboard\Plugin\ColorManager\Helper\CustomColorHelper');
+        $this->template->hook->attach('template:layout:bottom', 'colorManager:layout/css_ext');
         
         $this->hook->on('model:color:get-list', function (&$listing) {
             $new_colors = [];
@@ -65,7 +65,7 @@ class Plugin extends Base
     public function getClasses()
     {
         return [
-            'Plugin\KBColours\Model' => [
+            'Plugin\ColorManager\Model' => [
                 'ColorModelExt', 
             ],
         ];
@@ -75,7 +75,7 @@ class Plugin extends Base
     {
         // Plugin Name MUST be identical to namespace for Plugin Directory to detect updated versions
         // Do not translate the plugin name here
-        return 'KBColours';
+        return 'ColorManager';
     }
 
     public function getPluginDescription()
@@ -104,6 +104,6 @@ class Plugin extends Base
 
     public function getPluginHomepage()
     {
-        return 'https://github.com/aljawaid/KBColours';
+        return 'https://github.com/aljawaid/ColorManager';
     }
 }
