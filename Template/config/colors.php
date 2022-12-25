@@ -115,6 +115,9 @@
             <img class="color-manager-section-icon" src="/plugins/ColorManager/Assets/color-palette.svg" alt="<?= t('Custom Color Palette') ?>">
             <?= t('Custom Color Palette') ?><span class="colour-total-count-section"><?= $customColours; ?></span>
         </h3>
+        <p class="cm-section-desc">
+            <?= t('This palette shows all user created colors. These colors are unique to your application.') ?>
+        </p>
     </div>
     
     <button class=""><?= $this->modal->small('plus', t('Add Color'), 'ColorManagerController', 'add', ['plugin' => 'colorManager'], false, 'popover') ?></button>

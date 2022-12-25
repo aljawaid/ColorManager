@@ -33,4 +33,5 @@ return array(
   'Delete Color' => 'Delete Colour',
   'This palette shows a collection of colors different to those in the default palette. Selected colors also use alternative colors for text. These colors are particularly suitable for tags and categories.' => 'This palette shows a collection of colours different to those in the default palette. Selected colours also use alternative colours for text. These colours are particularly suitable for tags and categories.',
   'Colors are named based on their common color name. If text colors are used, then the names are preceded by their text color.' => 'Colours are named based on their common colour name. If text colours are used, then the names are preceded by their text colour.',
+  'This palette shows all user created colors. These colors are unique to your application.' => 'This palette shows all user created colours. These colours are unique to your application.',
 );
