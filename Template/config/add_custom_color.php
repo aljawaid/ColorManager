@@ -1,7 +1,7 @@
 <div class="page-header">
     <h2><?= $title ?></h2>
 </div>
-<form id="add-color-form" method="post" action="<?= $this->url->href('KBColoursController', 'save', ['plugin' => 'kBColours']) ?>" autocomplete="off">
+<form id="add-color-form" method="post" action="<?= $this->url->href('ColorManagerController', 'save', ['plugin' => 'colorManager']) ?>" autocomplete="off">
     
     <?= $this->form->label(t('Color Name'), 'color_name') ?>
     <?= $this->form->text('color_name', $values, $errors, ['required']) ?>
