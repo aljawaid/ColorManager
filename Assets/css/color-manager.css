@@ -191,6 +191,6 @@ li.note > a.note-link {
 }
 
 div.color-picker-square {
-    border-left-width: 5px;
+    border-left-width: 5px !important;
 }
 
