@@ -40,6 +40,11 @@ class ColorModelExt extends ColorModel
             'background' => '#F8D210',
             'border' => '#A48900',
         ),
+        'dark_gold' => array(
+            'name' => 'Dark Gold',
+            'background' => '#DBA40E',
+            'border' => '#8E6A08',
+        ),
     );
     
     private function custom_colors()
