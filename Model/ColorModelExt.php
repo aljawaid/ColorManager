@@ -121,7 +121,9 @@ class ColorModelExt extends ColorModel
             $buffer .= 'background-color: '.$values['background'].';';
             $buffer .= 'border-color: '.$values['border'].';';
             if (isset($values['font'])) {
-                $buffer .= 'color: '.$values['font'].'; position: relative;';
+                $buffer .= 'color: '.$values['font'].'; position: relative;}';
+                $buffer .= 'select#form-default_color option[value="'.$color.'"], option[value="'.$color.'"] {';
+                $buffer .= 'color: '.$values['font'];
             }
             $buffer .= '}';
             if (isset($values['font'])) {
