@@ -13,6 +13,7 @@ class Plugin extends Base
         // CSS - Asset Hook
         //  - Keep filename lowercase
         $this->hook->on('template:layout:css', array('template' => 'plugins/ColorManager/Assets/css/color-manager.css'));
+        $this->template->hook->attach('template:layout:bottom', 'colorManager:layout/css_ext');
 
         // Views - Add Menu Item - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
@@ -24,7 +25,6 @@ class Plugin extends Base
         $this->route->addRoute('/settings/colours', 'ColorManagerController', 'show', 'ColorManager');
 
         $this->helper->register('customColorHelper', '\Kanboard\Plugin\ColorManager\Helper\CustomColorHelper');
-        $this->template->hook->attach('template:layout:bottom', 'colorManager:layout/css_ext');
         
         $this->hook->on('model:color:get-list', function (&$listing) {
             $new_colors = [];
