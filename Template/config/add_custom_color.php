@@ -12,7 +12,7 @@
     <input type="color" id="border_color" name="border_color" value="#000000">
     
     <div class="form-actions">
-        <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
+        <button type="submit" class="btn btn-blue"><?= t('Save Color') ?></button>
     </div>
 
     <?= $this->form->csrf() ?>

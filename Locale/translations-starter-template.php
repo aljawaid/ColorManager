@@ -3,25 +3,31 @@ return array(
   //
   // GENERAL
   //
-  'This plugin shows the actual colour values (background and matching border) for all the default Kanboard colours in the application settings.' => '',
+  'A new way to utilise colors to their full potential in Kanboard. Choose from 3 color palettes, default, extra (includes white) or create your own. Across all palettes, choose from over 50 colors to match your workflow across the interface.' => '',
   //
-  // KBColoursContoller.php
+  // ColorManagerContoller.php
   //
-  'Default Colours' => '',
+  'Settings' => '',
+  'Color Manager' => '',
+  'Custom Colors' => '',
+  'Add Color' => 'text',
   //
-  // config/sidebar.php
+  // config/add_custom_color.php
   //
-  'Colors' => '',
+  'Color Name' => '',
+  'Background Color' => '',
+  'Border Color' => '',
+  'Save Color' => '',
   //
   // config/colours.php
   //
-  'Available Colours' => '',
-  'Default Task Colour' => '',
-  'Change the default colour in' => '',
+  'Available Colors' => '',
+  'Default Color Palette' => '',
+  'Task Color' => '',
+  'Change the default color in' => '',
   'Project Settings' => '',
   'Go to Project Settings' => '',
-  'Total Default Colours' => '',
-  'Background Colour' => '',
-  'Border Colour' => '',
-  'Total Custom Colours' => '',
+  'Extra Color Palette' => '',
+  'Custom Color Palette' => '',
+  'Delete Color' => '',
 );
