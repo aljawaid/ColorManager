@@ -30,4 +30,5 @@ return array(
   'Extra Color Palette' => '',
   'Custom Color Palette' => '',
   'Delete Color' => '',
+  'This palette shows a collection of colors different to those in the default palette. Selected colors also use alternative colors for text. These colors are particularly suitable for tags and categories.' => '',
 );

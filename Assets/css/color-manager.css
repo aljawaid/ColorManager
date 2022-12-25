@@ -68,6 +68,9 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     margin-top: 20px;
 }
 
+.color-manager-section .cm-section-desc {
+    margin-bottom: 15px;
+}
 
 .color-manager-section-icon {
     width: 1.2em;
