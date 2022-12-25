@@ -34,4 +34,5 @@ return array(
   'This palette shows a collection of colors different to those in the default palette. Selected colors also use alternative colors for text. These colors are particularly suitable for tags and categories.' => 'This palette shows a collection of colours different to those in the default palette. Selected colours also use alternative colours for text. These colours are particularly suitable for tags and categories.',
   'Colors are named based on their common color name. If text colors are used, then the names are preceded by their text color.' => 'Colours are named based on their common colour name. If text colours are used, then the names are preceded by their text colour.',
   'This palette shows all user created colors. These colors are unique to your application.' => 'This palette shows all user created colours. These colours are unique to your application.',
+  'Color names matching colors in other palettes will override those colors. Duplicate color names will not be created.' => 'Colour names matching colours in other palettes will override those colours. Duplicate colour names will not be created.',
 );

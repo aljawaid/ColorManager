@@ -118,6 +118,9 @@
         <p class="cm-section-desc">
             <?= t('This palette shows all user created colors. These colors are unique to your application.') ?>
         </p>
+        <p class="cm-section-desc-info-panel">
+            <i class="fa fa-info-circle"></i> <?= t('Color names matching colors in other palettes will override those colors. Duplicate color names will not be created.') ?>
+        </p>
     </div>
     
     <button class=""><?= $this->modal->small('plus', t('Add Color'), 'ColorManagerController', 'add', ['plugin' => 'colorManager'], false, 'popover') ?></button>
