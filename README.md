@@ -1,52 +1,53 @@
-# KBColours
+# ColorManager
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-This plugin shows the actual colour values (background and matching border) for all the default Kanboard colours in the application settings.
+A new way to utilise colors to their full potential in Kanboard. Choose from 3 color palettes - default, extra (includes white) or create your own. Across all palettes, choose from **over 50 colors** to match your workflow across the interface.
 
 
 Features
 -------------
 
 - New dedicated settings page
-- Show colour values as box examples
-- Show total colour count
-- Sort colours alphabetically
+- Show color values as box examples
+- Show total color counts
+- Sort all colors alphabetically
 
-**Default Colour Palette**   
-- Show default colour example instead of just colour name (in Project Settings)
-- Display CSS properties for each colour (background colour, border colour)
+**Default Color Palette**   
+- Show default color example instead of just the color name _(in Project Settings)_
+- Display CSS properties for each color (background color, border color)
 
-**Extra Colour Palette**  
-- xx New colours included
-- Solid `white` colour included
-- Extended colours including text colour
-- Display CSS properties for each colour (background colour, border colour, font colour)
+**Extra Color Palette**  
+- 50+ New colors included
+- Solid `white` color included
+- Extended colors including text color
+- Display CSS properties for each color (background color, border color, font color)
 
-**Custom Colour Palette**  
-- Create your own favourite colours
-- Display CSS properties for each colour (background colour, border colour)
+**Custom Color Palette**  
+- Create your own favourite colors
+- Display CSS properties for each color (background color, border color)
 
-**Dropdown Colour Lists**  
-- Sort colours alphabetically
-- Redesign colour square (left colour = border, right colour = background, centre dot = font colour)
-- Show colour examples in (Automatic Action creation) dropdown list
-- Show colour examples in (Project Settings) dropdown list
+**Dropdown Color Lists**  
+- Sort colors alphabetically
+- Show color examples in the Task creation dropdown list
+- Redesign color square (left color = border, right color = background, centre dot = font color)
+- Show color examples in the Automatic Action creation dropdown list
+- Show color examples in the Project Settings dropdown list
 
 Screenshots
 ----------
 
 **Kanboard Settings**  
 
-![Default Colours](../master/screenshot-kbcolours.png "Default Colours")
+![Default Colors](../master/screenshot-kbcolours.png "Default Colors")
 
 **Project Settings**  
 
-![Default Task Colour](../master/screenshot-default-colour-list.png "Default Task Colour List")
+![Default Task Color](../master/screenshot-default-Color-list.png "Default Task Color List")
 
 **Automatic Actions - Creation**  
 
-![Automatic Action Creation](../master/screenshot-automatic-action-colour-list.png "Automatic Action Colour List")
+![Automatic Action Creation](../master/screenshot-automatic-action-Color-list.png "Automatic Action Color List")
 
 
 Usage
@@ -105,6 +106,7 @@ _Note: The `/plugins` folder is case-sensitive._
 Translations
 ------------
 
+- English (UK)
 - _Contributors welcome_
 - _Starter template available_
 
