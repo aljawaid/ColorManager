@@ -37,17 +37,17 @@ Features
 Screenshots
 ----------
 
-**Kanboard Settings**  
+**Kanboard Settings - _Default Color Palette_**  
 
-![Default Colors](../master/screenshot-kbcolours.png "Default Colors")
+![Default Color Palette](../master/screenshot-settings-default-palette.png "Default Color Palette")
 
 **Project Settings**  
 
-![Default Task Color](../master/screenshot-default-Color-list.png "Default Task Color List")
+![Default Task Dropdown List](../master/screenshot-default-task-dropdown-list.png "Default Task Dropdown List")
 
 **Automatic Actions - Creation**  
 
-![Automatic Action Creation](../master/screenshot-automatic-action-Color-list.png "Automatic Action Color List")
+![Automatic Action Creation](../master/screenshot-automatic-action-dropdown-list.png "Automatic Action Dropdown List")
 
 
 Usage
