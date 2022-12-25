@@ -1,14 +1,14 @@
 <?php
 
-namespace Kanboard\Plugin\KBColours\Helper;
+namespace Kanboard\Plugin\ColorManager\Helper;
 
 use Kanboard\Core\Base;
-use Kanboard\Plugin\KBColours\Helper\ColorModelExt;
+use Kanboard\Plugin\ColorManager\Helper\ColorModelExt;
 
 /**
  * Asset Helper
  *
- * @package Kanboard Plugin KBColours
+ * @package Kanboard Plugin ColorManager
  * @author  Craig Crosby
  */
 class CustomColorHelper extends Base
