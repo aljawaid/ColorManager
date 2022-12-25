@@ -53,15 +53,19 @@ a:hover { color: var(--pp-red-alt-2) !important; }
 
 .relative { position: relative; }
 
-.kbc-page-header {
+.color-manager-page-header {
     margin: var(--header-page-margin-color-manager);
 }
 
-.kbc-page-header h2 svg {
+.color-manager-page-header h2 svg {
     vertical-align: sub;
     /*width: 1.4em;*/
     height: 1em;
     margin-right: 3px;
+}
+
+.color-manager-section {
+    margin-top: 20px;
 }
 
 .colour-section {
@@ -160,17 +164,13 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     margin-left: 5px;
 }
 
-.note {
+.color-manager-note {
     font-size: .8em;
     font-style: italic;
 }
 
-li.note > a.note-link {
+li.color-manager-note > a.note-link {
     font-weight: 600;
-}
-
-.kbc-section {
-    margin-top: 20px;
 }
 
 .colour-total-count, .colour-total-count-section {
