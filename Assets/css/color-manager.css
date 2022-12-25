@@ -173,7 +173,7 @@ li.note > a.note-link {
     margin-top: 20px;
 }
 
-.total-count, .total-count-section {
+.colour-total-count, .colour-total-count-section {
     font-size: .6em;
     vertical-align: super;
     margin-left: 5px;
@@ -182,11 +182,11 @@ li.note > a.note-link {
     color: var(--pp-white);
 }
 
-.total-count {
+.colour-total-count {
     background-color: var(--pp-green-dark);
 }
 
-.total-count-section {
+.colour-total-count-section {
     background-color: var(--blue-icon-dark);
 }
 
