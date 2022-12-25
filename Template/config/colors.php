@@ -15,7 +15,10 @@
     </h2>
     <hr>
     <div class="color-manager-section">
-        <h3 class=""><?= t('Default Color Palette') ?><span class="colour-total-count-section"><?= count($defaultColours); ?></span></h3>
+        <h3 class="">
+            <img class="color-manager-section-icon" src="/plugins/ColorManager/Assets/palette-print.svg" alt="<?= t('Default Color Palette') ?>">
+            <?= t('Default Color Palette') ?> <span class="colour-total-count-section"><?= count($defaultColours); ?></span>
+        </h3>
     </div>
     <div class="colour-section">
         <ul class="">
@@ -62,7 +65,10 @@
     <hr>
 
     <div class="color-manager-section">
-        <h3 class=""><?= t('Extra Color Palette') ?> <span class="colour-total-count-section"><?= count($this->task->colorModelExt->getStaticColors()); ?></span></h3>
+        <h3 class="">
+            <img class="color-manager-section-icon" src="/plugins/ColorManager/Assets/palette-print-bordered.svg" alt="<?= t('Extra Color Palette') ?>">
+            <?= t('Extra Color Palette') ?> <span class="colour-total-count-section"><?= count($this->task->colorModelExt->getStaticColors()); ?></span>
+        </h3>
     </div>
 
     <div class="colour-boxes">
@@ -96,7 +102,10 @@
     <hr>
 
     <div class="color-manager-section">
-        <h3 class=""><?= t('Custom Color Palette') ?><span class="colour-total-count-section"><?= $customColours; ?></span></h3>
+        <h3 class="">
+            <img class="color-manager-section-icon" src="/plugins/ColorManager/Assets/color-palette.svg" alt="<?= t('Custom Color Palette') ?>">
+            <?= t('Custom Color Palette') ?><span class="colour-total-count-section"><?= $customColours; ?></span>
+        </h3>
     </div>
     
     <button class=""><?= $this->modal->small('plus', t('Add Color'), 'ColorManagerController', 'add', ['plugin' => 'colorManager'], false, 'popover') ?></button>

@@ -68,6 +68,11 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     margin-top: 20px;
 }
 
+
+.color-manager-section-icon {
+    width: 1.2em;
+    vertical-align: text-bottom;
+}
 .colour-section {
     margin-bottom: 20px;
 }
