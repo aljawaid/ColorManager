@@ -80,7 +80,7 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return t('This plugin shows the actual colour values (background and matching border) for all the default Kanboard colours in the application settings.');
+        return t('A new way to utilise colors to their full potential in Kanboard. Choose from 3 color palettes, default, extra (includes white) or create your own. Across all palettes, choose from over 50 colors to match your workflow across the interface.');
     }
 
     public function getPluginAuthor()
