@@ -23,6 +23,7 @@ return array(
   //
   'Available Colors' => '',
   'Default Color Palette' => '',
+  'These colors are part of the core. Pastel styles make these colors universal across all features of the application.' => '',
   'Task Color' => '',
   'Change the default color in' => '',
   'Project Settings' => '',

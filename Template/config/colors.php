@@ -19,6 +19,9 @@
             <img class="color-manager-section-icon" src="/plugins/ColorManager/Assets/palette-print.svg" alt="<?= t('Default Color Palette') ?>">
             <?= t('Default Color Palette') ?> <span class="colour-total-count-section"><?= count($defaultColours); ?></span>
         </h3>
+        <p class="cm-section-desc">
+            <?= t('These colors are part of the core. Pastel styles make these colors universal across all features of the application.') ?>
+        </p>
     </div>
     <div class="colour-section">
         <ul class="">
