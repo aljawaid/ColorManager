@@ -25,7 +25,7 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
 
     public function show()
     {
-        $this->response->html($this->helper->layout->config('colorManager:config/colours', array(
+        $this->response->html($this->helper->layout->config('colorManager:config/colors', array(
             'title' => t('Settings') .' &#10562; '.t('Colors'),
         )));
     }
