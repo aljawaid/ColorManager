@@ -13,11 +13,11 @@ class Plugin extends Base
         // CSS - Asset Hook
         //  - Keep filename lowercase
         $this->hook->on('template:layout:css', array('template' => 'plugins/ColorManager/Assets/css/color-manager.css'));
-        $this->template->hook->attach('template:layout:bottom', 'colorManager:layout/css_ext');
 
         // Views - Add Menu Item - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
         $this->template->hook->attach('template:config:sidebar', 'colorManager:config/sidebar');
+        $this->template->hook->attach('template:layout:bottom', 'colorManager:layout/css_ext');
 
         // Extra Page - Routes
         //  - Example: $this->route->addRoute('/my/custom/route', 'myController', 'show', 'PluginNameExampleStudlyCaps');
