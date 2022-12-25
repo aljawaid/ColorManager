@@ -72,6 +72,9 @@
         <p class="cm-section-desc">
             <?= t('This palette shows a collection of colors different to those in the default palette. Selected colors also use alternative colors for text. These colors are particularly suitable for tags and categories.') ?>
         </p>
+        <p class="cm-section-desc-info-panel">
+            <i class="fa fa-info-circle"></i> <?= t('Colors are named based on their common color name. If text colors are used, then the names are preceded by their text color.') ?>
+        </p>
     </div>
 
     <div class="colour-boxes">
