@@ -1,17 +1,17 @@
 <?php
 
-namespace Kanboard\Plugin\KBColours\Controller;
+namespace Kanboard\Plugin\ColorManager\Controller;
 
 use Kanboard\Controller\BaseController;
 use Kanboard\Core\Plugin\Directory;
 
 /**
- * Plugin KBColours
- * Class KBColoursController
+ * Plugin ColorManager
+ * Class ColorManagerController
  * @authors aljawaid & Craig Crosby
  */
 
-class KBColoursController extends \Kanboard\Controller\ConfigController
+class ColorManagerController extends \Kanboard\Controller\ConfigController
 {
     /**
      * Display the Settings Page
@@ -25,7 +25,7 @@ class KBColoursController extends \Kanboard\Controller\ConfigController
 
     public function show()
     {
-        $this->response->html($this->helper->layout->config('kBColours:config/colours', array(
+        $this->response->html($this->helper->layout->config('colorManager:config/colours', array(
             'title' => t('Settings') .' &#10562; '.t('Colors'),
         )));
     }
@@ -35,7 +35,7 @@ class KBColoursController extends \Kanboard\Controller\ConfigController
         $errors = [];
         $values = [];
         
-        $this->response->html($this->helper->layout->config('kBColours:config/add_pop', [
+        $this->response->html($this->helper->layout->config('colorManager:config/add_pop', [
             'errors' => $errors,
             'values'  => $values,
             'title'  => t('Custom Colors').' &gt; '.t('Add Color'),
@@ -64,7 +64,7 @@ class KBColoursController extends \Kanboard\Controller\ConfigController
         $this->configModel->remove('kbcolour_backgroundcolor_'.$key);
         $this->configModel->remove('kbcolour_bordercolor_'.$key);
         
-        $this->response->redirect($this->helper->url->to('KBColoursController', 'show', ['plugin' => 'KBColours']));
+        $this->response->redirect($this->helper->url->to('ColorManagerController', 'show', ['plugin' => 'ColorManager']));
 
     }
     
@@ -93,7 +93,7 @@ class KBColoursController extends \Kanboard\Controller\ConfigController
             }
         }
         
-        $this->response->redirect($this->helper->url->to('KBColoursController', 'show', ['plugin' => 'KBColours']));
+        $this->response->redirect($this->helper->url->to('ColorManagerController', 'show', ['plugin' => 'ColorManager']));
         
     }
 }
