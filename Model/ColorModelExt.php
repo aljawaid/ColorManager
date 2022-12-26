@@ -231,6 +231,11 @@ class ColorModelExt extends ColorModel
             'border' => '#024015',
             'font' => '#FFFFFF',
         ),
+        'bright_orange' => array(
+            'name' => 'Bright Orange',
+            'background' => '#FF6D36',
+            'border' => '#F05216',
+        ),
     );
     
     private function custom_colors()
