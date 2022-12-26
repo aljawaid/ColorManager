@@ -171,6 +171,12 @@ class ColorModelExt extends ColorModel
             'background' => '#AE0000',
             'border' => '#6A0303',
         ),
+        'white_on_scarlet' => array(
+            'name' => 'White on Scarlet',
+            'background' => '#AE0000',
+            'border' => '#6A0303',
+            'font' => '#FFFFFF',
+        ),
     );
     
     private function custom_colors()
