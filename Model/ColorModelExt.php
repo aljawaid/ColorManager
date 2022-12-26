@@ -45,6 +45,12 @@ class ColorModelExt extends ColorModel
             'background' => '#DBA40E',
             'border' => '#8E6A08',
         ),
+        'white_on_dark_teal' => array(
+            'name' => 'White on Dark Teal',
+            'background' => '#00695C',
+            'border' => '#004038',
+            'font' => '#FFFFFF',
+        ),
     );
     
     private function custom_colors()
