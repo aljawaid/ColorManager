@@ -252,6 +252,11 @@ class ColorModelExt extends ColorModel
             'background' => '#D1D100',
             'border' => '#6C6C0F',
         ),
+        'deep_purple' => array(
+            'name' => 'Deep Purple',
+            'background' => '#8E44AD',
+            'border' => '#610288',
+        ),
     );
     
     private function custom_colors()
