@@ -199,6 +199,11 @@ class ColorModelExt extends ColorModel
             'background' => '#B59F84',
             'border' => '#A29380',
         ),
+        'pale_purple' => array(
+            'name' => 'Pale Purple',
+            'background' => '#A16AE8',
+            'border' => '#6B3AAA',
+        ),
     );
     
     private function custom_colors()
