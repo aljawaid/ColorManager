@@ -194,6 +194,11 @@ class ColorModelExt extends ColorModel
             'border' => '#015B2A',
             'font' => '#FFFFFF',
         ),
+        'beige' => array(
+            'name' => 'Beige',
+            'background' => '#B59F84',
+            'border' => '#A29380',
+        ),
     );
     
     private function custom_colors()
