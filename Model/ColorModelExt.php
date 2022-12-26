@@ -236,6 +236,11 @@ class ColorModelExt extends ColorModel
             'background' => '#FF6D36',
             'border' => '#F05216',
         ),
+        'bright_green' => array(
+            'name' => 'Bright Green',
+            'background' => '#00E11A',
+            'border' => '#04B318',
+        ),
     );
     
     private function custom_colors()
