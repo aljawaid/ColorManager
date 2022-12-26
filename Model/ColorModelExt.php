@@ -182,6 +182,12 @@ class ColorModelExt extends ColorModel
             'background' => '#868B8E',
             'border' => '#646464',
         ),
+        'white_on_deep_grey' => array(
+            'name' => 'White on Deep Grey',
+            'background' => '#868B8E',
+            'border' => '#646464',
+            'font' => '#FFFFFF',
+        ),
     );
     
     private function custom_colors()
