@@ -18,8 +18,10 @@ Features
 - Display CSS properties for each color (background color, border color)
 
 **Extra Color Palette**  
-- 50+ New colors included
+- **_50 New deep, rich and vibrant colors_**
+- Perfect for tasks, tags and categories
 - Solid `white` color included
+- Solid `black` color included
 - Extended colors including text color
 - Display CSS properties for each color (background color, border color, font color)
 
@@ -53,7 +55,7 @@ Screenshots
 Usage
 -------------
 
-Go to `Settings` &#10562; `Colors`
+Go to `Settings` &#10562; `Color Manager`
 
 
 Compatibility
