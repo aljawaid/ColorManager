@@ -262,6 +262,11 @@ class ColorModelExt extends ColorModel
             'background' => '#F0AD4E',
             'border' => '#BD7309',
         ),
+        'dirty_green' => array(
+            'name' => 'Dirty Green',
+            'background' => '#5CB85C',
+            'border' => '#367936',
+        ),
     );
     
     private function custom_colors()
