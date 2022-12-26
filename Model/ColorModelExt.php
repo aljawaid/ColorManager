@@ -139,6 +139,11 @@ class ColorModelExt extends ColorModel
             'background' => '#BACC81',
             'border' => '#99A869',
         ),
+        'dark_pink' => array(
+            'name' => 'Dark Pink',
+            'background' => '#8C6070',
+            'border' => '#F48FB1',
+        ),
     );
     
     private function custom_colors()
