@@ -128,6 +128,12 @@ class ColorModelExt extends ColorModel
             'background' => '#65463E',
             'border' => '#332623',
         ),
+        'white_on_dark_brown' => array(
+            'name' => 'White on Dark Brown',
+            'background' => '#65463E',
+            'border' => '#332623',
+            'font' => '#FFFFFF',
+        ),
     );
     
     private function custom_colors()
