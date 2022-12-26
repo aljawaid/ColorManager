@@ -257,6 +257,11 @@ class ColorModelExt extends ColorModel
             'background' => '#8E44AD',
             'border' => '#610288',
         ),
+        'deep_amber' => array(
+            'name' => 'Deep Amber',
+            'background' => '#F0AD4E',
+            'border' => '#BD7309',
+        ),
     );
     
     private function custom_colors()
