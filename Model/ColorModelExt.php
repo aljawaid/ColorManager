@@ -91,6 +91,11 @@ class ColorModelExt extends ColorModel
             'background' => '#A88C6A',
             'border' => '#755024',
         ),
+        'lime_green' => array(
+            'name' => 'Lime Green',
+            'background' => '#63B83E',
+            'border' => '#39771E',
+        ),
     );
     
     private function custom_colors()
