@@ -115,7 +115,7 @@ a:hover { color: var(--pp-red-alt-2) !important; }
 }
 
 .colour-wrapper {
-    border: 1px solid var(--pp-black);
+    border: 1px solid currentColor;
     padding: 5px;
     width: 150px;
     margin: 5px;
