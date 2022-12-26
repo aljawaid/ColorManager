@@ -225,6 +225,12 @@ class ColorModelExt extends ColorModel
             'background' => '#0A7029',
             'border' => '#024015',
         ),
+        'white_on_deep_green' => array(
+            'name' => 'White on Deep Green',
+            'background' => '#0A7029',
+            'border' => '#024015',
+            'font' => '#FFFFFF',
+        ),
     );
     
     private function custom_colors()
