@@ -267,7 +267,7 @@ class ColorModelExt extends ColorModel
             'background' => '#5CB85C',
             'border' => '#367936',
         ),
-        'Cream' => array(
+        'cream' => array(
             'name' => 'Cream',
             'background' => '#FDE7A6',
             'border' => '#FDD662',
