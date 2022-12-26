@@ -107,6 +107,11 @@ class ColorModelExt extends ColorModel
             'border' => '#DC143C',
             'font' => '#FFFFFF',
         ),
+        'blue_grey' => array(
+            'name' => 'Blue Grey',
+            'background' => '#5C7890',
+            'border' => '#405364',
+        ),
     );
     
     private function custom_colors()
