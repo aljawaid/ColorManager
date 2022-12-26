@@ -267,6 +267,11 @@ class ColorModelExt extends ColorModel
             'background' => '#5CB85C',
             'border' => '#367936',
         ),
+        'Cream' => array(
+            'name' => 'Cream',
+            'background' => '#FDE7A6',
+            'border' => '#FDD662',
+        ),
     );
     
     private function custom_colors()
