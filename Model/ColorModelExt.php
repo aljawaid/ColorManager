@@ -188,6 +188,12 @@ class ColorModelExt extends ColorModel
             'border' => '#646464',
             'font' => '#FFFFFF',
         ),
+        'white_on_green' => array(
+            'name' => 'White on Green',
+            'background' => '#00843D',
+            'border' => '#015B2A',
+            'font' => '#FFFFFF',
+        ),
     );
     
     private function custom_colors()
