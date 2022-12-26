@@ -166,6 +166,11 @@ class ColorModelExt extends ColorModel
             'border' => '#252D1C',
             'font' => '#FFFFFF',
         ),
+        'scarlet' => array(
+            'name' => 'Scarlet',
+            'background' => '#AE0000',
+            'border' => '#6A0303',
+        ),
     );
     
     private function custom_colors()
