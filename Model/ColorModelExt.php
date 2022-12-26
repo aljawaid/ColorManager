@@ -210,6 +210,11 @@ class ColorModelExt extends ColorModel
             'border' => '#000000',
             'font' => '#FFFFFF',
         ),
+        'pale_blue' => array(
+            'name' => 'Pale Blue',
+            'background' => '#90ADC6',
+            'border' => '#646464',
+        ),
     );
     
     private function custom_colors()
