@@ -123,6 +123,11 @@ class ColorModelExt extends ColorModel
             'background' => '#ECF87F',
             'border' => '#E6FF07',
         ),
+        'dark_brown' => array(
+            'name' => 'Dark Brown',
+            'background' => '#65463E',
+            'border' => '#332623',
+        ),
     );
     
     private function custom_colors()
