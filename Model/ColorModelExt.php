@@ -272,6 +272,11 @@ class ColorModelExt extends ColorModel
             'background' => '#FDE7A6',
             'border' => '#FDD662',
         ),
+        'copper' => array(
+            'name' => 'Copper',
+            'background' => '#B77729',
+            'border' => '#38240C',
+        ),
     );
     
     private function custom_colors()
