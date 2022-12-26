@@ -75,6 +75,12 @@ class ColorModelExt extends ColorModel
             'border' => '#F00000',
             'font' => '#F00000',
         ),
+        'orange_on_black' => array(
+            'name' => 'Orange on Black',
+            'background' => '#000000',
+            'border' => '#000000',
+            'font' => '#FFA500',
+        ),
     );
     
     private function custom_colors()
