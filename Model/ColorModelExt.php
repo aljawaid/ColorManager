@@ -86,6 +86,11 @@ class ColorModelExt extends ColorModel
             'background' => '#FFA500',
             'border' => '#000000',
         ),
+        'khaki' => array(
+            'name' => 'Khaki',
+            'background' => '#A88C6A',
+            'border' => '#755024',
+        ),
     );
     
     private function custom_colors()
