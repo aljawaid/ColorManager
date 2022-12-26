@@ -144,6 +144,11 @@ class ColorModelExt extends ColorModel
             'background' => '#8C6070',
             'border' => '#F48FB1',
         ),
+        'peach' => array(
+            'name' => 'Peach',
+            'background' => '#FC4F46',
+            'border' => '#F22B2B',
+        ),
     );
     
     private function custom_colors()
