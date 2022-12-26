@@ -96,6 +96,11 @@ class ColorModelExt extends ColorModel
             'background' => '#63B83E',
             'border' => '#39771E',
         ),
+        'dark_red' => array(
+            'name' => 'Dark Red',
+            'background' => '#951313',
+            'border' => '#DC143C',
+        ),
     );
     
     private function custom_colors()
