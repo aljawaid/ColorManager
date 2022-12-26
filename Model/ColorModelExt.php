@@ -277,6 +277,12 @@ class ColorModelExt extends ColorModel
             'background' => '#B77729',
             'border' => '#38240C',
         ),
+        'white_on_copper' => array(
+            'name' => 'White on Copper',
+            'background' => '#B77729',
+            'border' => '#38240C',
+            'font' => '#FFFFFF',
+        ),
     );
     
     private function custom_colors()
