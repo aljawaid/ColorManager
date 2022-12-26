@@ -160,6 +160,12 @@ class ColorModelExt extends ColorModel
             'background' => '#5E7345',
             'border' => '#252D1C',
         ),
+        'white_on_olive' => array(
+            'name' => 'White on Olive',
+            'background' => '#5E7345',
+            'border' => '#252D1C',
+            'font' => '#FFFFFF',
+        ),
     );
     
     private function custom_colors()
