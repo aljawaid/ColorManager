@@ -118,6 +118,11 @@ class ColorModelExt extends ColorModel
             'border' => '#405364',
             'font' => '#FFFFFF',
         ),
+        'bright_yellow' => array(
+            'name' => 'Bright Yellow',
+            'background' => '#ECF87F',
+            'border' => '#E6FF07',
+        ),
     );
     
     private function custom_colors()
