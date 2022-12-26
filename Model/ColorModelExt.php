@@ -134,6 +134,11 @@ class ColorModelExt extends ColorModel
             'border' => '#332623',
             'font' => '#FFFFFF',
         ),
+        'lint' => array(
+            'name' => 'Lint',
+            'background' => '#BACC81',
+            'border' => '#99A869',
+        ),
     );
     
     private function custom_colors()
