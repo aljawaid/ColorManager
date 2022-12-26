@@ -57,6 +57,12 @@ class ColorModelExt extends ColorModel
             'border' => '#24003C',
             'font' => '#FFFFFF',
         ),
+        'white_on_red' => array(
+            'name' => 'White on Red',
+            'background' => '#F00000',
+            'border' => '#F00000',
+            'font' => '#FFFFFF',
+        ),
     );
     
     private function custom_colors()
