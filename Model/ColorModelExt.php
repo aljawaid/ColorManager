@@ -177,6 +177,11 @@ class ColorModelExt extends ColorModel
             'border' => '#6A0303',
             'font' => '#FFFFFF',
         ),
+        'deep_grey' => array(
+            'name' => 'Deep Grey',
+            'background' => '#868B8E',
+            'border' => '#646464',
+        ),
     );
     
     private function custom_colors()
