@@ -155,6 +155,11 @@ class ColorModelExt extends ColorModel
             'border' => '#F22B2B',
             'font' => '#FFFFFF',
         ),
+        'olive' => array(
+            'name' => 'Olive',
+            'background' => '#5E7345',
+            'border' => '#252D1C',
+        ),
     );
     
     private function custom_colors()
