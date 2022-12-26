@@ -149,6 +149,12 @@ class ColorModelExt extends ColorModel
             'background' => '#FC4F46',
             'border' => '#F22B2B',
         ),
+        'white_on_peach' => array(
+            'name' => 'White on Peach',
+            'background' => '#FC4F46',
+            'border' => '#F22B2B',
+            'font' => '#FFFFFF',
+        ),
     );
     
     private function custom_colors()
