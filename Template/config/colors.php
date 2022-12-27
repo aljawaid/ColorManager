@@ -110,7 +110,8 @@
     </div>
     <hr>
 
-    <div class="color-manager-section">
+    <div class="color-manager-section relative">
+        <button class="add-colour-btn"><?= $this->modal->small('plus', t('Add Color'), 'ColorManagerController', 'add', ['plugin' => 'colorManager'], false, 'popover') ?></button>
         <h3 class="">
             <img class="color-manager-section-icon" src="/plugins/ColorManager/Assets/color-palette.svg" alt="<?= t('Custom Color Palette') ?>">
             <?= t('Custom Color Palette') ?><span class="colour-total-count-section"><?= $customColours; ?></span>
@@ -123,7 +124,6 @@
         </p>
     </div>
     
-    <button class=""><?= $this->modal->small('plus', t('Add Color'), 'ColorManagerController', 'add', ['plugin' => 'colorManager'], false, 'popover') ?></button>
 
     <div class="colour-boxes">
         <?php asort($customColors) ?>
