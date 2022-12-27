@@ -49,7 +49,7 @@ Screenshots
 
 **Kanboard Settings - _Custom Color Palette_**  
 
-![Custom Color Palette](../master/screenshot-settings-extra-palette.png "Custom Color Palette")
+![Custom Color Palette](../master/screenshot-settings-custom-palette.png "Custom Color Palette")
 
 **Project Settings**  
 
