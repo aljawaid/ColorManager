@@ -111,8 +111,8 @@
     <hr>
 
     <div class="color-manager-section relative">
-        <button class="add-colour-btn">
-            <a href="<?= $this->url->href('ColorManagerController', 'add', ['plugin' => 'colorManager'], false, t('AddColor'), false) ?>" class="js-modal-small" title="<?=t('Add to this palette') ?>">
+        <button id="AddColor" class="add-colour-btn">
+            <a href="<?= $this->url->href('ColorManagerController', 'add', ['plugin' => 'colorManager'], false, '', false) ?>" class="js-modal-small" title="<?=t('Add to this palette') ?>">
                 <svg width="20px" height="20px" viewBox="0 0 117 117" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" stroke="#000000">
                     <g id="" stroke-width="0"/>
                     <g id="">
