@@ -47,6 +47,10 @@ Screenshots
 
 ![Extra Color Palette](../master/screenshot-settings-extra-palette.png "Extra Color Palette")
 
+**Kanboard Settings - _Custom Color Palette_**  
+
+![Custom Color Palette](../master/screenshot-settings-extra-palette.png "Custom Color Palette")
+
 **Project Settings**  
 
 ![Default Task Dropdown List](../master/screenshot-default-task-dropdown-list.png "Default Task Dropdown List")
