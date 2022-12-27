@@ -12,6 +12,7 @@ Features
 - Show color values as box examples
 - Show total color counts
 - Sort all colors alphabetically
+- Translated pretty URL `mydomain.com/settings/color-manager`
 
 **Default Color Palette**   
 - Show default color example instead of just the color name _(in Project Settings)_
