@@ -137,7 +137,7 @@ a:hover { color: var(--pp-red-alt-2) !important; }
     border-left: 1px solid;
     border-bottom: 1px solid;
     opacity: 0;
-    transition: ease-in-out all .3s;
+    transition: var(--transition-color-manager);
 }
 
 .colour-wrapper:hover .delete-icon-wrapper {
