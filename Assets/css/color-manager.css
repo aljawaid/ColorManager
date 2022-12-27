@@ -238,3 +238,9 @@ div.color-picker-square {
 .color-manager-section .add-colour-btn a:hover {
     color: var(--pp-green) !important;
 }
+
+.add-colour-btn svg {
+    vertical-align: text-top;
+    width: 1.1em;
+    height: 1.1em;
+}
