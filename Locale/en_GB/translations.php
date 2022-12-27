@@ -9,6 +9,7 @@ return array(
   //
   'Settings' => 'Settings',
   'Color Manager' => 'Colour Manager',
+  'color-manager' => 'colour-manager',
   'Custom Colors' => 'Custom Colours',
   'Add Color' => 'Add Colour',
   //
