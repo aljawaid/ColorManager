@@ -2,7 +2,7 @@
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-A new way to utilise colors to their full potential in Kanboard. Choose from 3 color palettes - default, extra (includes white) or create your own. Across all palettes, choose from **over 60 colors** to match your workflow across the interface.
+A new way to utilise colors to their full potential in Kanboard. Choose from 3 color palettes - default, extra or custom. Combining all palettes, choose from **over 60 colors** to match your workflow across the interface.
 
 
 Features
@@ -26,12 +26,12 @@ Features
 - Display CSS properties for each color (background color, border color, font color)
 
 **Custom Color Palette**  
-- Create your own favourite colors
+- Create your own favorite colors
 - Display CSS properties for each color (background color, border color)
 
 **Dropdown Color Lists**  
-- Sort colors alphabetically
-- Show color examples in the Task creation dropdown list
+- Sort colors from all palettes alphabetically
+- Show color examples in the task creation dropdown list
 - Redesign color square (left color = border, right color = background, centre dot = font color)
 - Show color examples in the Automatic Action creation dropdown list
 - Show color examples in the Project Settings dropdown list
