@@ -24,6 +24,7 @@
     --blue-icon-dark: #034CA6;
     --panel-background-color-manager: #EEEEEE;
     --box-shadow-color-manager: 1px 1px 1px 0px #000;
+    --transition-color-manager: ease-in-out all .3s;
 }
 
 .pp-blue { color: var(--pp-blue); fill: var(--pp-blue); }
@@ -39,8 +40,8 @@
 .pp-dark-green { color: var(--pp-green-dark); fill: var(--pp-green-dark); }
 .pp-orange { color: var(--pp-orange); fill: var(--pp-orange); }
 
-div, a, details, summary, i, img, table, tr, figure {
-    transition: ease-in-out all .3s;
+a, details, summary, i, img, table, tr, figure {
+    transition: var(--transition-color-manager);
 }
 
 a:hover { color: var(--pp-red-alt-2) !important; }
