@@ -64,7 +64,7 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
         $this->configModel->remove('kbcolour_backgroundcolor_'.$key);
         $this->configModel->remove('kbcolour_bordercolor_'.$key);
         
-        $this->response->redirect($this->helper->url->to('ColorManagerController', 'show', ['plugin' => 'ColorManager']));
+        $this->response->redirect($this->helper->url->to('ColorManagerController', 'show', ['plugin' => 'ColorManager', 'url' => t('color-manager')]));
 
     }
     
@@ -93,7 +93,7 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
             }
         }
         
-        $this->response->redirect($this->helper->url->to('ColorManagerController', 'show', ['plugin' => 'ColorManager']));
+        $this->response->redirect($this->helper->url->to('ColorManagerController', 'show', ['plugin' => 'ColorManager', 'url' => t('color-manager')]));
         
     }
 }
