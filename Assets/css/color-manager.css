@@ -226,7 +226,7 @@ div.color-picker-square {
 }
 
 .add-colour-btn {
-    padding: 1px 8px 1px 3px;
+    padding: 2px 8px 1px 5px;
     background: var(--pp-white);
     border: 2px solid var(--pp-green);
     position: absolute;
