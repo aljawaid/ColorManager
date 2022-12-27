@@ -235,6 +235,10 @@ div.color-picker-square {
     border-radius: var(--border-radius-color-manager);
 }
 
+.add-colour-btn a {
+    transition: var(--transition-color-manager);
+}
+
 .color-manager-section .add-colour-btn a:hover {
     color: var(--pp-green) !important;
 }
