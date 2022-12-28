@@ -75,7 +75,8 @@ Compatibility
 
 #### Other Plugins & Action Plugins
 - _No known issues_
-- Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS "A kanboard theme")
+- Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS)
+- Compatible with [PluginManager](https://github.com/aljawaid/KanboardCSS)
 #### Core Files & Templates
 - _No template overrides_
 - _No database changes_
