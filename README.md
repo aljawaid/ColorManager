@@ -15,15 +15,16 @@ Features
 - Translated pretty URL `mydomain.com/settings/color-manager`
 
 **Default Color Palette**   
+- Contains the 16 default application colors
 - Show default color example instead of just the color name _(in Project Settings)_
 - Display CSS properties for each color (background color, border color)
 
 **Extra Color Palette**  
-- **_50 New deep, rich and vibrant colors_**
+- **_Contains 50 new vibrant colors_**
 - Perfect for tasks, tags and categories
-- Solid `white` color included
-- Solid `black` color included
-- Extended colors including text color
+- Includes solid `white` color
+- Includes solid `black` color
+- Extended colors with matching or contrasting text color
 - Display CSS properties for each color (background color, border color, font color)
 
 **Custom Color Palette**  
