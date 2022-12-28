@@ -12,7 +12,7 @@ Features
 - Show color values as box examples
 - Show total color counts
 - Sort all colors alphabetically
-- Translated pretty URL `mydomain.com/settings/color-manager`
+- Pretty URL `mydomain.com/settings/color-manager`
 
 **Default Color Palette**   
 - Contains the 16 default application colors
