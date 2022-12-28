@@ -9,6 +9,7 @@ use Kanboard\Model\ColorModel;
  *
  * @package  Kanboard\Model
  * @author   Craig Crosby
+ * @author   aljawaid
  */
 class ColorModelExt extends ColorModel
 {
@@ -350,13 +351,13 @@ class ColorModelExt extends ColorModel
             foreach ($this->custom_colors() as $color => $values) {
                 $buffer .= '.task-board.color-'.$color.', .task-summary-container.color-'.$color.', .color-picker-square.color-'.$color.', .task-board-category.color-'.$color.', .table-list-category.color-'.$color.', .task-tag.color-'.$color.' {';
                 $buffer .= 'background-color: '.$values['background'].';';
-                $buffer .= 'border-color: '.$values['border'];
+                $buffer .= 'border-color: '.$values['border'].';';
                 $buffer .= '}';
-                $buffer .= 'td.color-'.$color.' { background-color: '.$values['background'].'}';
-                $buffer .= '.table-list-row.color-'.$color.' {border-left: 5px solid '.$values['border'].'}';
+                $buffer .= 'td.color-'.$color.' { background-color: '.$values['background'].'; }';
+                $buffer .= '.table-list-row.color-'.$color.' { border-left: 5px solid '.$values['border'].'; }';
                 $buffer .= 'select#form-default_color option[value="'.$color.'"], option[value="'.$color.'"] {';
                 $buffer .= 'background-color: '.$values['background'].';';
-                $buffer .= 'border-color: '.$values['border'];
+                $buffer .= 'border-color: '.$values['border'].';';
                 $buffer .= '}';
             }
         }
@@ -365,25 +366,25 @@ class ColorModelExt extends ColorModel
             $buffer .= 'background-color: '.$values['background'].';';
             $buffer .= 'border-color: '.$values['border'].';';
             if (isset($values['font'])) {
-                $buffer .= 'color: '.$values['font'].'; position: relative;}';
+                $buffer .= 'color: '.$values['font'].'; position: relative; }';
                 $buffer .= 'select#form-default_color option[value="'.$color.'"], option[value="'.$color.'"] {';
-                $buffer .= 'color: '.$values['font'];
+                $buffer .= 'color: '.$values['font'].';';
             }
             $buffer .= '}';
             if (isset($values['font'])) {
-                $buffer .= '.color-picker-square.color-'.$color.':before { content: "\2609"; text-align: center; display: block; position: absolute; margin-top: -4px; margin-left: 1px;}';
+                $buffer .= '.color-picker-square.color-'.$color.':before { content: "\2609"; text-align: center; display: block; position: absolute; margin-top: -4px; margin-left: 1px; }';
             }
-            $buffer .= 'td.color-'.$color.' { background-color: '.$values['background'].'}';
-            $buffer .= '.table-list-row.color-'.$color.' {border-left: 5px solid '.$values['border'].'}';
+            $buffer .= 'td.color-'.$color.' { background-color: '.$values['background'].'; }';
+            $buffer .= '.table-list-row.color-'.$color.' { border-left: 5px solid '.$values['border'].'; }';
             $buffer .= 'select#form-default_color option[value="'.$color.'"], option[value="'.$color.'"] {';
             $buffer .= 'background-color: '.$values['background'].';';
-            $buffer .= 'border-color: '.$values['border'];
+            $buffer .= 'border-color: '.$values['border'].';';
             $buffer .= '}';
         }
         foreach ($this->default_colors as $color => $values) {
             $buffer .= 'select#form-default_color option[value="'.$color.'"], option[value="'.$color.'"] {';
             $buffer .= 'background-color: '.$values['background'].';';
-            $buffer .= 'border-color: '.$values['border'];
+            $buffer .= 'border-color: '.$values['border'].';';
             $buffer .= '}';
         }
 
