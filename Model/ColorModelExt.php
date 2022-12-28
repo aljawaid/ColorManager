@@ -85,6 +85,7 @@ class ColorModelExt extends ColorModel
             'name' => 'Black on Orange',
             'background' => '#FFA500',
             'border' => '#000000',
+            'font' => '#000000',
         ),
         'khaki' => array(
             'name' => 'Khaki',
