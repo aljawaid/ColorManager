@@ -373,6 +373,8 @@ class ColorModelExt extends ColorModel
             $buffer .= '}';
             if (isset($values['font'])) {
                 $buffer .= '.color-picker-square.color-'.$color.':before { content: "\2609"; text-align: center; display: block; position: absolute; margin-top: -4px; margin-left: 1px; }';
+                $buffer .= '.task-summary-container.color-'.$color.' .task-summary-columns .task-summary-column { color: '.$values['font'].'; }';
+                $buffer .= '.task-summary-container.color-'.$color.' .task-summary-columns .task-summary-column span { color: '.$values['font'].'; }';
             }
             $buffer .= 'td.color-'.$color.' { background-color: '.$values['background'].'; }';
             $buffer .= '.table-list-row.color-'.$color.' { border-left: 5px solid '.$values['border'].'; }';
