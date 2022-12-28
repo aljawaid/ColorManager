@@ -22,7 +22,7 @@ class Plugin extends Base
         // Extra Page - Routes
         //  - Example: $this->route->addRoute('/my/custom/route', 'myController', 'show', 'PluginNameExampleStudlyCaps');
         //  - Must have the corresponding action in the matching controller
-        $this->route->addRoute('/settings/:url', 'ColorManagerController', 'show', 'ColorManager');
+        $this->route->addRoute('/settings/color-manager', 'ColorManagerController', 'show', 'ColorManager');
 
         $this->helper->register('customColorHelper', '\Kanboard\Plugin\ColorManager\Helper\CustomColorHelper');
         
