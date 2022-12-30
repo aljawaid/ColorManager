@@ -192,7 +192,7 @@ class ColorModelExt extends ColorModel
         ),
         'white_on_green' => array(
             'name' => 'White on Green',
-            'background' => '#00843D',
+            'background' => '#06C200',
             'border' => '#015B2A',
             'font' => '#FFFFFF',
         ),
