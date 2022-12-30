@@ -1,6 +1,15 @@
 # Changelog
 
 
+## v2.1
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- Revert: Translated Pretty URL- Must stick to `mydomain.com/settings/color-manager` as translating causes page rendering issues with other plugins' settings' pages
+- FIX: #18 make route static (Bug: Settings Page Overrides Other Plugin Settings Page)
+
+
 ## v2.0
 
 ### What's Changed
