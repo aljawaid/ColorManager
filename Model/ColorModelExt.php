@@ -122,8 +122,8 @@ class ColorModelExt extends ColorModel
         ),
         'bright_yellow' => array(
             'name' => 'Bright Yellow',
-            'background' => '#ECF87F',
-            'border' => '#E6FF07',
+            'background' => '#F7FF00',
+            'border' => '#FFE407',
         ),
         'dark_brown' => array(
             'name' => 'Dark Brown',
