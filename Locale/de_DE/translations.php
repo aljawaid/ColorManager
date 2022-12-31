@@ -4,7 +4,7 @@ return array(
   //
   // GENERAL
   //
-  'A new way to utilise colors to their full potential in Kanboard. Choose from 3 color palettes, default, extra (includes white) or create your own. Across all palettes, choose from over 70 colors to match your workflow across the interface.'  =>  'Eine neue Möglichkeit um Farben in Kanboard nutzen zu können. Es gibt jetzt drei Farbpaletten. Die Standard Palette, eine erweiterte (Extra) Palette inkl. der Farbe Weiß sowie eine eigene Palette. Bereits in der Grundausstattung stehen damit 70 Farben für alle Bereiche (Tasks, Tags usw.) zur Verfügung.',
+  'A new way to utilise colors to their full potential in Kanboard.  Choose from 2 color palettes or create your own. Across all palettes, choose from over 70 colors to match your workflow across the interface.'  =>  'Eine neue Möglichkeit, Farben in Kanboard voll auszuschöpfen. Wählen Sie aus 2 Farbpaletten oder erstellen Sie Ihre eigene. Wählen Sie in allen Paletten aus über 70 Farben, die zu Ihrem Arbeitsablauf über die Benutzeroberfläche passen.',
   //
   // ColorManagerContoller.php
   //
