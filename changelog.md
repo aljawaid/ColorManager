@@ -1,6 +1,14 @@
 # Changelog
 
 
+## v2.6
+
+### What's Changed
+_(most recent changes are listed on top):_
+- FIX: Extra Whitespaces in `de_DE`
+- Update `de_DE` Colour Names - thanks @JustFxDev
+
+
 ## v2.5
 
 ### What's Changed
@@ -17,7 +25,7 @@ _(most recent changes are listed on top):_
 - FIX: Translations Coding Consistency #21
 - FIX: Conflicting Asset Path Between Kanboard Versions
 - Translate Colour Name in Tooltip
-- NEW: Add `de_DE` Translations #21 -- thanks @JustFxDev
+- NEW: Add `de_DE` Translations #21 - thanks @JustFxDev
 - FIX: Remove Unused String
 - FIX: `white_on_green` too dark
 - FIX: `bright_yellow` not bright enough
