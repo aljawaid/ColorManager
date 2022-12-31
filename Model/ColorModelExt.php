@@ -297,6 +297,12 @@ class ColorModelExt extends ColorModel
             'border' => '#B5B5B5',
             'font' => '#B5B5B5',
         ),
+        'black_on_grey' => array(
+            'name' => 'Black on Grey',
+            'background' => '#6A6A6A',
+            'border' => '#000000',
+            'font' => '#000000',
+        ),
     );
     
     private function custom_colors()
