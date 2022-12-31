@@ -61,6 +61,7 @@ return array(
   'Deep Purple' => '',
   'Dirty Green' => '',
   'Dirty Yellow' => '',
+  'Grey on Black' => '',
   'Gold' => '',
   'Khaki' => '',
   'Lime Green' => '',
