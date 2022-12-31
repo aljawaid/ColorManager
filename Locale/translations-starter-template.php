@@ -45,6 +45,7 @@ return array(
   'Blue Grey' => '',
   'Bright Green' => '',
   'Bright Orange' => '',
+  'Bright White' => '',
   'Bright Yellow' => '',
   'Copper' => '',
   'Cream' => '',

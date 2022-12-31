@@ -285,6 +285,12 @@ class ColorModelExt extends ColorModel
             'border' => '#38240C',
             'font' => '#FFFFFF',
         ),
+        'bright_white' => array(
+            'name' => 'Bright White',
+            'background' => '#FFFFFF',
+            'border' => '#FFFFFF',
+            'font' => '#000000',
+        ),
     );
     
     private function custom_colors()
