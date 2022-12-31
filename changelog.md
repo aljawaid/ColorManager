@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v2.5
+
+### What's Changed
+_(most recent changes are listed on top):_
+- Better plugin description
+- Update mention of total count in description
+- NEW: Add 5 New Colours to Extended PaletteCloses #20
+- Add `magenta` to Extra Colour Palette- #3
+- Add `black_on_yellow` to Extra Colour Palette- #3
+- Add `black_on_grey` to Extra Colour Palette- #3
+- Add `grey_on_black` to Extra Colour Palette- #3
+- Add `bright_white` to Extra Colour Palette - Requested by @JustFxDev
+- NEW: Add Colour Name Translations #22
+- FIX: Translations Coding Consistency #21
+- FIX: Conflicting Asset Path Between Kanboard Versions
+- Translate Colour Name in Tooltip
+- NEW: Add `de_DE` Translations #21 -- thanks @JustFxDev
+- FIX: Remove Unused String
+- FIX: `white_on_green` too dark
+- FIX: `bright_yellow` not bright enough
+- Fixed path to svg icons
+
+
 ## v2.1
 
 ### What's Changed
