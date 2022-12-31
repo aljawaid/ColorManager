@@ -83,7 +83,7 @@
     <div class="colour-boxes">
         <?php ksort($preinstalledColors) ?>
         <?php foreach ($preinstalledColors as $color_id => $color): ?>
-            <div class="colour-wrapper" style="<?php if (isset($color['font'])): ?>color: <?= $color['font'] ?>;<?php endif ?> background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
+            <div class="colour-wrapper" style="<?php if (isset($color['font'])): ?>color: <?= $color['font'] ?>;<?php endif ?> background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= t($color['name']) ?>">
                 <div class="colour-name"><?= $color['name'] ?></div>
                 <div class="colour-background">
                     <span class=""><?= t('Background Color') ?></span>
