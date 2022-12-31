@@ -309,6 +309,11 @@ class ColorModelExt extends ColorModel
             'border' => '#000000',
             'font' => '#000000',
         ),
+        'magenta' => array(
+            'name' => 'Magenta',
+            'background' => '#FF00FF',
+            'border' => '#B904B9',
+        ),
     );
     
     private function custom_colors()

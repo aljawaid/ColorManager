@@ -68,6 +68,7 @@ return array(
   'Khaki' => '',
   'Lime Green' => '',
   'Lint' => '',
+  'Magenta' => '',
   'Mint Green' => '',
   'Olive' => '',
   'Orange on Black' => '',
