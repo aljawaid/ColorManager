@@ -7,7 +7,7 @@
 
 <div class="color-manager-page-header">
     <h2 class="">
-        <img class="color-manager-section-icon" src="/plugins/ColorManager/Assets/colour-palette.svg" alt="<?= t('Default Color Palette') ?>">
+        <img class="color-manager-section-icon" src="./plugins/ColorManager/Assets/colour-palette.svg" alt="<?= t('Default Color Palette') ?>">
         <!--<svg width="22" height="22" fill="currentColor" class="bi bi-palette-fill" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.433 10.07C14.133 10.585 16 11.15 16 8a8 8 0 1 0-8 8c1.996 0 1.826-1.504 1.649-3.08-.124-1.101-.252-2.237.351-2.92.465-.527 1.42-.237 2.433.07zM8 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
         </svg>-->
@@ -16,7 +16,7 @@
     <hr>
     <div class="color-manager-section">
         <h3 class="">
-            <img class="color-manager-section-icon" src="/plugins/ColorManager/Assets/palette-print.svg" alt="<?= t('Default Color Palette') ?>">
+            <img class="color-manager-section-icon" src="./plugins/ColorManager/Assets/palette-print.svg" alt="<?= t('Default Color Palette') ?>">
             <?= t('Default Color Palette') ?> <span class="colour-total-count-section"><?= count($defaultColours); ?></span>
         </h3>
         <p class="cm-section-desc">
@@ -69,7 +69,7 @@
 
     <div class="color-manager-section">
         <h3 class="">
-            <img class="color-manager-section-icon" src="/plugins/ColorManager/Assets/palette-print-bordered.svg" alt="<?= t('Extra Color Palette') ?>">
+            <img class="color-manager-section-icon" src="./plugins/ColorManager/Assets/palette-print-bordered.svg" alt="<?= t('Extra Color Palette') ?>">
             <?= t('Extra Color Palette') ?> <span class="colour-total-count-section"><?= count($this->task->colorModelExt->getStaticColors()); ?></span>
         </h3>
         <p class="cm-section-desc">
@@ -128,7 +128,7 @@
             </a>
         </button>
         <h3 class="">
-            <img class="color-manager-section-icon" src="/plugins/ColorManager/Assets/color-palette.svg" alt="<?= t('Custom Color Palette') ?>">
+            <img class="color-manager-section-icon" src="./plugins/ColorManager/Assets/color-palette.svg" alt="<?= t('Custom Color Palette') ?>">
             <?= t('Custom Color Palette') ?><span class="colour-total-count-section"><?= $customColours; ?></span>
         </h3>
         <p class="cm-section-desc">
