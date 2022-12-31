@@ -43,6 +43,7 @@ return array(
   'Black on Grey' => '',
   'Black on Orange' => '',
   'Black on Red' => '',
+  'Black on Yellow' => '',
   'Blue Grey' => '',
   'Bright Green' => '',
   'Bright Orange' => '',
