@@ -53,6 +53,8 @@ Screenshots
 
 ![Custom Color Palette](../master/screenshot-settings-custom-palette.png "Custom Color Palette")
 
+![Empty Custom Color Palette](../master/screenshot-settings-custom-palette-empty.png "Empty Custom Color Palette")
+
 **Project Settings**  
 
 ![Default Task Dropdown List](../master/screenshot-default-task-dropdown-list.png "Default Task Dropdown List")
