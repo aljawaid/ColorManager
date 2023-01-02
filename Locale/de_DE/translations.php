@@ -37,6 +37,7 @@ return array(
   'This palette shows all user created colors. These colors are unique to your application.' => 'Diese Palette zeigt alle vom Benutzer erstellten Farben. Diese Farben sind individuell für Ihre Anwendung.',
   'Color names matching colors in other palettes will override those colors. Duplicate color names will not be created.' => 'Farbnamen, die mit Farben in anderen Paletten übereinstimmen, setzen diese Farben außer Kraft. Doppelte Farbnamen werden nicht erstellt.',
   'Delete Color' => 'Farbe löschen',
+  'This palette is empty' => 'Diese Palette ist leer',
   //
   // model/ColorModelExt.php /// COLOR NAMES
   //
