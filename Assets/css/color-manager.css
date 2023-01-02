@@ -261,3 +261,15 @@ div.color-picker-square {
     width: 1.1em;
     height: 1.1em;
 }
+
+.colour-boxes .add-colour-btn {
+    position: initial;
+    font-size: 1em;
+    margin-left: 1em;
+}
+
+.colour-boxes .no-colours {
+    margin: 2em auto;
+    color: var(--pp-grey);
+    font-style: italic;
+}
