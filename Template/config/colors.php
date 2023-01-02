@@ -139,7 +139,7 @@
 
     <div class="colour-boxes">
         <?php asort($customColors) ?>
-        <?php if ($customColors != ''): ?>
+        <?php if (!empty($customColors)): ?>
             <?php foreach ($customColors as $color_id => $color): ?>
                 <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
                     <div class="colour-name"><?= $color['name'] ?>
@@ -169,6 +169,25 @@
                     </div>
                 </div>
             <?php endforeach ?>
+        <?php else: ?>
+            <p class="no-colours"><?= t('This palette is empty') ?>
+                <button id="AddColor" class="add-colour-btn">
+                    <a href="<?= $this->url->href('ColorManagerController', 'add', ['plugin' => 'colorManager'], false, '', false) ?>" class="js-modal-small" title="<?=t('Add to this palette') ?>">
+                        <svg width="20px" height="20px" viewBox="0 0 117 117" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" stroke="#000000">
+                            <g id="" stroke-width="0"/>
+                            <g id="">
+                                <g fill="none" fill-rule="evenodd" id="" stroke="none" stroke-width="1">
+                                    <g fill-rule="nonzero" id="add">
+                                        <path d="M58.5,0.5 C26.5,0.5 0.4,26.5 0.4,58.5 C0.4,90.5 26.4,116.5 58.5,116.5 C90.5,116.5 116.5,90.5 116.5,58.5 C116.5,26.5 90.5,0.5 58.5,0.5 Z M58.5,108.4 C31,108.4 8.6,86 8.6,58.5 C8.6,31 31,8.6 58.5,8.6 C86,8.6 108.4,31 108.4,58.5 C108.4,86 86,108.4 58.5,108.4 Z" fill="#4A4A4A" id=""/>
+                                        <path d="M85.2,53.9 L62.6,53.9 L62.6,31.2 C62.6,28.9 60.8,27.1 58.5,27.1 C56.2,27.1 54.4,28.9 54.4,31.2 L54.4,53.8 L31.8,53.8 C29.5,53.8 27.7,55.6 27.7,57.9 C27.7,60.2 29.5,62 31.8,62 L54.4,62 L54.4,84.6 C54.4,86.9 56.2,88.7 58.5,88.7 C60.8,88.7 62.6,86.9 62.6,84.6 L62.6,62 L85.2,62 C87.5,62 89.3,60.2 89.3,57.9 C89.3,55.6 87.5,53.9 85.2,53.9 Z" fill="#2EA02E" id=""/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <?= t('Add Color') ?>
+                    </a>
+                </button>
+            </p>
         <?php endif ?>
     </div>
 
