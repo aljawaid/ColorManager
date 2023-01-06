@@ -73,7 +73,7 @@ class ColorModelExt extends ColorModel
         'red_on_black' => array(
             'name' => 'Red on Black',
             'background' => '#000000',
-            'border' => '#F00000',
+            'border' => '#000000',
             'font' => '#F00000',
         ),
         'orange_on_black' => array(
