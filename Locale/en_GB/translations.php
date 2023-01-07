@@ -28,7 +28,7 @@ return array(
   'Change the default color in' => 'Change the default colour in',
   'Project Settings' => 'Project Settings',
   'Go to Project Settings' => 'Go to Project Settings',
-  'Extra Color Palette' => 'Extra Colour Palette',
+  'Extended Color Palette' => 'Extended Colour Palette',
   'This palette shows a collection of colors different to those in the default palette. Selected colors also use alternative colors for text. These colors are particularly suitable for tags and categories.' => 'This palette shows a collection of colours different to those in the default palette. Selected colours also use alternative colours for text. These colours are particularly suitable for tags and categories.',
   'Colors are named based on their common color name. If text colors are used, then the names are preceded by their text color.' => 'Colours are named based on their common colour name. If text colours are used, then the names are preceded by their text colour.',
   'Add to this palette' => 'Add to this palette',

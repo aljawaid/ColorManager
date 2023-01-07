@@ -29,7 +29,7 @@ return array(
   'Change the default color in' => 'Ändere die Standardfarbe zu',
   'Project Settings' => 'Projekteinstellungen',
   'Go to Project Settings' => 'Geh zu den Projekteinstellungen',
-  'Extra Color Palette' => 'Extra Farbpalette',
+  'Extended Color Palette' => 'Erweitert Farbpalette',
   'This palette shows a collection of colors different to those in the default palette. Selected colors also use alternative colors for text. These colors are particularly suitable for tags and categories.' => 'Diese Palette enthält eine Auswahl von Farben die sich von denen der Standard Palette unterscheiden. Einige Farben bringen auch eine andere Textfarbe mit, damit diese auch für Kategorien und Tags einfach verwendbar sind.',
   'Colors are named based on their common color name. If text colors are used, then the names are preceded by their text color.' => 'Die Farben werden auf der Grundlage ihres allgemeinen Farbnamens benannt. Wenn Textfarben verwendet werden, wird den Namen die Textfarbe vorangestellt.',
   'Add to this palette' => 'Zu dieser Palette hinzufügen',
