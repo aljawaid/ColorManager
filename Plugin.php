@@ -47,9 +47,9 @@ class Plugin extends Base
                 }
             }
 
-            $preinstalledColors = $this->colorModelExt->getStaticList();
+            $staticColors = $this->colorModelExt->getStaticList();
                 
-            $listing = array_merge($listing, $preinstalledColors, isset($new_list) ? $new_list : array());
+            $listing = array_merge($listing, $staticColors, isset($new_list) ? $new_list : array());
             
             array_multisort($listing, SORT_ASC, SORT_NATURAL | SORT_FLAG_CASE);
 
