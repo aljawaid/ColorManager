@@ -46,7 +46,6 @@ return array(
   //
 'Amber' => 'Bernstein',
 'Beige' => 'Beige',
-'Black on Orange' => 'Schwarz auf Orange',
 'Black on Red' => 'Schwarz auf Rot',
 'Black on Yellow' => 'Schwarz auf Gelb',
 'Blue Grey' => 'Blau Grau',
@@ -78,6 +77,7 @@ return array(
 'Olive' => 'Olivgrün',
 'Orange on Black' => 'Orange auf Schwarz',
 'Pale Blue' => 'Blassblau',
+'Pale Orange' => 'Blass Orange',
 'Pale Purple' => 'Blassviolett',
 'Peach' => 'Pfirsich',
 'Red on Black' => 'Rot auf Schwarz',

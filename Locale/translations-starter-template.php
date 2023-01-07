@@ -44,7 +44,6 @@ return array(
   // model/ColorModelExt.php /// COLOR NAMES
   //
   'Beige' => '',
-  'Black on Orange' => '',
   'Black on Red' => '',
   'Black on Yellow' => '',
   'Blue Grey' => '',
@@ -76,6 +75,7 @@ return array(
   'Olive' => '',
   'Orange on Black' => '',
   'Pale Blue' => '',
+  'Pale Orange' => '',
   'Pale Purple' => '',
   'Peach' => '',
   'Red on Black' => '',

@@ -20,12 +20,6 @@ class ColorModelExt extends ColorModel
             'background' => '#B59F84',
             'border' => '#A29380',
         ),
-        'black_on_orange' => array(
-            'name' => 'Black on Orange',
-            'background' => '#FFA500',
-            'border' => '#000000',
-            'font' => '#000000',
-        ),
         'black_on_red' => array(
             'name' => 'Black on Red',
             'background' => '#F00000',
@@ -186,6 +180,12 @@ class ColorModelExt extends ColorModel
             'name' => 'Pale Blue',
             'background' => '#90ADC6',
             'border' => '#646464',
+        ),
+        'pale_orange' => array(
+            'name' => 'Pale Orange',
+            'background' => '#FFA500',
+            'border' => '#000000',
+            'font' => '#000000',
         ),
         'pale_purple' => array(
             'name' => 'Pale Purple',
