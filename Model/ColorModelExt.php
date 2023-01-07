@@ -361,6 +361,11 @@ class ColorModelExt extends ColorModel
     {
         return $this->static_colors;
     }
+
+    public function getTextColors()
+    {
+        return $this->text_colors;
+    }
     
     public function getStaticList()
     {
@@ -373,6 +378,19 @@ class ColorModelExt extends ColorModel
 
         return $listing;
         
+    }
+
+    public function getTextColorList()
+    {
+
+        $listing = array();
+
+        foreach ($this->text_colors as $color_id => $color) {
+            $listing[$color_id] = t($color['name']);
+        }
+
+        return $listing;
+
     }
     
     public function getCssExt()
