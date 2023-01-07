@@ -46,7 +46,6 @@ return array(
   //
 'Amber' => 'Bernstein',
 'Beige' => 'Beige',
-'Black on Yellow' => 'Schwarz auf Gelb',
 'Blue Grey' => 'Blau Grau',
 'Bright Green' => 'Hellgrün',
 'Bright Red' => 'Helles Rot',

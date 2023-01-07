@@ -20,12 +20,6 @@ class ColorModelExt extends ColorModel
             'background' => '#B59F84',
             'border' => '#A29380',
         ),
-        'black_on_yellow' => array(
-            'name' => 'Black on Yellow',
-            'background' => '#F7FF00',
-            'border' => '#000000',
-            'font' => '#000000',
-        ),
         'blue_grey' => array(
             'name' => 'Blue Grey',
             'background' => '#5C7890',
