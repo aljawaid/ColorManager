@@ -1,5 +1,6 @@
 <?php $defaultColours = $this->task->colorModel->getDefaultColors(); ?>
 <?php $staticColours = $this->task->colorModelExt->getStaticColors(); ?>
+<?php $textColours = $this->task->colorModelExt->getTextColors(); ?>
 <?php $customColors = $this->task->colorModelExt->getCustomColors(); ?>
 <?php $defaultBackground = $this->task->colorModelExt->getAllColors()[$this->task->colorModel->getDefaultColor()]['background']; ?>
 <?php $defaultBorder = $this->task->colorModelExt->getAllColors()[$this->task->colorModel->getDefaultColor()]['border']; ?>
@@ -80,6 +81,49 @@
     <div class="colour-boxes">
         <?php ksort($staticColours) ?>
         <?php foreach ($staticColours as $color_id => $color): ?>
+            <div class="colour-wrapper" style="<?php if (isset($color['font'])): ?>color: <?= $color['font'] ?>;<?php endif ?> background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= t($color['name']) ?>">
+                <div class="colour-name"><?= $color['name'] ?></div>
+                <div class="colour-background">
+                    <span class=""><?= t('Background Color') ?></span>
+                    <code class="">
+                        <?php if (strpos($color['background'], '#') !== false): ?>
+                            <?= strtoupper($color['background']) ?>
+                        <?php else: ?>
+                            <?= $color['background'] ?>
+                        <?php endif ?>
+                    </code>
+                </div>
+                <div class="colour-border">
+                    <span class=""><?= t('Border Color') ?></span>
+                    <code class="">
+                        <?php if (strpos($color['border'], '#') !== false): ?>
+                            <?= strtoupper($color['border']) ?>
+                        <?php else: ?>
+                            <?= $color['border'] ?>
+                        <?php endif ?>
+                    </code>
+                </div>
+            </div>
+        <?php endforeach ?>
+    </div>
+    <hr>
+
+    <div class="color-manager-section">
+        <h3 class="">
+            <span class="color-manager-section-icon-text"></span>
+            <?= t('Text Color Palette') ?> <span class="colour-total-count-section"><?= count($this->task->colorModelExt->getTextColors()); ?></span>
+        </h3>
+        <p class="cm-section-desc">
+            <?= t('This palette shows a collection of colors different to those in the default palette and enhances colors from the extended palette. This palette primarily uses alternative colors for text. These colors are particularly suitable for tags and categories.') ?>
+        </p>
+        <p class="cm-section-desc-info-panel">
+            <i class="fa fa-info-circle"></i> <?= t('Colors are named based on their common color name. Names are preceded by their text color.') ?>
+        </p>
+    </div>
+
+    <div class="colour-boxes">
+        <?php ksort($textColours) ?>
+        <?php foreach ($textColours as $color_id => $color): ?>
             <div class="colour-wrapper" style="<?php if (isset($color['font'])): ?>color: <?= $color['font'] ?>;<?php endif ?> background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= t($color['name']) ?>">
                 <div class="colour-name"><?= $color['name'] ?></div>
                 <div class="colour-background">
