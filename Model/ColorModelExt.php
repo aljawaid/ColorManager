@@ -20,12 +20,6 @@ class ColorModelExt extends ColorModel
             'background' => '#B59F84',
             'border' => '#A29380',
         ),
-        'black_on_red' => array(
-            'name' => 'Black on Red',
-            'background' => '#F00000',
-            'border' => '#000000',
-            'font' => '#000000',
-        ),
         'black_on_yellow' => array(
             'name' => 'Black on Yellow',
             'background' => '#F7FF00',
@@ -42,6 +36,11 @@ class ColorModelExt extends ColorModel
             'background' => '#00E11A',
             'border' => '#04B318',
         ),
+        'bright_red' => array(
+            'name' => 'Bright Red',
+            'background' => '#F00000',
+            'border' => '#000000',
+            'font' => '#000000',
         ),
         'bright_white' => array(
             'name' => 'Bright White',

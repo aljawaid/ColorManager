@@ -46,10 +46,10 @@ return array(
   //
 'Amber' => 'Bernstein',
 'Beige' => 'Beige',
-'Black on Red' => 'Schwarz auf Rot',
 'Black on Yellow' => 'Schwarz auf Gelb',
 'Blue Grey' => 'Blau Grau',
 'Bright Green' => 'Hellgrün',
+'Bright Red' => 'Helles Rot',
 'Bright White' => 'Helles Weiß',
 'Bright Yellow' => 'Helles Gelb',
 'Copper' => 'Kupfer',

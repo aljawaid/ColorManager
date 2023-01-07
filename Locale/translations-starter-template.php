@@ -44,10 +44,10 @@ return array(
   // model/ColorModelExt.php /// COLOR NAMES
   //
   'Beige' => '',
-  'Black on Red' => '',
   'Black on Yellow' => '',
   'Blue Grey' => '',
   'Bright Green' => '',
+  'Bright Red' => '',
   'Bright White' => '',
   'Bright Yellow' => '',
   'Copper' => '',
