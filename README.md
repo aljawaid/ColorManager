@@ -123,6 +123,7 @@ Translations
 ------------
 
 - English (UK)
+- German
 - _Contributors welcome_
 - _Starter template available_
 
