@@ -316,6 +316,9 @@ class ColorModelExt extends ColorModel
         ),
     );
     
+    protected $text_colors = array(
+    );
+
     private function custom_colors()
     {
         $custom_colors = $this->configModel->get('kbcolour_ids','');
