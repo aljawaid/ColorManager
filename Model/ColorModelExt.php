@@ -42,10 +42,6 @@ class ColorModelExt extends ColorModel
             'background' => '#00E11A',
             'border' => '#04B318',
         ),
-        'bright_orange' => array(
-            'name' => 'Bright Orange',
-            'background' => '#FF6D36',
-            'border' => '#F05216',
         ),
         'bright_white' => array(
             'name' => 'Bright White',
@@ -202,6 +198,10 @@ class ColorModelExt extends ColorModel
             'background' => '#000000',
             'border' => '#000000',
             'font' => '#F00000',
+        'pumpkin_orange' => array(
+            'name' => 'Pumpkin Orange',
+            'background' => '#FF6D36',
+            'border' => '#F05216',
         ),
         'scarlet' => array(
             'name' => 'Scarlet',
