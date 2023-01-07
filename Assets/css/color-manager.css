@@ -52,6 +52,10 @@
     margin: var(--header-page-margin-color-manager);
 }
 
+.color-manager-page-header h2, .color-manager-section h3 {
+    font-weight: bold;
+}
+
 .color-manager-page-header h2 svg {
     vertical-align: sub;
     /*width: 1.4em;*/
