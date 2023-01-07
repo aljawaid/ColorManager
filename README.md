@@ -19,7 +19,7 @@ Features
 - Show default color example instead of just the color name _(in Project Settings)_
 - Display CSS properties for each color (background color, border color)
 
-**Extra Color Palette**  
+**Extended Color Palette**  
 - **_Contains 55 new vibrant colors_**
 - Perfect for tasks, tags and categories
 - Includes variations of `white`
@@ -47,7 +47,7 @@ Screenshots
 
 **Kanboard Settings - _Extra Color Palette_**  
 
-![Extra Color Palette](../master/screenshot-settings-extra-palette.png "Extra Color Palette")
+![Extended Color Palette](../master/screenshot-settings-extra-palette.png "Extended Color Palette")
 
 **Kanboard Settings - _Custom Color Palette_**  
 
