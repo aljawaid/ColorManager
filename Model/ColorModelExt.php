@@ -303,12 +303,6 @@ class ColorModelExt extends ColorModel
             'border' => '#F00000',
             'font' => '#FFFFFF',
         ),
-        'white_on_scarlet' => array(
-            'name' => 'White on Scarlet',
-            'background' => '#AE0000',
-            'border' => '#6A0303',
-            'font' => '#FFFFFF',
-        ),
         'yellow_green' => array(
             'name' => 'Yellow Green',
             'background' => '#C8DF52',
@@ -317,6 +311,12 @@ class ColorModelExt extends ColorModel
     );
     
     protected $text_colors = array(
+        'white_on_scarlet' => array(
+            'name' => 'White on Scarlet',
+            'background' => '#AE0000',
+            'border' => '#6A0303',
+            'font' => '#FFFFFF',
+        ),
     );
 
     private function custom_colors()
