@@ -66,7 +66,7 @@
 
     <div class="color-manager-section">
         <h3 class="">
-            <span class="color-manager-section-icon-extra"></span>
+            <span class="color-manager-section-icon-extended"></span>
             <?= t('Extended Color Palette') ?> <span class="colour-total-count-section"><?= count($this->task->colorModelExt->getStaticColors()); ?></span>
         </h3>
         <p class="cm-section-desc">
