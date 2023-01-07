@@ -1,5 +1,5 @@
 <?php $defaultColours = $this->task->colorModel->getDefaultColors(); ?>
-<?php $preinstalledColors = $this->task->colorModelExt->getStaticColors(); ?>
+<?php $staticColours = $this->task->colorModelExt->getStaticColors(); ?>
 <?php $customColors = $this->task->colorModelExt->getCustomColors(); ?>
 <?php $defaultBackground = $this->task->colorModelExt->getAllColors()[$this->task->colorModel->getDefaultColor()]['background']; ?>
 <?php $defaultBorder = $this->task->colorModelExt->getAllColors()[$this->task->colorModel->getDefaultColor()]['border']; ?>
@@ -78,8 +78,8 @@
     </div>
 
     <div class="colour-boxes">
-        <?php ksort($preinstalledColors) ?>
-        <?php foreach ($preinstalledColors as $color_id => $color): ?>
+        <?php ksort($staticColours) ?>
+        <?php foreach ($staticColours as $color_id => $color): ?>
             <div class="colour-wrapper" style="<?php if (isset($color['font'])): ?>color: <?= $color['font'] ?>;<?php endif ?> background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= t($color['name']) ?>">
                 <div class="colour-name"><?= $color['name'] ?></div>
                 <div class="colour-background">
