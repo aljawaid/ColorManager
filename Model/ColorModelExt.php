@@ -15,15 +15,263 @@ class ColorModelExt extends ColorModel
 {
     
     protected $static_colors = array(
-        'white' => array(
-            'name' => 'White',
+        'beige' => array(
+            'name' => 'Beige',
+            'background' => '#B59F84',
+            'border' => '#A29380',
+        ),
+        'black_on_grey' => array(
+            'name' => 'Black on Grey',
+            'background' => '#6A6A6A',
+            'border' => '#000000',
+            'font' => '#000000',
+        ),
+        'black_on_orange' => array(
+            'name' => 'Black on Orange',
+            'background' => '#FFA500',
+            'border' => '#000000',
+            'font' => '#000000',
+        ),
+        'black_on_red' => array(
+            'name' => 'Black on Red',
+            'background' => '#F00000',
+            'border' => '#000000',
+            'font' => '#000000',
+        ),
+        'black_on_yellow' => array(
+            'name' => 'Black on Yellow',
+            'background' => '#F7FF00',
+            'border' => '#000000',
+            'font' => '#000000',
+        ),
+        'blue_grey' => array(
+            'name' => 'Blue Grey',
+            'background' => '#5C7890',
+            'border' => '#405364',
+        ),
+        'bright_green' => array(
+            'name' => 'Bright Green',
+            'background' => '#00E11A',
+            'border' => '#04B318',
+        ),
+        'bright_orange' => array(
+            'name' => 'Bright Orange',
+            'background' => '#FF6D36',
+            'border' => '#F05216',
+        ),
+        'bright_white' => array(
+            'name' => 'Bright White',
             'background' => '#FFFFFF',
-            'border' => '#EEEEEE',
+            'border' => '#FFFFFF',
+            'font' => '#000000',
+        ),
+        'bright_yellow' => array(
+            'name' => 'Bright Yellow',
+            'background' => '#F7FF00',
+            'border' => '#FFE407',
+        ),
+        'copper' => array(
+            'name' => 'Copper',
+            'background' => '#B77729',
+            'border' => '#38240C',
+        ),
+        'cream' => array(
+            'name' => 'Cream',
+            'background' => '#FDE7A6',
+            'border' => '#FDD662',
         ),
         'crimson' => array(
             'name' => 'Crimson',
             'background' => '#DC143C',
             'border' => '#800000',
+        ),
+        'dark_brown' => array(
+            'name' => 'Dark Brown',
+            'background' => '#65463E',
+            'border' => '#332623',
+        ),
+        'dark_gold' => array(
+            'name' => 'Dark Gold',
+            'background' => '#DBA40E',
+            'border' => '#8E6A08',
+        ),
+        'dark_red' => array(
+            'name' => 'Dark Red',
+            'background' => '#951313',
+            'border' => '#DC143C',
+        ),
+        'dark_pink' => array(
+            'name' => 'Dark Pink',
+            'background' => '#8C6070',
+            'border' => '#F48FB1',
+        ),
+        'deep_amber' => array(
+            'name' => 'Deep Amber',
+            'background' => '#F0AD4E',
+            'border' => '#BD7309',
+        ),
+        'deep_green' => array(
+            'name' => 'Deep Green',
+            'background' => '#0A7029',
+            'border' => '#024015',
+        ),
+        'deep_grey' => array(
+            'name' => 'Deep Grey',
+            'background' => '#868B8E',
+            'border' => '#646464',
+        ),
+        'deep_purple' => array(
+            'name' => 'Deep Purple',
+            'background' => '#8E44AD',
+            'border' => '#610288',
+        ),
+        'dirty_green' => array(
+            'name' => 'Dirty Green',
+            'background' => '#5CB85C',
+            'border' => '#367936',
+        ),
+        'dirty_yellow' => array(
+            'name' => 'Dirty Yellow',
+            'background' => '#D1D100',
+            'border' => '#6C6C0F',
+        ),
+        'gold' => array(
+            'name' => 'Gold',
+            'background' => '#F8D210',
+            'border' => '#A48900',
+        ),
+        'grey_on_black' => array(
+            'name' => 'Grey on Black',
+            'background' => '#000000',
+            'border' => '#B5B5B5',
+            'font' => '#B5B5B5',
+        ),
+        'khaki' => array(
+            'name' => 'Khaki',
+            'background' => '#A88C6A',
+            'border' => '#755024',
+        ),
+        'lime_green' => array(
+            'name' => 'Lime Green',
+            'background' => '#63B83E',
+            'border' => '#39771E',
+        ),
+        'lint' => array(
+            'name' => 'Lint',
+            'background' => '#BACC81',
+            'border' => '#99A869',
+        ),
+        'magenta' => array(
+            'name' => 'Magenta',
+            'background' => '#FF00FF',
+            'border' => '#B904B9',
+        ),
+        'mint_green' => array(
+            'name' => 'Mint Green',
+            'background' => '#2CF760',
+            'border' => '#BDF4CB',
+        ),
+        'olive' => array(
+            'name' => 'Olive',
+            'background' => '#5E7345',
+            'border' => '#252D1C',
+        ),
+        'orange_on_black' => array(
+            'name' => 'Orange on Black',
+            'background' => '#000000',
+            'border' => '#000000',
+            'font' => '#FFA500',
+        ),
+        'pale_blue' => array(
+            'name' => 'Pale Blue',
+            'background' => '#90ADC6',
+            'border' => '#646464',
+        ),
+        'pale_purple' => array(
+            'name' => 'Pale Purple',
+            'background' => '#A16AE8',
+            'border' => '#6B3AAA',
+        ),
+        'peach' => array(
+            'name' => 'Peach',
+            'background' => '#FC4F46',
+            'border' => '#F22B2B',
+        ),
+        'red_on_black' => array(
+            'name' => 'Red on Black',
+            'background' => '#000000',
+            'border' => '#000000',
+            'font' => '#F00000',
+        ),
+        'scarlet' => array(
+            'name' => 'Scarlet',
+            'background' => '#AE0000',
+            'border' => '#6A0303',
+        ),
+        'white' => array(
+            'name' => 'White',
+            'background' => '#FFFFFF',
+            'border' => '#EEEEEE',
+        ),
+        'white_on_black' => array(
+            'name' => 'White on Black',
+            'background' => '#000000',
+            'border' => '#000000',
+            'font' => '#FFFFFF',
+        ),
+        'white_on_blue_grey' => array(
+            'name' => 'White on Blue Grey',
+            'background' => '#5C7890',
+            'border' => '#405364',
+            'font' => '#FFFFFF',
+        ),
+        'white_on_copper' => array(
+            'name' => 'White on Copper',
+            'background' => '#B77729',
+            'border' => '#38240C',
+            'font' => '#FFFFFF',
+        ),
+        'white_on_dark_brown' => array(
+            'name' => 'White on Dark Brown',
+            'background' => '#65463E',
+            'border' => '#332623',
+            'font' => '#FFFFFF',
+        ),
+        'white_on_dark_red' => array(
+            'name' => 'White on Dark Red',
+            'background' => '#951313',
+            'border' => '#DC143C',
+            'font' => '#FFFFFF',
+        ),
+        'white_on_dark_teal' => array(
+            'name' => 'White on Dark Teal',
+            'background' => '#00695C',
+            'border' => '#004038',
+            'font' => '#FFFFFF',
+        ),
+        'white_on_deep_blue' => array(
+            'name' => 'White on Deep Blue',
+            'background' => '#0000FF',
+            'border' => '#030373',
+            'font' => '#FFFFFF',
+        ),
+        'white_on_deep_green' => array(
+            'name' => 'White on Deep Green',
+            'background' => '#0A7029',
+            'border' => '#024015',
+            'font' => '#FFFFFF',
+        ),
+        'white_on_deep_grey' => array(
+            'name' => 'White on Deep Grey',
+            'background' => '#868B8E',
+            'border' => '#646464',
+            'font' => '#FFFFFF',
+        ),
+        'white_on_green' => array(
+            'name' => 'White on Green',
+            'background' => '#06C200',
+            'border' => '#015B2A',
+            'font' => '#FFFFFF',
         ),
         'white_on_maroon' => array(
             'name' => 'White on Maroon',
@@ -31,25 +279,16 @@ class ColorModelExt extends ColorModel
             'border' => '#4F0404',
             'font' => '#FFFFFF',
         ),
-        'mint_green' => array(
-            'name' => 'Mint Green',
-            'background' => '#2CF760',
-            'border' => '#BDF4CB',
+        'white_on_olive' => array(
+            'name' => 'White on Olive',
+            'background' => '#5E7345',
+            'border' => '#252D1C',
+            'font' => '#FFFFFF',
         ),
-        'gold' => array(
-            'name' => 'Gold',
-            'background' => '#F8D210',
-            'border' => '#A48900',
-        ),
-        'dark_gold' => array(
-            'name' => 'Dark Gold',
-            'background' => '#DBA40E',
-            'border' => '#8E6A08',
-        ),
-        'white_on_dark_teal' => array(
-            'name' => 'White on Dark Teal',
-            'background' => '#00695C',
-            'border' => '#004038',
+        'white_on_peach' => array(
+            'name' => 'White on Peach',
+            'background' => '#FC4F46',
+            'border' => '#F22B2B',
             'font' => '#FFFFFF',
         ),
         'white_on_purple' => array(
@@ -64,255 +303,16 @@ class ColorModelExt extends ColorModel
             'border' => '#F00000',
             'font' => '#FFFFFF',
         ),
-        'black_on_red' => array(
-            'name' => 'Black on Red',
-            'background' => '#F00000',
-            'border' => '#000000',
-            'font' => '#000000',
-        ),
-        'red_on_black' => array(
-            'name' => 'Red on Black',
-            'background' => '#000000',
-            'border' => '#000000',
-            'font' => '#F00000',
-        ),
-        'orange_on_black' => array(
-            'name' => 'Orange on Black',
-            'background' => '#000000',
-            'border' => '#000000',
-            'font' => '#FFA500',
-        ),
-        'black_on_orange' => array(
-            'name' => 'Black on Orange',
-            'background' => '#FFA500',
-            'border' => '#000000',
-            'font' => '#000000',
-        ),
-        'khaki' => array(
-            'name' => 'Khaki',
-            'background' => '#A88C6A',
-            'border' => '#755024',
-        ),
-        'lime_green' => array(
-            'name' => 'Lime Green',
-            'background' => '#63B83E',
-            'border' => '#39771E',
-        ),
-        'dark_red' => array(
-            'name' => 'Dark Red',
-            'background' => '#951313',
-            'border' => '#DC143C',
-        ),
-        'white_on_dark_red' => array(
-            'name' => 'White on Dark Red',
-            'background' => '#951313',
-            'border' => '#DC143C',
-            'font' => '#FFFFFF',
-        ),
-        'blue_grey' => array(
-            'name' => 'Blue Grey',
-            'background' => '#5C7890',
-            'border' => '#405364',
-        ),
-        'white_on_blue_grey' => array(
-            'name' => 'White on Blue Grey',
-            'background' => '#5C7890',
-            'border' => '#405364',
-            'font' => '#FFFFFF',
-        ),
-        'bright_yellow' => array(
-            'name' => 'Bright Yellow',
-            'background' => '#F7FF00',
-            'border' => '#FFE407',
-        ),
-        'dark_brown' => array(
-            'name' => 'Dark Brown',
-            'background' => '#65463E',
-            'border' => '#332623',
-        ),
-        'white_on_dark_brown' => array(
-            'name' => 'White on Dark Brown',
-            'background' => '#65463E',
-            'border' => '#332623',
-            'font' => '#FFFFFF',
-        ),
-        'lint' => array(
-            'name' => 'Lint',
-            'background' => '#BACC81',
-            'border' => '#99A869',
-        ),
-        'dark_pink' => array(
-            'name' => 'Dark Pink',
-            'background' => '#8C6070',
-            'border' => '#F48FB1',
-        ),
-        'peach' => array(
-            'name' => 'Peach',
-            'background' => '#FC4F46',
-            'border' => '#F22B2B',
-        ),
-        'white_on_peach' => array(
-            'name' => 'White on Peach',
-            'background' => '#FC4F46',
-            'border' => '#F22B2B',
-            'font' => '#FFFFFF',
-        ),
-        'olive' => array(
-            'name' => 'Olive',
-            'background' => '#5E7345',
-            'border' => '#252D1C',
-        ),
-        'white_on_olive' => array(
-            'name' => 'White on Olive',
-            'background' => '#5E7345',
-            'border' => '#252D1C',
-            'font' => '#FFFFFF',
-        ),
-        'scarlet' => array(
-            'name' => 'Scarlet',
-            'background' => '#AE0000',
-            'border' => '#6A0303',
-        ),
         'white_on_scarlet' => array(
             'name' => 'White on Scarlet',
             'background' => '#AE0000',
             'border' => '#6A0303',
             'font' => '#FFFFFF',
         ),
-        'deep_grey' => array(
-            'name' => 'Deep Grey',
-            'background' => '#868B8E',
-            'border' => '#646464',
-        ),
-        'white_on_deep_grey' => array(
-            'name' => 'White on Deep Grey',
-            'background' => '#868B8E',
-            'border' => '#646464',
-            'font' => '#FFFFFF',
-        ),
-        'white_on_green' => array(
-            'name' => 'White on Green',
-            'background' => '#06C200',
-            'border' => '#015B2A',
-            'font' => '#FFFFFF',
-        ),
-        'beige' => array(
-            'name' => 'Beige',
-            'background' => '#B59F84',
-            'border' => '#A29380',
-        ),
-        'pale_purple' => array(
-            'name' => 'Pale Purple',
-            'background' => '#A16AE8',
-            'border' => '#6B3AAA',
-        ),
-        'white_on_black' => array(
-            'name' => 'White on Black',
-            'background' => '#000000',
-            'border' => '#000000',
-            'font' => '#FFFFFF',
-        ),
-        'pale_blue' => array(
-            'name' => 'Pale Blue',
-            'background' => '#90ADC6',
-            'border' => '#646464',
-        ),
         'yellow_green' => array(
             'name' => 'Yellow Green',
             'background' => '#C8DF52',
             'border' => '#A5BB32',
-        ),
-        'deep_green' => array(
-            'name' => 'Deep Green',
-            'background' => '#0A7029',
-            'border' => '#024015',
-        ),
-        'white_on_deep_green' => array(
-            'name' => 'White on Deep Green',
-            'background' => '#0A7029',
-            'border' => '#024015',
-            'font' => '#FFFFFF',
-        ),
-        'bright_orange' => array(
-            'name' => 'Bright Orange',
-            'background' => '#FF6D36',
-            'border' => '#F05216',
-        ),
-        'bright_green' => array(
-            'name' => 'Bright Green',
-            'background' => '#00E11A',
-            'border' => '#04B318',
-        ),
-        'white_on_deep_blue' => array(
-            'name' => 'White on Deep Blue',
-            'background' => '#0000FF',
-            'border' => '#030373',
-            'font' => '#FFFFFF',
-        ),
-        'dirty_yellow' => array(
-            'name' => 'Dirty Yellow',
-            'background' => '#D1D100',
-            'border' => '#6C6C0F',
-        ),
-        'deep_purple' => array(
-            'name' => 'Deep Purple',
-            'background' => '#8E44AD',
-            'border' => '#610288',
-        ),
-        'deep_amber' => array(
-            'name' => 'Deep Amber',
-            'background' => '#F0AD4E',
-            'border' => '#BD7309',
-        ),
-        'dirty_green' => array(
-            'name' => 'Dirty Green',
-            'background' => '#5CB85C',
-            'border' => '#367936',
-        ),
-        'cream' => array(
-            'name' => 'Cream',
-            'background' => '#FDE7A6',
-            'border' => '#FDD662',
-        ),
-        'copper' => array(
-            'name' => 'Copper',
-            'background' => '#B77729',
-            'border' => '#38240C',
-        ),
-        'white_on_copper' => array(
-            'name' => 'White on Copper',
-            'background' => '#B77729',
-            'border' => '#38240C',
-            'font' => '#FFFFFF',
-        ),
-        'bright_white' => array(
-            'name' => 'Bright White',
-            'background' => '#FFFFFF',
-            'border' => '#FFFFFF',
-            'font' => '#000000',
-        ),
-        'grey_on_black' => array(
-            'name' => 'Grey on Black',
-            'background' => '#000000',
-            'border' => '#B5B5B5',
-            'font' => '#B5B5B5',
-        ),
-        'black_on_grey' => array(
-            'name' => 'Black on Grey',
-            'background' => '#6A6A6A',
-            'border' => '#000000',
-            'font' => '#000000',
-        ),
-        'black_on_yellow' => array(
-            'name' => 'Black on Yellow',
-            'background' => '#F7FF00',
-            'border' => '#000000',
-            'font' => '#000000',
-        ),
-        'magenta' => array(
-            'name' => 'Magenta',
-            'background' => '#FF00FF',
-            'border' => '#B904B9',
         ),
     );
     
