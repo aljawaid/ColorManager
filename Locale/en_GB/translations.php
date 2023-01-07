@@ -44,7 +44,6 @@ return array(
   // model/ColorModelExt.php /// COLOR NAMES
   //
   'Beige' => 'Beige',
-  'Black on Grey' => 'Black on Grey',
   'Black on Orange' => 'Black on Orange',
   'Black on Red' => 'Black on Red',
   'Black on Yellow' => 'Black on Yellow',
@@ -64,6 +63,7 @@ return array(
   'Deep Green' => 'Deep Green',
   'Deep Grey' => 'Deep Grey',
   'Deep Purple' => 'Deep Purple',
+  'Dim Grey' => 'Dim Grey',
   'Dirty Green' => 'Dirty Green',
   'Dirty Yellow' => 'Dirty Yellow',
   'Gold' => 'Gold',

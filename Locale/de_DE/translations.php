@@ -46,7 +46,6 @@ return array(
   //
 'Amber' => 'Bernstein',
 'Beige' => 'Beige',
-'Black on Grey' => 'Schwarz auf Grau',
 'Black on Orange' => 'Schwarz auf Orange',
 'Black on Red' => 'Schwarz auf Rot',
 'Black on Yellow' => 'Schwarz auf Gelb',
@@ -66,6 +65,7 @@ return array(
 'Deep Green' => 'Tiefgrün',
 'Deep Grey' => 'Tiefes Grau',
 'Deep Purple' => 'Tiefes Violett',
+'Dim Grey' => 'Abm Grau',
 'Dirty Green' => 'Schmutziges Grün',
 'Dirty Yellow' => 'Schmutziges Gelb',
 'Grey on Black' => 'Grau auf Schwarz',

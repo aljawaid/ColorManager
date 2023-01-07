@@ -20,12 +20,6 @@ class ColorModelExt extends ColorModel
             'background' => '#B59F84',
             'border' => '#A29380',
         ),
-        'black_on_grey' => array(
-            'name' => 'Black on Grey',
-            'background' => '#6A6A6A',
-            'border' => '#000000',
-            'font' => '#000000',
-        ),
         'black_on_orange' => array(
             'name' => 'Black on Orange',
             'background' => '#FFA500',
@@ -124,6 +118,12 @@ class ColorModelExt extends ColorModel
             'name' => 'Deep Purple',
             'background' => '#8E44AD',
             'border' => '#610288',
+        ),
+        'dim_grey' => array(
+            'name' => 'Dim Grey',
+            'background' => '#6A6A6A',
+            'border' => '#000000',
+            'font' => '#000000',
         ),
         'dirty_green' => array(
             'name' => 'Dirty Green',
