@@ -67,7 +67,7 @@
     <div class="color-manager-section">
         <h3 class="">
             <span class="color-manager-section-icon-extra"></span>
-            <?= t('Extra Color Palette') ?> <span class="colour-total-count-section"><?= count($this->task->colorModelExt->getStaticColors()); ?></span>
+            <?= t('Extended Color Palette') ?> <span class="colour-total-count-section"><?= count($this->task->colorModelExt->getStaticColors()); ?></span>
         </h3>
         <p class="cm-section-desc">
             <?= t('This palette shows a collection of colors different to those in the default palette. Selected colors also use alternative colors for text. These colors are particularly suitable for tags and categories.') ?>
