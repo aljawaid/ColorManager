@@ -48,8 +48,10 @@ class Plugin extends Base
             }
 
             $staticColors = $this->colorModelExt->getStaticList();
+
+            $textColors = $this->colorModelExt->getTextColorList();
                 
-            $listing = array_merge($listing, $staticColors, isset($new_list) ? $new_list : array());
+            $listing = array_merge($listing, $staticColors, $textColors, isset($new_list) ? $new_list : array());
             
             array_multisort($listing, SORT_ASC, SORT_NATURAL | SORT_FLAG_CASE);
 
