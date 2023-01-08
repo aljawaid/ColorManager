@@ -362,6 +362,12 @@ class ColorModelExt extends ColorModel
             'border' => '#6A0303',
             'font' => '#FFFFFF',
         ),
+        'white_on_supreme_blue' => array(
+            'name' => 'White on Supreme Blue',
+            'background' => '#1953BE',
+            'border' => '#1953BE',
+            'font' => '#FFFFFF',
+        ),
     );
 
     private function custom_colors()

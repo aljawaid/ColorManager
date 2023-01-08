@@ -105,6 +105,7 @@ return array(
   'White on Peach' => 'White on Peach',
   'White on Purple' => 'White on Purple',
   'White on Red Orange' => 'White on Red Orange',
+  'White on Supreme Blue' => 'White on Supreme Blue',
   'White on Scarlet' => 'White on Scarlet',
   'Yellow Green' => 'Yellow Green',
 );
