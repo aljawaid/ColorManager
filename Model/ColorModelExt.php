@@ -189,6 +189,14 @@ class ColorModelExt extends ColorModel
             'background' => '#FFFFFF',
             'border' => '#EEEEEE',
         ),
+        'yellow_green' => array(
+            'name' => 'Yellow Green',
+            'background' => '#C8DF52',
+            'border' => '#A5BB32',
+        ),
+    );
+
+    protected $text_colors = array(
         'grey_on_black' => array(
             'name' => 'Grey on Black',
             'background' => '#000000',
@@ -297,14 +305,6 @@ class ColorModelExt extends ColorModel
             'border' => '#F00000',
             'font' => '#FFFFFF',
         ),
-        'yellow_green' => array(
-            'name' => 'Yellow Green',
-            'background' => '#C8DF52',
-            'border' => '#A5BB32',
-        ),
-    );
-    
-    protected $text_colors = array(
         'white_on_scarlet' => array(
             'name' => 'White on Scarlet',
             'background' => '#AE0000',
