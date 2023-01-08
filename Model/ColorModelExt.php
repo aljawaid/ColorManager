@@ -205,6 +205,12 @@ class ColorModelExt extends ColorModel
             'background' => '#AE0000',
             'border' => '#6A0303',
         ),
+        'supreme_blue' => array(
+            'name' => 'Supreme Blue',
+            'background' => '#1953BE',
+            'border' => '#1953BE',
+            'font' => '#000000',
+        ),
         'white' => array(
             'name' => 'White',
             'background' => '#FFFFFF',

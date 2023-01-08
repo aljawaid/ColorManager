@@ -88,6 +88,7 @@ return array(
   'Red on Black' => 'Rot auf Schwarz',
   'Red Orange' => 'Rot Orange',
   'Scarlet' => 'Scharlachrot',
+  'Supreme Blue' => 'Höchstes Blau',
   'White' => 'Weiß',
   'White on Black' => 'Weiß auf Schwarz',
   'White on Blood Red' => 'Weiß auf Blutrot',

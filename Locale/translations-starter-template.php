@@ -86,6 +86,7 @@ return array(
   'Red on Black' => '',
   'Red Orange' => '',
   'Scarlet' => '',
+  'Supreme Blue' => '',
   'White' => '',
   'White on Black' => '',
   'White on Blood Red' => '',
