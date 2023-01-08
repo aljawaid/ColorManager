@@ -84,6 +84,7 @@ return array(
   'Peach' => 'Peach',
   'Pumpkin Orange' => 'Pumpkin Orange',
   'Red on Black' => 'Red on Black',
+  'Red Orange' => 'Red Orange',
   'Scarlet' => 'Scarlet',
   'White' => 'White',
   'White on Black' => 'White on Black',

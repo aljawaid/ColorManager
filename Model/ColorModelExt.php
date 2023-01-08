@@ -195,6 +195,11 @@ class ColorModelExt extends ColorModel
             'background' => '#FF6D36',
             'border' => '#F05216',
         ),
+        'red_orange' => array(
+            'name' => 'Red Orange',
+            'background' => '#FF3F00',
+            'border' => '#FF3F00',
+        ),
         'scarlet' => array(
             'name' => 'Scarlet',
             'background' => '#AE0000',
