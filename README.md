@@ -88,6 +88,7 @@ Compatibility
 - _No known issues_
 - Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS)
 - Compatible with [PluginManager](https://github.com/aljawaid/KanboardCSS)
+- Compatible with [ThemeMaestro](https://github.com/JustFxDev/ThemeMaestro)
 #### Core Files & Templates
 - _No template overrides_
 - _No database changes_
