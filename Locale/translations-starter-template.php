@@ -58,6 +58,7 @@ return array(
   'Cream' => '',
   'Crimson' => '',
   'Dark Brown' => '',
+  'Dark Brown on Cream' => '',
   'Dark Gold' => '',
   'Dark Pink' => '',
   'Dark Red' => '',

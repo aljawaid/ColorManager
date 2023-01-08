@@ -230,6 +230,12 @@ class ColorModelExt extends ColorModel
             'border' => '#000000',
             'font' => '#700000',
         ),
+        'dark_brown_on_cream' => array(
+            'name' => 'Dark Brown on Cream',
+            'background' => '#FDE7A6',
+            'border' => '#FDD662',
+            'font' => '#846101',
+        ),
         'deep_blue_on_aqua' => array(
             'name' => 'Deep Blue on Aqua',
             'background' => '#1FE1E7',

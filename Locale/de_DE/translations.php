@@ -60,6 +60,7 @@ return array(
   'Cream' => 'Creme',
   'Crimson' => 'Karminrot',
   'Dark Brown' => 'Dunkelbraun',
+  'Dark Brown on Cream' => 'Dunkelbraun auf Creme',
   'Dark Gold' => 'Dunkelgold',
   'Dark Pink' => 'Dunkelrosa',
   'Dark Red' => 'Dunkelrot',
