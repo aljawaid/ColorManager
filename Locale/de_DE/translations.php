@@ -61,6 +61,7 @@ return array(
   'Dark Pink' => 'Dunkelrosa',
   'Dark Red' => 'Dunkelrot',
   'Deep Amber' => 'Tiefes Bernstein',
+  'Deep Blue on Aqua' => 'Tiefblau auf Aqua',
   'Deep Green' => 'Tiefgrün',
   'Deep Grey' => 'Tiefes Grau',
   'Deep Purple' => 'Tiefes Violett',

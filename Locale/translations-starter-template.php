@@ -59,6 +59,7 @@ return array(
   'Dark Pink' => '',
   'Dark Red' => '',
   'Deep Amber' => '',
+  'Deep Blue on Aqua' => '',
   'Deep Green' => '',
   'Deep Grey' => '',
   'Deep Purple' => '',

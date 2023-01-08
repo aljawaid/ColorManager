@@ -202,6 +202,12 @@ class ColorModelExt extends ColorModel
     );
 
     protected $text_colors = array(
+        'deep_blue_on_aqua' => array(
+            'name' => 'Deep Blue on Aqua',
+            'background' => '#1FE1E7',
+            'border' => '#1FE1E7',
+            'font' => '#0000FF',
+        ),
         'grey_on_black' => array(
             'name' => 'Grey on Black',
             'background' => '#000000',
