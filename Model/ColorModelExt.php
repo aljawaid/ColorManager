@@ -238,6 +238,12 @@ class ColorModelExt extends ColorModel
             'border' => '#000000',
             'font' => '#FFFFFF',
         ),
+        'white_on_blood_red' => array(
+            'name' => 'White on Blood Red',
+            'background' => '#700000',
+            'border' => '#700000',
+            'font' => '#FFFFFF',
+        ),
         'white_on_blue_grey' => array(
             'name' => 'White on Blue Grey',
             'background' => '#5C7890',
