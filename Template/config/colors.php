@@ -146,6 +146,16 @@
                         <?php endif ?>
                     </code>
                 </div>
+                <div class="colour-font">
+                    <span class=""><?= t('Text Color') ?></span>
+                    <code class="">
+                        <?php if (strpos($color['font'], '#') !== false): ?>
+                            <?= strtoupper($color['font']) ?>
+                        <?php else: ?>
+                            <?= $color['font'] ?>
+                        <?php endif ?>
+                    </code>
+                </div>
             </div>
         <?php endforeach ?>
     </div>

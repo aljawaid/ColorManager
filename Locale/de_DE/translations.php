@@ -35,6 +35,7 @@ return array(
   'Text Color Palette' => 'Text Farbpalette',
   'This palette shows a collection of colors different to those in the default palette and enhances colors from the extended palette. This palette primarily uses alternative colors for text. These colors are particularly suitable for tags and categories.' => 'Diese Palette zeigt eine Sammlung von Farben, die sich von denen in der Standardpalette unterscheiden, und verbessert Farben aus der erweiterten Palette. Diese Palette verwendet hauptsächlich alternative Farben für Text. Diese Farben eignen sich besonders gut für Tags und Kategorien.',
   'Colors are named based on their common color name. Names are preceded by their text color.' => 'Die Farben werden auf der Grundlage ihres allgemeinen Farbnamens benannt. Namen wird ihre Textfarbe vorangestellt.',
+  'Text Color' => 'Textfarbe',
   'Add to this palette' => 'Zu dieser Palette hinzufügen',
   'Custom Color Palette' => 'Benutzerdefinierte Farbpalette',
   'This palette shows all user created colors. These colors are unique to your application.' => 'Diese Palette zeigt alle vom Benutzer erstellten Farben. Diese Farben sind individuell für Ihre Anwendung.',
