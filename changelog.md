@@ -4,7 +4,52 @@
 ## v3.0
 ### What's Changed
 _(most recent changes are listed on top):_
-
+- Add `white_on_lime_green` to Text Colour Palette
+- Add `white_on_dim_grey` to Text Colour Palette
+- Add `white_on_deep_purple` to Text Colour Palette
+- Add `dark_green_on_lime` to Text Colour Palette
+- Add `dark_brown_on_cream` to Text Colour Palette
+- Add `blood_red_on_pale_orange` to Text Colour Palette
+- Add `white_on_supreme_blue` to Text Colour Palette
+- Add `supreme_blue` to Extended Colour Palette
+- Add `white_on_red_orange` to Text Colour Palette
+- Add `red_orange` to Extended Colour Palette
+- Add `maroon_on_classic_silver` to Text Colour Palette
+- Add `classic_silver` to Extended Colour Palette
+- Add Compatibility for ThemeMaestro
+- Add `white_on_blood_red` to Text Colour Palette
+- Add `blood_red` to Extended Colour Palette
+- Add `deep_blue_on_aqua` to Text Colour Palette
+- Add `aqua` to Extended Colour Palette
+- Update Plugin Description Colour Total
+- FIX: Colour Boxes - Fix width for long colour names
+- FIX: Whitespaces in `de_DE`
+- Update Screenshots
+- NEW: Show Text Colour Code
+- Add Anchors and Classes to Palettes
+- FIX: Change `white_on_red` to `white_on_bright_red`
+- Move `orange_on_black` to Text Color Palette
+- Move `grey_on_black` to Text Color Palette
+- Move `red_on_black` to Text Color Palette
+- FIX: Delete `black_on_yellow` - Duplicate to `bright_yellow` as all palette text color is now black
+- FIX: Change `black_on_red` to `bright_red`
+- FIX: Change `bright_orange` to `pumpkin_orange`
+- FIX: Change `black_on_orange` to `pale_orange`
+- FIX: Change `black_on_grey` to `dim_grey`
+- Move `white_on_scarlet` to Text Color Palette
+- UPDATE: Translations for Text Color Palette
+- NEW: Add Text Color Palette
+- UPDATE: Translations for Text Color Palette
+- FIX: Rename Variable
+- FIX: Variable Naming to Match Model Function
+- Change CSS Class
+- FIX: Mention Translation in README.md
+- NEW: Make Titles Bolder
+- Rename palette
+- Sort Colours in Code - colours are now coded alphabetically too
+- FIX: Border Colour `red_on_black`
+- Add Button `if` statement - Show only if palette contains colours, as the button is shown next to the text
+- NEW: Show if Custom Colour Palette is Empty
 
 
 ## v2.6
