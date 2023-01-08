@@ -297,3 +297,7 @@ div.color-picker-square {
 #TextPalette {}
 
 #CustomPalette {}
+
+.select2-container--default .select2-results > #select2-form-color_id-results.select2-results__options {
+    font-size: .85em;
+}
