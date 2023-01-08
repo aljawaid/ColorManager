@@ -54,6 +54,10 @@ Screenshots
 
 ![Extended Color Palette](../master/screenshot-settings-extended-palette.png "Extended Color Palette")
 
+**Kanboard Settings - _Text Color Palette_**  
+
+![Text Color Palette](../master/screenshot-settings-text-palette.png "Text Color Palette")
+
 **Kanboard Settings - _Custom Color Palette_**  
 
 ![Custom Color Palette](../master/screenshot-settings-custom-palette.png "Custom Color Palette")
