@@ -58,6 +58,11 @@ class ColorModelExt extends ColorModel
             'background' => '#F7FF00',
             'border' => '#FFE407',
         ),
+        'classic_silver' => array(
+            'name' => 'Classic Silver',
+            'background' => '#B1B8BA',
+            'border' => '#B1B8BA',
+        ),
         'copper' => array(
             'name' => 'Copper',
             'background' => '#B77729',

@@ -52,6 +52,7 @@ return array(
   'Bright Red' => 'Bright Red',
   'Bright White' => 'Bright White',
   'Bright Yellow' => 'Bright Yellow',
+  'Classic Silver' => 'Classic Silver',
   'Copper' => 'Copper',
   'Cream' => 'Cream',
   'Crimson' => 'Crimson',

@@ -54,6 +54,7 @@ return array(
   'Bright Red' => 'Helles Rot',
   'Bright White' => 'Helles Weiß',
   'Bright Yellow' => 'Helles Gelb',
+  'Classic Silver' => 'Klassisches Silber',
   'Copper' => 'Kupfer',
   'Cream' => 'Creme',
   'Crimson' => 'Karminrot',
