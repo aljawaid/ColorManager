@@ -1,6 +1,15 @@
 # Changelog
 
 
+## v3.1
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- FIX: Long Colour Names Show Incorrectly in Select2 Dropdown - Fixes #31
+- FIX: Translation for `dark_green_on_lime_green`
+
+
 ## v3.0
 
 ### What's Changed
