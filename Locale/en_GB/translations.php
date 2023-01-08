@@ -44,6 +44,7 @@ return array(
   //
   // model/ColorModelExt.php /// COLOR NAMES
   //
+  'Aqua' => 'Aqua',
   'Beige' => 'Beige',
   'Blue Grey' => 'Blue Grey',
   'Bright Green' => 'Bright Green',

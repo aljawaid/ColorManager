@@ -15,6 +15,11 @@ class ColorModelExt extends ColorModel
 {
     
     protected $static_colors = array(
+        'aqua' => array(
+            'name' => 'Aqua',
+            'background' => '#1FE1E7',
+            'border' => '#1FE1E7',
+        ),
         'beige' => array(
             'name' => 'Beige',
             'background' => '#B59F84',

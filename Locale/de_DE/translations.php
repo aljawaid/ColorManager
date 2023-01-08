@@ -45,6 +45,7 @@ return array(
   //
   // model/ColorModelExt.php /// COLOR NAMES
   //
+  'Aqua' => 'Aqua',
   'Amber' => 'Bernstein',
   'Beige' => 'Beige',
   'Blue Grey' => 'Blau Grau',
