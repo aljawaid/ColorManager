@@ -227,6 +227,12 @@ class ColorModelExt extends ColorModel
             'border' => '#405364',
             'font' => '#FFFFFF',
         ),
+        'white_on_bright_red' => array(
+            'name' => 'White on Bright Red',
+            'background' => '#F00000',
+            'border' => '#F00000',
+            'font' => '#FFFFFF',
+        ),
         'white_on_copper' => array(
             'name' => 'White on Copper',
             'background' => '#B77729',
@@ -297,12 +303,6 @@ class ColorModelExt extends ColorModel
             'name' => 'White on Purple',
             'background' => '#9700FD',
             'border' => '#24003C',
-            'font' => '#FFFFFF',
-        ),
-        'white_on_red' => array(
-            'name' => 'White on Red',
-            'background' => '#F00000',
-            'border' => '#F00000',
             'font' => '#FFFFFF',
         ),
         'white_on_scarlet' => array(

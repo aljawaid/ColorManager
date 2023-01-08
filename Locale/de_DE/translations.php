@@ -84,6 +84,7 @@ return array(
 'White' => 'Weiß',
 'White on Black' => 'Weiß auf Schwarz',
 'White on Blue Grey' => 'Weiß auf Blau Grau',
+'White on Bright Red' => 'Weiß auf Helles Rot',
 'White on Copper' => 'Weiß auf Kupfer',
 'White on Dark Brown' => 'Weiß auf Dunkelbraun',
 'White on Dark Red' => 'Weiß auf Dunkelrot',
@@ -96,7 +97,6 @@ return array(
 'White on Olive' => 'Weiß auf Olive',
 'White on Peach' => 'Weiß auf Pfirsich',
 'White on Purple' => 'Weiß auf Violett',
-'White on Red' => 'Weiß auf Rot',
 'White on Scarlet' => 'Weiß auf Scharlachrot',
 'Yellow Green' => 'Gelbgrün'
 );
