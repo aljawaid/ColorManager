@@ -105,6 +105,7 @@ return array(
   'White on Olive' => 'Weiß auf Olive',
   'White on Peach' => 'Weiß auf Pfirsich',
   'White on Purple' => 'Weiß auf Violett',
+  'White on Red Orange' => 'Weiß auf Rotorange',
   'White on Scarlet' => 'Weiß auf Scharlachrot',
   'Yellow Green' => 'Gelbgrün'
 );

@@ -344,6 +344,12 @@ class ColorModelExt extends ColorModel
             'border' => '#24003C',
             'font' => '#FFFFFF',
         ),
+        'white_on_red_orange' => array(
+            'name' => 'White on Red Orange',
+            'background' => '#FF3F00',
+            'border' => '#FF3F00',
+            'font' => '#FFFFFF',
+        ),
         'white_on_scarlet' => array(
             'name' => 'White on Scarlet',
             'background' => '#AE0000',
