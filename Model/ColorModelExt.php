@@ -123,12 +123,6 @@ class ColorModelExt extends ColorModel
             'background' => '#F8D210',
             'border' => '#A48900',
         ),
-        'grey_on_black' => array(
-            'name' => 'Grey on Black',
-            'background' => '#000000',
-            'border' => '#B5B5B5',
-            'font' => '#B5B5B5',
-        ),
         'khaki' => array(
             'name' => 'Khaki',
             'background' => '#A88C6A',
@@ -200,6 +194,12 @@ class ColorModelExt extends ColorModel
             'name' => 'White',
             'background' => '#FFFFFF',
             'border' => '#EEEEEE',
+        ),
+        'grey_on_black' => array(
+            'name' => 'Grey on Black',
+            'background' => '#000000',
+            'border' => '#B5B5B5',
+            'font' => '#B5B5B5',
         ),
         'red_on_black' => array(
             'name' => 'Red on Black',
