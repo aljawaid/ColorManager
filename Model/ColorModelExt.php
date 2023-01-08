@@ -338,6 +338,12 @@ class ColorModelExt extends ColorModel
             'border' => '#646464',
             'font' => '#FFFFFF',
         ),
+        'white_on_deep_purple' => array(
+            'name' => 'White on Deep Purple',
+            'background' => '#8E44AD',
+            'border' => '#610288',
+            'font' => '#FFFFFF',
+        ),
         'white_on_green' => array(
             'name' => 'White on Green',
             'background' => '#06C200',
