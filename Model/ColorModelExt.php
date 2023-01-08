@@ -356,6 +356,12 @@ class ColorModelExt extends ColorModel
             'border' => '#015B2A',
             'font' => '#FFFFFF',
         ),
+        'white_on_lime_green' => array(
+            'name' => 'White on Lime Green',
+            'background' => '#63B83E',
+            'border' => '#39771E',
+            'font' => '#FFFFFF',
+        ),
         'white_on_maroon' => array(
             'name' => 'White on Maroon',
             'background' => '#800000',
