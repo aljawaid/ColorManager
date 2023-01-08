@@ -141,7 +141,8 @@
 .colour-wrapper {
     border: 1px solid currentColor;
     padding: 5px;
-    width: 150px;
+    min-width: 150px;
+    width: auto;
     margin: 5px;
     display: inline-block;
     border-radius: var(--border-radius-color-manager);
