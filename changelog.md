@@ -4,6 +4,7 @@
 ## v3.0
 
 ### What's Changed
+
 _(most recent changes are listed on top):_
 - Add `white_on_lime_green` to Text Colour Palette
 - Add `white_on_dim_grey` to Text Colour Palette
