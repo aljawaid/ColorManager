@@ -3,7 +3,7 @@ return array(
   //
   // GENERAL
   //
-  'A new way to utilise colors to their full potential in Kanboard.  Choose from 2 color palettes or create your own. Across all palettes, choose from over 70 colors to match your workflow across the interface.' => '',
+  'A new way to utilise colors to their full potential in Kanboard.  Choose from 3 color palettes or create your own. Across all palettes, choose from over 70 colors to match your workflow across the interface.' => '',
   //
   // ColorManagerContoller.php
   //

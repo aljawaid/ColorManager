@@ -4,7 +4,7 @@ return array(
   //
   // GENERAL
   //
-  'A new way to utilise colors to their full potential in Kanboard.  Choose from 2 color palettes or create your own. Across all palettes, choose from over 70 colors to match your workflow across the interface.' => 'Eine neue Möglichkeit, Farben in Kanboard voll auszuschöpfen. Wählen Sie aus 2 Farbpaletten oder erstellen Sie Ihre eigene. Wählen Sie in allen Paletten aus über 70 Farben, die zu Ihrem Arbeitsablauf über die Benutzeroberfläche passen.',
+  'A new way to utilise colors to their full potential in Kanboard.  Choose from 3 color palettes or create your own. Across all palettes, choose from over 70 colors to match your workflow across the interface.' => 'Eine neue Möglichkeit, Farben in Kanboard voll auszuschöpfen. Wählen Sie aus 3 Farbpaletten oder erstellen Sie Ihre eigene. Wählen Sie in allen Paletten aus über 70 Farben, die zu Ihrem Arbeitsablauf über die Benutzeroberfläche passen.',
   //
   // ColorManagerContoller.php
   //
