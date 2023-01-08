@@ -103,6 +103,7 @@ return array(
   'White on Deep Green' => '',
   'White on Deep Grey' => '',
   'White on Deep Purple' => '',
+  'White on Dim Grey' => '',
   'White on Green' => '',
   'White on Maroon' => '',
   'White on Olive' => '',

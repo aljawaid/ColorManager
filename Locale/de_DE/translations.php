@@ -105,6 +105,7 @@ return array(
   'White on Deep Green' => 'Weiß auf Deep Green',
   'White on Deep Grey' => 'Weiß auf Tiefgrau',
   'White on Deep Purple' => 'Weiß auf Tiefes Violett',
+  'White on Dim Grey' => 'Weiß auf schwachem Grau',
   'White on Green' => 'Weiß auf Grün',
   'White on Maroon' => 'Weiß auf Kastanienbraun',
   'White on Olive' => 'Weiß auf Olive',

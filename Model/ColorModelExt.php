@@ -344,6 +344,12 @@ class ColorModelExt extends ColorModel
             'border' => '#610288',
             'font' => '#FFFFFF',
         ),
+        'white_on_dim_grey' => array(
+            'name' => 'White on Dim Grey',
+            'background' => '#6A6A6A',
+            'border' => '#000000',
+            'font' => '#FFFFFF',
+        ),
         'white_on_green' => array(
             'name' => 'White on Green',
             'background' => '#06C200',
