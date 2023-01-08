@@ -392,16 +392,16 @@ class ColorModelExt extends ColorModel
             'border' => '#FF3F00',
             'font' => '#FFFFFF',
         ),
+        'white_on_royal_blue' => array(
+            'name' => 'White on Royal Blue',
+            'background' => '#1953BE',
+            'border' => '#1953BE',
+            'font' => '#FFFFFF',
+        ),
         'white_on_scarlet' => array(
             'name' => 'White on Scarlet',
             'background' => '#AE0000',
             'border' => '#6A0303',
-            'font' => '#FFFFFF',
-        ),
-        'white_on_supreme_blue' => array(
-            'name' => 'White on Supreme Blue',
-            'background' => '#1953BE',
-            'border' => '#1953BE',
             'font' => '#FFFFFF',
         ),
     );
