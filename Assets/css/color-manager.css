@@ -283,3 +283,11 @@ div.color-picker-square {
     color: var(--pp-grey);
     font-style: italic;
 }
+
+#DefaultPalette {}
+
+#ExtendedPalette {}
+
+#TextPalette {}
+
+#CustomPalette {}

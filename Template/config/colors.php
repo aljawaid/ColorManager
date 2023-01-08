@@ -13,7 +13,7 @@
     </h2>
     <hr>
     <div class="color-manager-section">
-        <h3 class="">
+        <h3 id="DefaultPalette" class="">
             <span class="color-manager-section-icon-default"></span>
             <?= t('Default Color Palette') ?> <span class="colour-total-count-section"><?= count($defaultColours); ?></span>
         </h3>
@@ -66,7 +66,7 @@
     <hr>
 
     <div class="color-manager-section">
-        <h3 class="">
+        <h3 id="ExtendedPalette" class="">
             <span class="color-manager-section-icon-extended"></span>
             <?= t('Extended Color Palette') ?> <span class="colour-total-count-section"><?= count($this->task->colorModelExt->getStaticColors()); ?></span>
         </h3>
@@ -109,7 +109,7 @@
     <hr>
 
     <div class="color-manager-section">
-        <h3 class="">
+        <h3 id="TextPalette" class="">
             <span class="color-manager-section-icon-text"></span>
             <?= t('Text Color Palette') ?> <span class="colour-total-count-section"><?= count($this->task->colorModelExt->getTextColors()); ?></span>
         </h3>
@@ -170,7 +170,7 @@
                 </a>
             </button>
         <?php endif ?>
-        <h3 class="">
+        <h3 id="CustomPalette" class="">
             <span class="color-manager-section-icon-custom"></span>
             <?= t('Custom Color Palette') ?><span class="colour-total-count-section"><?= $customColours; ?></span>
         </h3>
