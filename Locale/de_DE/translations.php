@@ -62,7 +62,7 @@ return array(
   'Dark Brown' => 'Dunkelbraun',
   'Dark Brown on Cream' => 'Dunkelbraun auf Creme',
   'Dark Gold' => 'Dunkelgold',
-  'Dark Green on Lime' => 'Dunkelgrün auf Limette',
+  'Dark Green on Lime Green' => 'Dunkelgrün auf Limette Grün',
   'Dark Pink' => 'Dunkelrosa',
   'Dark Red' => 'Dunkelrot',
   'Deep Amber' => 'Tiefes Bernstein',

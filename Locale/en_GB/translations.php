@@ -60,7 +60,7 @@ return array(
   'Dark Brown' => 'Dark Brown',
   'Dark Brown on Cream' => 'Dark Brown on Cream',
   'Dark Gold' => 'Dark Gold',
-  'Dark Green on Lime' => 'Dark Green on Lime',
+  'Dark Green on Lime Green' => 'Dark Green on Lime Green',
   'Dark Pink' => 'Dark Pink',
   'Dark Red' => 'Dark Red',
   'Deep Amber' => 'Deep Amber',
