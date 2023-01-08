@@ -25,7 +25,7 @@ Features
 - Includes variations of `white`
 - Display CSS properties for each color (background color, border color)
 
-**Extended Color Palette**  
+**Text Color Palette**  
 - **_Contains 20+ new vibrant colors_**
 - Perfect for tags and categories
 - Includes variations of `black`
@@ -50,9 +50,9 @@ Screenshots
 
 ![Default Color Palette](../master/screenshot-settings-default-palette.png "Default Color Palette")
 
-**Kanboard Settings - _Extra Color Palette_**  
+**Kanboard Settings - _Extended Color Palette_**  
 
-![Extended Color Palette](../master/screenshot-settings-extra-palette.png "Extended Color Palette")
+![Extended Color Palette](../master/screenshot-settings-extended-palette.png "Extended Color Palette")
 
 **Kanboard Settings - _Custom Color Palette_**  
 
