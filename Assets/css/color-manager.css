@@ -185,13 +185,13 @@
     display: block;
 }
 
-.colour-background span, .colour-border span {
+.colour-background span, .colour-border span, .colour-font span {
     display: block;
     font-size: .8em;
     margin-top: 5px;
 }
 
-.colour-background code, .colour-border code {
+.colour-background code, .colour-border code, .colour-font code {
     display: block;
     width: fit-content;
     margin: 3px 0 0 0 !important;
@@ -206,6 +206,11 @@
 }
 
 .colour-border {
+    text-align: left;
+    display: block;
+}
+
+.colour-font {
     text-align: left;
     display: block;
 }
