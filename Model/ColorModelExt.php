@@ -236,6 +236,12 @@ class ColorModelExt extends ColorModel
             'border' => '#FDD662',
             'font' => '#846101',
         ),
+        'dark_green_on_lime_green' => array(
+            'name' => 'Dark Green on Lime Green',
+            'background' => '#63B83E',
+            'border' => '#39771E',
+            'font' => '#013311',
+        ),
         'deep_blue_on_aqua' => array(
             'name' => 'Deep Blue on Aqua',
             'background' => '#1FE1E7',
