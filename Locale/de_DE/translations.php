@@ -76,6 +76,7 @@ return array(
   'Lime Green' => 'Limonengrün',
   'Lint' => 'Fussel',
   'Magenta' => 'Magenta',
+  'Maroon on Classic Silver' => 'Kastanienbraun auf klassischem Silber',
   'Mint Green' => 'Minzgrün',
   'Olive' => 'Olivgrün',
   'Orange on Black' => 'Orange auf Schwarz',

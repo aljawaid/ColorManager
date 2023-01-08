@@ -225,6 +225,12 @@ class ColorModelExt extends ColorModel
             'border' => '#B5B5B5',
             'font' => '#B5B5B5',
         ),
+        'maroon_on_classic_silver' => array(
+            'name' => 'Maroon on Classic Silver',
+            'background' => '#B1B8BA',
+            'border' => '#B1B8BA',
+            'font' => '#800000',
+        ),
         'orange_on_black' => array(
             'name' => 'Orange on Black',
             'background' => '#000000',

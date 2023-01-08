@@ -74,6 +74,7 @@ return array(
   'Lime Green' => '',
   'Lint' => '',
   'Magenta' => '',
+  'Maroon on Classic Silver' => '',
   'Mint Green' => '',
   'Olive' => '',
   'Orange on Black' => '',
