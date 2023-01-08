@@ -25,6 +25,12 @@ class ColorModelExt extends ColorModel
             'background' => '#B59F84',
             'border' => '#A29380',
         ),
+        'blood_red' => array(
+            'name' => 'Blood Red',
+            'background' => '#700000',
+            'border' => '#700000',
+            'font' => '#000000',
+        ),
         'blue_grey' => array(
             'name' => 'Blue Grey',
             'background' => '#5C7890',

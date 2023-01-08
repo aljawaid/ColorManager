@@ -46,6 +46,7 @@ return array(
   //
   'Aqua' => '',
   'Beige' => '',
+  'Blood Red' => '',
   'Blue Grey' => '',
   'Bright Green' => '',
   'Bright Red' => '',

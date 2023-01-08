@@ -48,6 +48,7 @@ return array(
   'Aqua' => 'Aqua',
   'Amber' => 'Bernstein',
   'Beige' => 'Beige',
+  'Blood Red' => 'Blutrot',
   'Blue Grey' => 'Blau Grau',
   'Bright Green' => 'Hellgrün',
   'Bright Red' => 'Helles Rot',
