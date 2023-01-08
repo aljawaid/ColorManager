@@ -200,16 +200,16 @@ class ColorModelExt extends ColorModel
             'background' => '#FF3F00',
             'border' => '#FF3F00',
         ),
+        'royal_blue' => array(
+            'name' => 'Royal Blue',
+            'background' => '#1953BE',
+            'border' => '#1953BE',
+            'font' => '#000000',
+        ),
         'scarlet' => array(
             'name' => 'Scarlet',
             'background' => '#AE0000',
             'border' => '#6A0303',
-        ),
-        'supreme_blue' => array(
-            'name' => 'Supreme Blue',
-            'background' => '#1953BE',
-            'border' => '#1953BE',
-            'font' => '#000000',
         ),
         'white' => array(
             'name' => 'White',
