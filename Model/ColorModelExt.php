@@ -186,11 +186,6 @@ class ColorModelExt extends ColorModel
             'background' => '#FC4F46',
             'border' => '#F22B2B',
         ),
-        'red_on_black' => array(
-            'name' => 'Red on Black',
-            'background' => '#000000',
-            'border' => '#000000',
-            'font' => '#F00000',
         'pumpkin_orange' => array(
             'name' => 'Pumpkin Orange',
             'background' => '#FF6D36',
@@ -205,6 +200,12 @@ class ColorModelExt extends ColorModel
             'name' => 'White',
             'background' => '#FFFFFF',
             'border' => '#EEEEEE',
+        ),
+        'red_on_black' => array(
+            'name' => 'Red on Black',
+            'background' => '#000000',
+            'border' => '#000000',
+            'font' => '#F00000',
         ),
         'white_on_black' => array(
             'name' => 'White on Black',
