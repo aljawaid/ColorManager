@@ -1,6 +1,12 @@
 # Changelog
 
 
+## v3.0
+### What's Changed
+_(most recent changes are listed on top):_
+
+
+
 ## v2.6
 
 ### What's Changed
