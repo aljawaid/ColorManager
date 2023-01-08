@@ -49,6 +49,7 @@ return array(
   'Amber' => 'Bernstein',
   'Beige' => 'Beige',
   'Blood Red' => 'Blutrot',
+  'Blood Red on Pale Orange' => 'Blutrot auf Hellorange',
   'Blue Grey' => 'Blau Grau',
   'Bright Green' => 'Hellgrün',
   'Bright Red' => 'Helles Rot',

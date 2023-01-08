@@ -224,6 +224,12 @@ class ColorModelExt extends ColorModel
     );
 
     protected $text_colors = array(
+        'blood_red_on_pale_orange' => array(
+            'name' => 'Blood Red on Pale Orange',
+            'background' => '#FFA500',
+            'border' => '#000000',
+            'font' => '#700000',
+        ),
         'deep_blue_on_aqua' => array(
             'name' => 'Deep Blue on Aqua',
             'background' => '#1FE1E7',
