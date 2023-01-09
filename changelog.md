@@ -1,6 +1,15 @@
 # Changelog
 
 
+## v3.2
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- FIX: Rename `white_on_supreme_blue` to `white_on_royal_blue`
+- FIX: Rename `supreme_blue` to `royal_blue`
+
+
 ## v3.1
 
 ### What's Changed
