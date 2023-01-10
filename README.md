@@ -86,10 +86,7 @@ Compatibility
 
 #### Other Plugins & Action Plugins
 - _No known issues_
-- Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS)
-- Compatible with [PluginManager](https://github.com/aljawaid/PluginManager)
-- Compatible with [TagManager](https://github.com/aljawaid/TagManager)
-- Compatible with [ThemeMaestro](https://github.com/JustFxDev/ThemeMaestro)
+- Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [PluginManager](https://github.com/aljawaid/PluginManager), [TagManager](https://github.com/aljawaid/TagManager), [ThemeMaestro](https://github.com/JustFxDev/ThemeMaestro)
 #### Core Files & Templates
 - _No template overrides_
 - _No database changes_
