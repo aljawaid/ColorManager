@@ -1,6 +1,16 @@
 # Changelog
 
 
+## v3.5
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- NEW: Display Actual Colors for Actions in AutomaticActionUX
+- FIX: Empty CSS Rulesets
+- FIX: README.md links
+
+
 ## v3.2
 
 ### What's Changed
