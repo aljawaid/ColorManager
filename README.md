@@ -72,6 +72,9 @@ Screenshots
 
 ![Automatic Action Creation](../master/screenshot-automatic-action-dropdown-list.png "Automatic Action Dropdown List")
 
+**Automatic Actions** _- compatible with [AutomaticActionUX](https://github.com/aljawaid/AutomaticActionUX)_
+
+![Automatic Actions](../master/screenshot-automatic-action-interface.png "Automatic Actions")
 
 Usage
 -------------
@@ -86,7 +89,7 @@ Compatibility
 
 #### Other Plugins & Action Plugins
 - _No known issues_
-- Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [PluginManager](https://github.com/aljawaid/PluginManager), [TagManager](https://github.com/aljawaid/TagManager), [ThemeMaestro](https://github.com/JustFxDev/ThemeMaestro)
+- Compatible with [AutomaticActionUX](https://github.com/aljawaid/AutomaticActionUX), [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [PluginManager](https://github.com/aljawaid/PluginManager), [TagManager](https://github.com/aljawaid/TagManager), [ThemeMaestro](https://github.com/JustFxDev/ThemeMaestro)
 #### Core Files & Templates
 - _No template overrides_
 - _No database changes_
