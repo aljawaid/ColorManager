@@ -20,7 +20,7 @@ class Plugin extends Base
         $this->template->hook->attach('template:layout:bottom', 'colorManager:layout/css_ext');
 
         // Extra Page - Routes
-        //  - Example: $this->route->addRoute('/my/custom/route', 'myController', 'show', 'PluginNameExampleStudlyCaps');
+        //  - Example: $this->route->addRoute('/my/custom/route', 'MyController', 'show', 'PluginNameExampleStudlyCaps');
         //  - Must have the corresponding action in the matching controller
         $this->route->addRoute('/settings/color-manager', 'ColorManagerController', 'show', 'ColorManager');
 
