@@ -1,6 +1,14 @@
 # Changelog
 
 
+## v3.6
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- FIX: Unix (LF) Line Endings and Tabs > Spaces
+
+
 ## v3.5
 
 ### What's Changed
