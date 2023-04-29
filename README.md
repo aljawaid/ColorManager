@@ -1,8 +1,10 @@
-# ColorManager
+<h1 name="readme-top">ColorManager</h1>
+
 ![GitHub All Releases](https://img.shields.io/github/downloads/aljawaid/ColorManager/total?style=for-the-badge "GitHub All Downloads") - **_A plugin for [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software")_**
 
 A new way to utilise colors to their full potential in Kanboard.  Choose from 3 color palettes or create your own. Combining all palettes, choose from **over 85 colors** to match your workflow across the interface.
 
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>]</p>
 
 ## Features
 
@@ -41,6 +43,7 @@ A new way to utilise colors to their full potential in Kanboard.  Choose from 3 
 - Show color examples in the Automatic Action creation dropdown list
 - Show color examples in the Project Settings dropdown list
 
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## Screenshots
 
@@ -74,11 +77,13 @@ A new way to utilise colors to their full potential in Kanboard.  Choose from 3 
 
 ![Automatic Actions](../master/screenshot-automatic-action-interface.png "Automatic Actions")
 
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## Usage
 
 Go to `Settings` &#10562; `Color Manager`
 
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## Installation & Compatibility
 
@@ -109,6 +114,7 @@ Go to `Settings` &#10562; `Color Manager`
 
 </details>
 
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## Authors & Contributors
 
@@ -116,7 +122,11 @@ Go to `Settings` &#10562; `Color Manager`
 - [Craig Crosby](https://github.com/creecros) - Contributor
 - _Contributors welcome_
 
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## License
 
 - This project is distributed under the [MIT License](../master/LICENSE "Read The MIT license")
+
+<a name="readme-bottom"></a>
+<p align="right">[<a href="#readme-top">&#8593; Top</a>]</p>
