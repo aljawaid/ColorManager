@@ -1,12 +1,10 @@
 # ColorManager
-
-#### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
+![GitHub All Releases](https://img.shields.io/github/downloads/aljawaid/ColorManager/total?style=for-the-badge "GitHub All Downloads") - **_A plugin for [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software")_**
 
 A new way to utilise colors to their full potential in Kanboard.  Choose from 3 color palettes or create your own. Combining all palettes, choose from **over 85 colors** to match your workflow across the interface.
 
 
-Features
--------------
+## Features
 
 - New dedicated settings page
 - Show color values as box examples
@@ -43,8 +41,8 @@ Features
 - Show color examples in the Automatic Action creation dropdown list
 - Show color examples in the Project Settings dropdown list
 
-Screenshots
-----------
+
+## Screenshots
 
 **Kanboard Settings - _Default Color Palette_**  
 
@@ -76,76 +74,49 @@ Screenshots
 
 ![Automatic Actions](../master/screenshot-automatic-action-interface.png "Automatic Actions")
 
-Usage
--------------
+
+## Usage
 
 Go to `Settings` &#10562; `Color Manager`
 
 
-Compatibility
--------------
+## Installation & Compatibility
 
-- Requires [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
+<details>
+    <summary><strong>Installation</strong></summary>
 
-#### Other Plugins & Action Plugins
-- _No known issues_
-- Compatible with [AutomaticActionUX](https://github.com/aljawaid/AutomaticActionUX), [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [PluginManager](https://github.com/aljawaid/PluginManager), [TagManager](https://github.com/aljawaid/TagManager), [ThemeMaestro](https://github.com/JustFxDev/ThemeMaestro)
-#### Core Files & Templates
-- _No template overrides_
-- _No database changes_
+- Install via the **[Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory** or see [INSTALL.md](../master/INSTALL.md)
+- Read the full [**Changelog**](../master/changelog.md "See changes") to see the latest updates
 
+</details>
+<details>
+    <summary><strong>Compatibility</strong></summary>
 
-Changelog
----------
+- Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
+- **Other Plugins & Action Plugins**
+  - _No known issues_
+  - Compatible with [AutomaticActionUX](https://github.com/aljawaid/AutomaticActionUX), [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [PluginManager](https://github.com/aljawaid/PluginManager), [TagManager](https://github.com/aljawaid/TagManager), [ThemeMaestro](https://github.com/JustFxDev/ThemeMaestro)
+- **Core Files & Templates**
+  - _No template overrides_
+  - _No database changes_
 
-Read the full [**Changelog**](../master/changelog.md "See changes")
- 
+</details>
+<details>
+    <summary><strong>Translations</strong></summary>
 
-Installation
-------------
-
-- **Install via the [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory**
-  - _Go to:_
-    - Kanboard: `Plugins` &#10562; `Plugin Directory`
-  - _or with [PluginManager](https://github.com/aljawaid/PluginManager) installed:_
-    - Kanboard: `Settings` &#10562; `Plugins` &#10562; `Plugin Directory`
-
-**_or_**
-
-- **Install via the [Releases](../master/Releases/ "A copy of each release is saved in the folder") folder**
-  - A copy of each release is saved in the `/Releases` folder of the repository
-  - Simply extract the `.zip` file into the `/plugins` directory
-
-**_or_**
-
-- **Install via [GitHub](https://github.com/aljawaid "Find the correct plugin from the list of repositories")**
-  - Download the `.zip` file and decompress everything under the directory `/plugins`
-  - The folder inside the `.zip` must not contain any branch names and must be exact case (matching the plugin name)
-
-_Note: The `/plugins` folder is case-sensitive._
-
-**_or_**
-
-- **Install using Git CLI**
-  - `git clone` (_or ftp upload_) and extract the `.zip` file into this folder: `.\plugins\` (must be exact case)
-
-
-Translations
-------------
-
-- English (UK)
-- German
-- _Contributors welcome_
+- English (UK), German
 - _Starter template available_
 
-Authors & Contributors
-----------------------
+</details>
+
+
+## Authors & Contributors
 
 - [@aljawaid](https://github.com/aljawaid) - Author
 - [Craig Crosby](https://github.com/creecros) - Contributor
 - _Contributors welcome_
 
 
-License
--------
+## License
+
 - This project is distributed under the [MIT License](../master/LICENSE "Read The MIT license")
