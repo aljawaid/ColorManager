@@ -3,15 +3,11 @@
 
 ## v3.6
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - FIX: Unix (LF) Line Endings and Tabs > Spaces
 
 
 ## v3.5
-
-### What's Changed
 
 _(most recent changes are listed on top):_
 - NEW: Display Actual Colors for Actions in AutomaticActionUX
@@ -21,8 +17,6 @@ _(most recent changes are listed on top):_
 
 ## v3.2
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - FIX: Rename `white_on_supreme_blue` to `white_on_royal_blue`
 - FIX: Rename `supreme_blue` to `royal_blue`
@@ -30,16 +24,12 @@ _(most recent changes are listed on top):_
 
 ## v3.1
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - FIX: Long Colour Names Show Incorrectly in Select2 Dropdown - Fixes #31
 - FIX: Translation for `dark_green_on_lime_green`
 
 
 ## v3.0
-
-### What's Changed
 
 _(most recent changes are listed on top):_
 - Add `white_on_lime_green` to Text Colour Palette
@@ -92,16 +82,14 @@ _(most recent changes are listed on top):_
 
 ## v2.6
 
-### What's Changed
-_(most recent changes are listed on top):_
+(most recent changes are listed on top):_
 - FIX: Extra Whitespaces in `de_DE`
 - Update `de_DE` Colour Names - thanks @JustFxDev
 
 
 ## v2.5
 
-### What's Changed
-_(most recent changes are listed on top):_
+(most recent changes are listed on top):_
 - Better plugin description
 - Update mention of total count in description
 - NEW: Add 5 New Colours to Extended PaletteCloses #20
@@ -123,8 +111,6 @@ _(most recent changes are listed on top):_
 
 ## v2.1
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - Revert: Translated Pretty URL- Must stick to `mydomain.com/settings/color-manager` as translating causes page rendering issues with other plugins' settings' pages
 - FIX: #18 make route static (Bug: Settings Page Overrides Other Plugin Settings Page)
@@ -132,9 +118,8 @@ _(most recent changes are listed on top):_
 
 ## v2.0
 
-### What's Changed
-
 #### KBColours _becomes_ ColorManager
+
 ##### Reinstall of this plugin is required if upgrading
 
 _(most recent changes are listed on top):_
@@ -249,15 +234,11 @@ _(most recent changes are listed on top):_
 
 ## v1.1
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - FIX: Faulty code where the automatic actions page was replaced by a blank page (without loss of data)
 
 
 ## v1.0
-
-### What's Changed
 
 _(most recent changes are listed on top):_
 - Initial release
