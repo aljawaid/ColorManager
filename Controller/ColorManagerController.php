@@ -26,10 +26,10 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
     public function show()
     {
         $this->response->html($this->helper->layout->config('colorManager:config/colors', array(
-            'title' => t('Settings') .' &#10562; '.t('Color Manager'),
+            'title' => t('Settings') . ' &#10562; ' . t('Color Manager'),
         )));
     }
-    
+
     public function add()
     {
         $errors = [];
@@ -38,10 +38,10 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
         $this->response->html($this->helper->layout->config('colorManager:config/add_custom_color', [
             'errors' => $errors,
             'values'  => $values,
-            'title'  => t('Custom Colors').' &gt; '.t('Add Color'),
+            'title'  => t('Custom Colors') . ' &gt; ' . t('Add Color'),
          ])); 
     }
-    
+
     public function remove()
     {
         $key = $this->request->getStringParam('key');
@@ -61,13 +61,12 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
         $this->configModel->save(['kbcolour_ids' => $custom_colors_string]);
         
         $this->configModel->remove('kbcolour_name_'.$key);
-        $this->configModel->remove('kbcolour_backgroundcolor_'.$key);
-        $this->configModel->remove('kbcolour_bordercolor_'.$key);
+        $this->configModel->remove('kbcolour_backgroundcolor_' . $key);
+        $this->configModel->remove('kbcolour_bordercolor_' . $key);
         
         $this->response->redirect($this->helper->url->to('ColorManagerController', 'show', ['plugin' => 'ColorManager', 'url' => t('color-manager')]));
-
     }
-    
+
     public function save()
     {
         $errors = [];
@@ -88,12 +87,11 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
                 if (is_array($custom_colors_array)) { $custom_colors_string = implode(',', $custom_colors_array); } else { $custom_colors_string = $color_id; }
                 $this->configModel->save(['kbcolour_ids' => $custom_colors_string]);
                 $this->configModel->save(['kbcolour_name_'.$color_id => $values['color_name']]);
-                $this->configModel->save(['kbcolour_backgroundcolor_'.$color_id => $values['background_color']]);
-                $this->configModel->save(['kbcolour_bordercolor_'.$color_id => $values['border_color']]);
+                $this->configModel->save(['kbcolour_backgroundcolor_' . $color_id => $values['background_color']]);
+                $this->configModel->save(['kbcolour_bordercolor_' . $color_id => $values['border_color']]);
             }
         }
-        
+
         $this->response->redirect($this->helper->url->to('ColorManagerController', 'show', ['plugin' => 'ColorManager', 'url' => t('color-manager')]));
-        
     }
 }

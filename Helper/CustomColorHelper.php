@@ -21,6 +21,6 @@ class CustomColorHelper extends Base
      */
     public function colorCssExt()
     {
-        return '<style>'.$this->colorModelExt->getCssExt().'</style>';
+        return '<style>' . $this->colorModelExt->getCssExt() . '</style>';
     }
 }
