@@ -1,4 +1,4 @@
-<h1 name="user-content-top">ColorManager</h1>
+<h1 name="user-content-readme-top">ColorManager</h1>
 <p align="center">
     <a href="https://github.com/aljawaid/ColorManager/releases">
         <img src="https://img.shields.io/github/v/release/aljawaid/ColorManager?style=for-the-badge&color=brightgreen" alt="GitHub Latest Release (by date)" title="GitHub Latest Release (by date)">
@@ -33,7 +33,7 @@
 
 A new way to utilise colors to their full potential in Kanboard.  Choose from 3 color palettes or create your own. Combining all palettes, choose from **over 85 colors** to match your workflow across the interface.
 
-<p align="right">[<a href="#user-content-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8594; Next</a>] [<a href="#user-content-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## Features
 
@@ -72,7 +72,7 @@ A new way to utilise colors to their full potential in Kanboard.  Choose from 3 
 - Show color examples in the Automatic Action creation dropdown list
 - Show color examples in the Project Settings dropdown list
 
-<p align="right">[<a href="#user-content-bottom">&#8595; Bottom</a>] [<a href="#features">&#8592; Previous</a>] [<a href="#usage">&#8594; Next</a>] [<a href="#user-content-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#features">&#8592; Previous</a>] [<a href="#usage">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## Screenshots
 
@@ -106,13 +106,13 @@ A new way to utilise colors to their full potential in Kanboard.  Choose from 3 
 
 ![Automatic Actions](../master/screenshot-automatic-action-interface.png "Automatic Actions")
 
-<p align="right">[<a href="#user-content-bottom">&#8595; Bottom</a>] [<a href="#features">&#8592; Previous</a>] [<a href="#installation--compatibility">&#8594; Next</a>] [<a href="#user-content-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#features">&#8592; Previous</a>] [<a href="#installation--compatibility">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## Usage
 
 Go to `Settings` &#10562; `Color Manager`
 
-<p align="right">[<a href="#user-content-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8592; Previous</a>] [<a href="#authors--contributors">&#8594; Next</a>] [<a href="#user-content-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8592; Previous</a>] [<a href="#authors--contributors">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## Installation & Compatibility
 
@@ -143,7 +143,7 @@ Go to `Settings` &#10562; `Color Manager`
 
 </details>
 
-<p align="right">[<a href="#user-content-bottom">&#8595; Bottom</a>] [<a href="#usage">&#8592; Previous</a>] [<a href="#license">&#8594; Next</a>] [<a href="#user-content-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#usage">&#8592; Previous</a>] [<a href="#license">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## Authors & Contributors
 
@@ -151,7 +151,7 @@ Go to `Settings` &#10562; `Color Manager`
 - [Craig Crosby](https://github.com/creecros) - Contributor
 - _Contributors welcome_
 
-<p align="right">[<a href="#user-content-bottom">&#8595; Bottom</a>] [<a href="#installation--compatibility">&#8592; Previous</a>] [<a href="#user-content-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#installation--compatibility">&#8592; Previous</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## License
 
@@ -182,5 +182,5 @@ Go to `Settings` &#10562; `Color Manager`
         <img alt="GitHub commits since latest release (by date)" src="https://img.shields.io/github/commits-since/aljawaid/ColorManager/latest?style=flat-square">
     </a>
 </p>
-<a name="user-content-bottom"></a>
-<p align="right">[<a href="#user-content-top">&#8593; Top</a>]</p>
+<a name="user-content-readme-bottom"></a>
+<p align="right">[<a href="#user-content-readme-top">&#8593; Top</a>]</p>
