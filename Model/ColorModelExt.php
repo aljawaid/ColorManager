@@ -221,6 +221,7 @@ class ColorModelExt extends ColorModel
         ),
     );
 
+
     protected $text_colors = array(
         'blood_red_on_pale_orange' => array(
             'name' => 'Blood Red on Pale Orange',
@@ -404,36 +405,38 @@ class ColorModelExt extends ColorModel
         ),
     );
 
+    // phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     private function custom_colors()
     {
+        // phpcs:enable
         $custom_colors = $this->configModel->get('kbcolour_ids', '');
         $custom_colors_array = explode(',', $custom_colors);
         $new_colors = [];
 
         if ($this->configModel->get('kbcolour_ids', '') != '') {
-                foreach ($custom_colors_array as $color_id) {
-                    $new_color = array(
-                        $color_id => array(
-                            'name' => $this->configModel->get('kbcolour_name_'.$color_id, ''),
-                            'background' => $this->configModel->get('kbcolour_backgroundcolor_'.$color_id, ''),
-                            'border' => $this->configModel->get('kbcolour_bordercolor_'.$color_id, ''),
-                        ),
-                    );
-                    $new_colors = array_merge($new_colors, $new_color);
-                }
+            foreach ($custom_colors_array as $color_id) {
+                $new_color = array(
+                    $color_id => array(
+                        'name' => $this->configModel->get('kbcolour_name_' . $color_id, ''),
+                        'background' => $this->configModel->get('kbcolour_backgroundcolor_' . $color_id, ''),
+                        'border' => $this->configModel->get('kbcolour_bordercolor_' . $color_id, ''),
+                    ),
+                );
+                $new_colors = array_merge($new_colors, $new_color);
+            }
 
             return $new_colors;
         }
-        
+
         return $new_colors;
     }
-    
+
     public function getAllColors()
     {
         $combine_colors = array_merge($this->default_colors, $this->static_colors, $this->text_colors, $this->custom_colors());
         return $combine_colors;
     }
-    
+
     public function getCustomColors()
     {
         if ($this->configModel->get('kbcolour_ids', '') != '') {
@@ -442,7 +445,7 @@ class ColorModelExt extends ColorModel
 
         return array();
     }
-    
+
     public function getStaticColors()
     {
         return $this->static_colors;
@@ -452,7 +455,7 @@ class ColorModelExt extends ColorModel
     {
         return $this->text_colors;
     }
-    
+
     public function getStaticList()
     {
         $listing = array();
@@ -474,11 +477,11 @@ class ColorModelExt extends ColorModel
 
         return $listing;
     }
-    
+
     public function getCssExt()
     {
         $buffer = '';
-        
+
         if ($this->configModel->get('kbcolour_ids', '') != '') {
             foreach ($this->custom_colors() as $color => $values) {
                 $buffer .= '.task-board.color-' . $color . ', .task-summary-container.color-' . $color . ', .color-picker-square.color-' . $color . ', .task-board-category.color-' . $color . ', .table-list-category.color-' . $color . ', .task-tag.color-' . $color . ', .action-color-' . $color . ' {';
