@@ -1,6 +1,33 @@
 # Changelog
 
 
+## v3.7
+
+_(most recent changes are listed on top):_
+- FIX: Multiple PHP Calls
+- FIX: Move SVG Icons - exclude from release packages
+- FIX: Code Syntax - `ColorModelExt.php`
+- FIX: Code Syntax - `ColorManagerController.php`
+- FIX: Code Syntax - `ColorModelExt.php`
+- FIX: Line Endings - `css_ext.php`
+- FIX: Code Syntax - `colors.php`- ignore specific test rules
+- FIX: Code Syntax - `Plugin.php`
+- FIX: Code Syntax - `ColorManagerController.php`
+- FIX: Markdown Syntax - `changelog.md`
+- FIX: CSS Code Syntax & Line Endings
+- NEW: Add Code Scanning Badges to README.md
+- FIX: README Navigation Links for GitHub
+- FIX: Code Syntax
+- FIX: Markdown Syntax
+- FIX: Line Endings
+- NEW: Add Footer Badges to README.md
+- NEW: Add Section Navigation Links to README.md
+- NEW: Add Badges to README.md
+- NEW: Add README Page Navigation Links
+- FIX: Content Flow for README.md
+- Create INSTALL.md
+
+
 ## v3.6
 
 _(most recent changes are listed on top):_
@@ -25,7 +52,7 @@ _(most recent changes are listed on top):_
 ## v3.1
 
 _(most recent changes are listed on top):_
-- FIX: Long Colour Names Show Incorrectly in Select2 Dropdown - Fixes #31
+- FIX: Long Colour Names Show Incorrectly in Select2 Dropdown - fixes #31
 - FIX: Translation for `dark_green_on_lime_green`
 
 
@@ -50,7 +77,7 @@ _(most recent changes are listed on top):_
 - Add `deep_blue_on_aqua` to Text Colour Palette
 - Add `aqua` to Extended Colour Palette
 - Update Plugin Description Colour Total
-- FIX: Colour Boxes - Fix width for long colour names
+- FIX: Colour Boxes - fix width for long colour names
 - FIX: Whitespaces in `de_DE`
 - Update Screenshots
 - NEW: Show Text Colour Code
@@ -59,7 +86,7 @@ _(most recent changes are listed on top):_
 - Move `orange_on_black` to Text Color Palette
 - Move `grey_on_black` to Text Color Palette
 - Move `red_on_black` to Text Color Palette
-- FIX: Delete `black_on_yellow` - Duplicate to `bright_yellow` as all palette text color is now black
+- FIX: Delete `black_on_yellow` - duplicate to `bright_yellow` as all palette text color is now black
 - FIX: Change `black_on_red` to `bright_red`
 - FIX: Change `bright_orange` to `pumpkin_orange`
 - FIX: Change `black_on_orange` to `pale_orange`
@@ -76,7 +103,7 @@ _(most recent changes are listed on top):_
 - Rename palette
 - Sort Colours in Code - colours are now coded alphabetically too
 - FIX: Border Colour `red_on_black`
-- Add Button `if` statement - Show only if palette contains colours, as the button is shown next to the text
+- Add Button `if` statement - show only if palette contains colours, as the button is shown next to the text
 - NEW: Show if Custom Colour Palette is Empty
 
 
@@ -92,12 +119,12 @@ _(most recent changes are listed on top):_
 (most recent changes are listed on top):_
 - Better plugin description
 - Update mention of total count in description
-- NEW: Add 5 New Colours to Extended PaletteCloses #20
-- Add `magenta` to Extra Colour Palette- #3
-- Add `black_on_yellow` to Extra Colour Palette- #3
-- Add `black_on_grey` to Extra Colour Palette- #3
-- Add `grey_on_black` to Extra Colour Palette- #3
-- Add `bright_white` to Extra Colour Palette - Requested by @JustFxDev
+- NEW: Add 5 New Colours to Extended Palette - closes #20
+- Add `magenta` to Extra Colour Palette - #3
+- Add `black_on_yellow` to Extra Colour Palette - #3
+- Add `black_on_grey` to Extra Colour Palette - #3
+- Add `grey_on_black` to Extra Colour Palette - #3
+- Add `bright_white` to Extra Colour Palette - requested by @JustFxDev
 - NEW: Add Colour Name Translations #22
 - FIX: Translations Coding Consistency #21
 - FIX: Conflicting Asset Path Between Kanboard Versions
@@ -112,7 +139,7 @@ _(most recent changes are listed on top):_
 ## v2.1
 
 _(most recent changes are listed on top):_
-- Revert: Translated Pretty URL- Must stick to `mydomain.com/settings/color-manager` as translating causes page rendering issues with other plugins' settings' pages
+- Revert: Translated Pretty URL - must stick to `mydomain.com/settings/color-manager` as translating causes page rendering issues with other plugins' settings' pages
 - FIX: #18 make route static (Bug: Settings Page Overrides Other Plugin Settings Page)
 
 
@@ -182,7 +209,7 @@ _(most recent changes are listed on top):_
 - Translate Plugin
 - Rename CSS Classes
 - Rename CSS Variables
-- FIX: CSS Classes Conflict- `.total-count` conflicted with PluginManager
+- FIX: CSS Classes Conflict - `.total-count` conflicted with PluginManager
 - FIX: Colour Square for Default Colours in Dropdown
 - FIX: Font Color in Dropdowns
 - Update Plugin Description
@@ -194,12 +221,12 @@ _(most recent changes are listed on top):_
 - Rename CSS File
 - Rename Plugin in Plugin.php
 - Translate & Fix Wording
-- FIX: #8 Custom Colours Are Not Sorted in Dropdown Lists - Colours are now sorted in the lists regardless of titlecase or lowercase
+- FIX: #8 Custom Colours Are Not Sorted in Dropdown Lists - colours are now sorted in the lists regardless of titlecase or lowercase
 - FIX: Use `isset` instead of just `if`
 - NEW: Sort array - thanks @creecros
 - Add Tooltip & Class to Delete Colour Icon
 - NEW: Show Delete Colour Icon on Hover
-- Add 3 Colours- `White on Maroon` `Mint Green` `Gold`
+- Add 3 Colours - `White on Maroon` `Mint Green` `Gold`
 - Remove `maroon` and Add `crimson`
 - Add html entity for white text indication in dropdowns
 - Add Font Color
@@ -220,16 +247,16 @@ _(most recent changes are listed on top):_
 - Fix CSS Jumping Side Menu
 - FIX: Title
 - Add Badge Count
-- FIX: Sidebar Translation- WIP #2
+- FIX: Sidebar Translation - WIP #2
 - Add Border Highlight for Dropdowns
 - Seperate custom and default in config - thanks @creecros
 - Add getCustomColors to model - thanks @creecros
 - Add helper, model ext, and layout with hook - thanks @creecros
 - Add `White`
 - NEW: Add Custom Colours Section
-- Add total colour count- default + custom
+- Add total colour count - default + custom
 - NEW: Show actual colours in (Automatic Action creation) dropdown list
-- NEW: Show Actual Colours in Dropdown List- Show in default colour list... settings > project settings
+- NEW: Show Actual Colours in Dropdown List - Show in default colour list... settings > project settings
 
 
 ## v1.1
