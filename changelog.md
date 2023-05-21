@@ -118,9 +118,9 @@ _(most recent changes are listed on top):_
 
 ## v2.0
 
-#### KBColours _becomes_ ColorManager
+### KBColours _becomes_ ColorManager
 
-##### Reinstall of this plugin is required if upgrading
+#### Reinstall of this plugin is required if upgrading
 
 _(most recent changes are listed on top):_
 - Mention plugin compatibility
