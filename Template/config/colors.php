@@ -81,7 +81,9 @@
     <div class="colour-boxes">
         <?php ksort($staticColours) ?>
         <?php foreach ($staticColours as $color_id => $color): ?>
+            <?php // phpcs:disable Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace,Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore -- code must be kept intact?>
             <div class="colour-wrapper" style="<?php if (isset($color['font'])): ?>color: <?= $color['font'] ?>;<?php endif ?> background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= t($color['name']) ?>">
+                <?php // phpcs:enable ?>
                 <div class="colour-name"><?= $color['name'] ?></div>
                 <div class="colour-background">
                     <span class=""><?= t('Background Color') ?></span>
@@ -124,7 +126,9 @@
     <div class="colour-boxes">
         <?php ksort($textColours) ?>
         <?php foreach ($textColours as $color_id => $color): ?>
+            <?php // phpcs:disable Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace,Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore -- code must be kept intact?>
             <div class="colour-wrapper" style="<?php if (isset($color['font'])): ?>color: <?= $color['font'] ?>;<?php endif ?> background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= t($color['name']) ?>">
+                <?php // phpcs:enable ?>
                 <div class="colour-name"><?= $color['name'] ?></div>
                 <div class="colour-background">
                     <span class=""><?= t('Background Color') ?></span>
