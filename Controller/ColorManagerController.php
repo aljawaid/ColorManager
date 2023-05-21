@@ -79,9 +79,9 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
 
         if ($this->request->isPost()) {
             $values = $this->request->getValues();
-            if (isset($values['color_name'])) { 
+            if (isset($values['color_name'])) {
                 $color_id = str_replace(' ', '_', strtolower($values['color_name']));
-                $custom_colors = $this->configModel->get('kbcolour_ids','');
+                $custom_colors = $this->configModel->get('kbcolour_ids', '');
                 if ($custom_colors == '') {
                     $custom_colors_array = array();
                 } else {
