@@ -1,10 +1,12 @@
-<?php $defaultColours = $this->task->colorModel->getDefaultColors(); ?>
-<?php $staticColours = $this->task->colorModelExt->getStaticColors(); ?>
-<?php $textColours = $this->task->colorModelExt->getTextColors(); ?>
-<?php $customColors = $this->task->colorModelExt->getCustomColors(); ?>
-<?php $defaultBackground = $this->task->colorModelExt->getAllColors()[$this->task->colorModel->getDefaultColor()]['background']; ?>
-<?php $defaultBorder = $this->task->colorModelExt->getAllColors()[$this->task->colorModel->getDefaultColor()]['border']; ?>
-<?php $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ? 0 : count($this->task->colorModelExt->getCustomColors()); ?>
+<?php
+$defaultColours = $this->task->colorModel->getDefaultColors();
+$staticColours = $this->task->colorModelExt->getStaticColors();
+$textColours = $this->task->colorModelExt->getTextColors();
+$customColors = $this->task->colorModelExt->getCustomColors();
+$defaultBackground = $this->task->colorModelExt->getAllColors()[$this->task->colorModel->getDefaultColor()]['background'];
+$defaultBorder = $this->task->colorModelExt->getAllColors()[$this->task->colorModel->getDefaultColor()]['border'];
+$customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ? 0 : count($this->task->colorModelExt->getCustomColors());
+?>
 
 <div class="color-manager-page-header">
     <h2 class="">

@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h2><?= $title ?></h2>
+    <h2 class=""><?= $title ?></h2>
 </div>
 <form id="add-color-form" method="post" action="<?= $this->url->href('ColorManagerController', 'save', ['plugin' => 'colorManager']) ?>" autocomplete="off">
     
