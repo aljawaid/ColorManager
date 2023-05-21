@@ -14,16 +14,16 @@
     --pp-green-dark: #055D20;
     --pp-orange: #FF6500;
     --border-radius-color-manager: 3px;
-    --button-blue-gradient: linear-gradient(to bottom, #7892c2 80%, #476e9e 100%);
+    --button-blue-gradient: linear-gradient(to bottom, #7892C2 80%, #476E9E 100%);
     --blue-border-gradient-match: #476E9E;
     --header-page-margin-color-manager: 5px 15px 50px 15px;
-    --page-margin-color-manager: 0px 15px 0px 15px;
-    --title-margin-color-manager: 0px 15px 0px 15px;
+    --page-margin-color-manager: 0 15px 0 15px;
+    --title-margin-color-manager: 0 15px 0 15px;
     --button-background-delete: #D05C84;
-    --link-color-primary: #36C;
+    --link-color-primary: #3366CC;
     --blue-icon-dark: #034CA6;
     --panel-background-color-manager: #EEEEEE;
-    --box-shadow-color-manager: 1px 1px 1px 0px #000;
+    --box-shadow-color-manager: 1px 1px 1px 0 #000000;
     --transition-color-manager: ease-in-out all .3s;
 }
 
@@ -40,7 +40,7 @@
 .pp-dark-green { color: var(--pp-green-dark); fill: var(--pp-green-dark); }
 .pp-orange { color: var(--pp-orange); fill: var(--pp-orange); }
 
-.display-none, .d-none { display: none !important;}
+.display-none, .d-none { display: none;}
 
 .font-weight-bold { font-weight: bold; }
 
@@ -58,7 +58,6 @@
 
 .color-manager-page-header h2 svg {
     vertical-align: sub;
-    /*width: 1.4em;*/
     height: 1em;
     margin-right: 3px;
 }
@@ -139,7 +138,7 @@
 }
 
 .colour-wrapper {
-    border: 1px solid currentColor;
+    border: 1px solid currentcolor;
     padding: 5px;
     min-width: 150px;
     width: auto;
@@ -199,11 +198,11 @@
     color: var(--pp-black) !important;
     background-color: rgb(179, 179, 179) !important;
     text-rendering: optimizelegibility;
-    font-family: Monospace !important;
-    letter-spacing: 0.06rem;
+    font-family: monospace !important;
+    letter-spacing: .06rem;
     padding: 1px 3px 3px 3px !important;
     border-radius: var(--border-radius-color-manager);
-    font-size: 0.9em !important;
+    font-size: .9em !important;
 }
 
 .colour-border {
@@ -289,14 +288,6 @@ div.color-picker-square {
     color: var(--pp-grey);
     font-style: italic;
 }
-
-/*#DefaultPalette {}*/
-
-/*#ExtendedPalette {}*/
-
-/*#TextPalette {}*/
-
-/*#CustomPalette {}*/
 
 .select2-container--default .select2-results > #select2-form-color_id-results.select2-results__options {
     font-size: .85em;
