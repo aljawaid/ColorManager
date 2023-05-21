@@ -8,7 +8,8 @@ use Kanboard\Core\Plugin\Directory;
 /**
  * Plugin ColorManager
  * Class ColorManagerController
- * @authors aljawaid & Craig Crosby
+ *
+ * @author aljawaid, Craig Crosby
  */
 
 class ColorManagerController extends \Kanboard\Controller\ConfigController
@@ -34,12 +35,12 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
     {
         $errors = [];
         $values = [];
-        
+
         $this->response->html($this->helper->layout->config('colorManager:config/add_custom_color', [
             'errors' => $errors,
             'values'  => $values,
             'title'  => t('Custom Colors') . ' &gt; ' . t('Add Color'),
-         ])); 
+         ]));
     }
 
     public function remove()
@@ -47,8 +48,8 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
         $key = $this->request->getStringParam('key');
         $errors = [];
         $values = [];
-        
-        $custom_colors = $this->configModel->get('kbcolour_ids','');
+
+        $custom_colors = $this->configModel->get('kbcolour_ids', '');
         if ($custom_colors == '') {
                     $custom_colors_array = array();
         } else {
@@ -57,13 +58,17 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
         if (($k = array_search($key, $custom_colors_array)) !== false) {
             unset($custom_colors_array[$k]);
         }
-        if (is_array($custom_colors_array)) { $custom_colors_string = implode(',', $custom_colors_array); } else { $custom_colors_string = $color_id; }
+        if (is_array($custom_colors_array)) {
+            $custom_colors_string = implode(',', $custom_colors_array);
+        } else {
+            $custom_colors_string = $color_id;
+        }
         $this->configModel->save(['kbcolour_ids' => $custom_colors_string]);
-        
+
         $this->configModel->remove('kbcolour_name_' . $key);
         $this->configModel->remove('kbcolour_backgroundcolor_' . $key);
         $this->configModel->remove('kbcolour_bordercolor_' . $key);
-        
+
         $this->response->redirect($this->helper->url->to('ColorManagerController', 'show', ['plugin' => 'ColorManager', 'url' => t('color-manager')]));
     }
 
@@ -84,7 +89,11 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
                 }
                 array_push($custom_colors_array, $color_id);
                 $custom_colors_array = array_unique($custom_colors_array);
-                if (is_array($custom_colors_array)) { $custom_colors_string = implode(',', $custom_colors_array); } else { $custom_colors_string = $color_id; }
+                if (is_array($custom_colors_array)) {
+                    $custom_colors_string = implode(',', $custom_colors_array);
+                } else {
+                    $custom_colors_string = $color_id;
+                }
                 $this->configModel->save(['kbcolour_ids' => $custom_colors_string]);
                 $this->configModel->save(['kbcolour_name_' . $color_id => $values['color_name']]);
                 $this->configModel->save(['kbcolour_backgroundcolor_' . $color_id => $values['background_color']]);
