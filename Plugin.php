@@ -25,17 +25,17 @@ class Plugin extends Base
         $this->route->addRoute('/settings/color-manager', 'ColorManagerController', 'show', 'ColorManager');
 
         $this->helper->register('customColorHelper', '\Kanboard\Plugin\ColorManager\Helper\CustomColorHelper');
-        
+
         $this->hook->on('model:color:get-list', function (&$listing) {
             $new_colors = [];
-            $custom_colors = $this->configModel->get('kbcolour_ids','');
-            $custom_colors_array = explode(',',$custom_colors);
-            
+            $custom_colors = $this->configModel->get('kbcolour_ids', '');
+            $custom_colors_array = explode(',', $custom_colors);
+
             if ($custom_colors != '') {
-                foreach($custom_colors_array as $val) {
+                foreach ($custom_colors_array as $val) {
                     $new_color = array(
                         $val => array(
-                            'name' => $this->configModel->get('kbcolour_name_'.$val,''),
+                            'name' => $this->configModel->get('kbcolour_name_' . $val, ''),
                         ),
                     );
                     $new_colors = array_merge($new_colors, $new_color);
@@ -50,9 +50,9 @@ class Plugin extends Base
             $staticColors = $this->colorModelExt->getStaticList();
 
             $textColors = $this->colorModelExt->getTextColorList();
-                
+
             $listing = array_merge($listing, $staticColors, $textColors, isset($new_list) ? $new_list : array());
-            
+
             array_multisort($listing, SORT_ASC, SORT_NATURAL | SORT_FLAG_CASE);
 
             return $listing;
@@ -63,12 +63,12 @@ class Plugin extends Base
     {
         Translator::load($this->languageModel->getCurrentLanguage(), __DIR__ . '/Locale');
     }
-    
+
     public function getClasses()
     {
         return [
             'Plugin\ColorManager\Model' => [
-                'ColorModelExt', 
+                'ColorModelExt',
             ],
         ];
     }
