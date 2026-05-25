@@ -28,7 +28,7 @@ $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ?
             <li class="">
                 <strong><?= t('Task Color') ?>:</strong>
                 <span class="default-box-colour" style="background-color: <?= $defaultBackground ?>; border-color: <?= $defaultBorder ?>;">
-                    <?= ucfirst($this->task->colorModel->getDefaultColor()); ?>
+                    <?= t(ucfirst($this->task->colorModel->getDefaultColor())); ?>
                 </span>
             </li>
             <li class="color-manager-note">
@@ -41,7 +41,7 @@ $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ?
         <?php asort($defaultColours) ?>
         <?php foreach ($defaultColours as $color_id => $color): ?>
             <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
-                <div class="colour-name"><?= $color['name'] ?></div>
+                <div class="colour-name"><?= t($color['name']) ?></div>
                 <div class="colour-background">
                     <span class=""><?= t('Background Color') ?></span>
                     <code class="">
@@ -86,7 +86,7 @@ $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ?
             <?php // phpcs:disable Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace,Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore -- code must be kept intact?>
             <div class="colour-wrapper" style="<?php if (isset($color['font'])): ?>color: <?= $color['font'] ?>;<?php endif ?> background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= t($color['name']) ?>">
                 <?php // phpcs:enable ?>
-                <div class="colour-name"><?= $color['name'] ?></div>
+                <div class="colour-name"><?= t($color['name']) ?></div>
                 <div class="colour-background">
                     <span class=""><?= t('Background Color') ?></span>
                     <code class="">
@@ -131,7 +131,7 @@ $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ?
             <?php // phpcs:disable Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace,Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore -- code must be kept intact?>
             <div class="colour-wrapper" style="<?php if (isset($color['font'])): ?>color: <?= $color['font'] ?>;<?php endif ?> background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= t($color['name']) ?>">
                 <?php // phpcs:enable ?>
-                <div class="colour-name"><?= $color['name'] ?></div>
+                <div class="colour-name"><?= t($color['name']) ?></div>
                 <div class="colour-background">
                     <span class=""><?= t('Background Color') ?></span>
                     <code class="">
