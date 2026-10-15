@@ -55,6 +55,13 @@ jobs:
             php -l "$file"
           done < <(find plugin -type f -name '*.php' -print0)
 
+      - name: Run plugin contract tests
+        shell: bash
+        run: |
+          php plugin/tests/custom_color_validator.php
+          php plugin/tests/palette_integrity.php
+          php plugin/tests/security_contract.php
+
       - name: Install Kanboard dependencies
         run: composer install --working-dir=kanboard --no-dev --no-interaction --prefer-dist --no-progress --optimize-autoloader
 
@@ -86,3 +93,8 @@ jobs:
           }
           echo $pluginName." loaded on Kanboard ".APP_VERSION." with PHP ".PHP_VERSION.PHP_EOL;
           PHP
+
+      - name: Run Kanboard integration tests
+        env:
+          KANBOARD_ROOT: ${{ github.workspace }}/kanboard
+        run: php plugin/tests/kanboard_integration.php
