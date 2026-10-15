@@ -101,7 +101,7 @@ class ColorManagerController extends BaseController
         $this->checkCSRFForm();
 
         $values = $this->request->getValues();
-        $allowedFields = array('color_name', 'background_color', 'border_color');
+        $allowedFields = array('color_name', 'background_color', 'border_color', 'use_font_color', 'font_color');
 
         if (array_diff(array_keys($values), $allowedFields) !== array()) {
             throw new AccessForbiddenException();
@@ -112,7 +112,7 @@ class ColorManagerController extends BaseController
             return $this->add($values, $errors);
         }
 
-        if (!$this->colorModel->saveCustomColor($color['id'], $color['name'], $color['background'], $color['border'])) {
+        if (!$this->colorModel->saveCustomColor($color['id'], $color['name'], $color['background'], $color['border'], $color['font'])) {
             $this->flash->failure(t('Unable to save this color'));
             return $this->add($values, $errors);
         }

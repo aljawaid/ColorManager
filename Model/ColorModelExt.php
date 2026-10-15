@@ -416,9 +416,10 @@ class ColorModelExt extends ColorModel
             $name = $this->configModel->get('kbcolour_name_' . $colorId, '');
             $background = $this->configModel->get('kbcolour_backgroundcolor_' . $colorId, '');
             $border = $this->configModel->get('kbcolour_bordercolor_' . $colorId, '');
+            $font = $this->configModel->get('kbcolour_fontcolor_' . $colorId, '');
 
             // Invalid legacy values are suppressed rather than rewritten because saved tasks may still reference their ids.
-            if (!$this->customColorValidator->isValidStoredColor($colorId, $name, $background, $border)) {
+            if (!$this->customColorValidator->isValidStoredColor($colorId, $name, $background, $border, $font)) {
                 continue;
             }
 
@@ -427,6 +428,10 @@ class ColorModelExt extends ColorModel
                 'background' => strtoupper($background),
                 'border' => strtoupper($border),
             );
+
+            if ($font !== '') {
+                $customColors[$colorId]['font'] = strtoupper($font);
+            }
         }
 
         return $customColors;
@@ -469,9 +474,9 @@ class ColorModelExt extends ColorModel
         return $listing;
     }
 
-    public function saveCustomColor($colorId, $name, $background, $border)
+    public function saveCustomColor($colorId, $name, $background, $border, $font = null)
     {
-        if (!$this->customColorValidator->isValidStoredColor($colorId, $name, $background, $border)) {
+        if (!$this->customColorValidator->isValidStoredColor($colorId, $name, $background, $border, $font)) {
             return false;
         }
 
@@ -484,6 +489,7 @@ class ColorModelExt extends ColorModel
             'kbcolour_name_' . $colorId => $name,
             'kbcolour_backgroundcolor_' . $colorId => strtoupper($background),
             'kbcolour_bordercolor_' . $colorId => strtoupper($border),
+            'kbcolour_fontcolor_' . $colorId => $font === null ? '' : strtoupper($font),
             'kbcolour_ids' => implode(',', $colorIds),
         ));
     }
@@ -509,6 +515,7 @@ class ColorModelExt extends ColorModel
         $this->configModel->remove('kbcolour_name_' . $colorId);
         $this->configModel->remove('kbcolour_backgroundcolor_' . $colorId);
         $this->configModel->remove('kbcolour_bordercolor_' . $colorId);
+        $this->configModel->remove('kbcolour_fontcolor_' . $colorId);
 
         return true;
     }

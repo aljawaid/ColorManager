@@ -201,7 +201,9 @@ $customColours = count($customColors);
         <?php asort($customColors) ?>
         <?php if (!empty($customColors)): ?>
             <?php foreach ($customColors as $color_id => $color): ?>
-                <div class="colour-wrapper" style="background-color: <?= $this->text->e($color['background']) ?>; border-color: <?= $this->text->e($color['border']) ?>;" title="<?= $this->text->e($color['name']) ?>">
+                <?php // phpcs:disable Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace,Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore -- keep the preview style inline ?>
+                <div class="colour-wrapper" style="<?php if (isset($color['font'])): ?>color: <?= $this->text->e($color['font']) ?>;<?php endif ?> background-color: <?= $this->text->e($color['background']) ?>; border-color: <?= $this->text->e($color['border']) ?>;" title="<?= $this->text->e($color['name']) ?>">
+                <?php // phpcs:enable ?>
                     <div class="colour-name"><?= $this->text->e($color['name']) ?>
                     <span class="delete-icon-wrapper" style="border-color: <?= $this->text->e($color['border']) ?>;">
                         <?= $this->url->icon('trash', '', 'ColorManagerController', 'confirm', ['plugin' => 'ColorManager', 'key' => $color_id], false, 'delete-icon js-modal-confirm', t('Delete Color')) ?>
@@ -227,6 +229,12 @@ $customColours = count($customColors);
                             <?php endif ?>
                         </code>
                     </div>
+                    <?php if (isset($color['font'])): ?>
+                        <div class="colour-font">
+                            <span class=""><?= t('Text Color') ?></span>
+                            <code class=""><?= $this->text->e(strtoupper($color['font'])) ?></code>
+                        </div>
+                    <?php endif ?>
                 </div>
             <?php endforeach ?>
         <?php else: ?>

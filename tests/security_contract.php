@@ -11,6 +11,7 @@ $pluginRoot = dirname(__DIR__);
 $controller = file_get_contents($pluginRoot . '/Controller/ColorManagerController.php');
 $plugin = file_get_contents($pluginRoot . '/Plugin.php');
 $model = file_get_contents($pluginRoot . '/Model/ColorModelExt.php');
+$validator = file_get_contents($pluginRoot . '/Validator/CustomColorValidator.php');
 $template = file_get_contents($pluginRoot . '/Template/config/colors.php');
 $removeTemplate = file_get_contents($pluginRoot . '/Template/config/remove.php');
 $failures = array();
@@ -21,7 +22,7 @@ foreach (
         'userSession->isAdmin()',
         'requirePostRequest()',
         'checkCSRFForm()',
-        "array('color_name', 'background_color', 'border_color')",
+        "array('color_name', 'background_color', 'border_color', 'use_font_color', 'font_color')",
     ) as $boundary
 ) {
     if (strpos($controller, $boundary) === false) {
@@ -41,6 +42,17 @@ foreach (array('isValidStoredColor', 'loadCustomColors()', 'getColorProperties($
     if (strpos($model, $modelBoundary) === false) {
         $failures[] = 'The model safety boundary is missing: ' . $modelBoundary;
     }
+}
+
+foreach (array('MINIMUM_CONTRAST_RATIO', 'calculateContrastRatio', 'kbcolour_fontcolor_') as $textColorBoundary) {
+    if (strpos($model . $validator, $textColorBoundary) === false) {
+        $failures[] = 'The custom text color boundary is missing: ' . $textColorBoundary;
+    }
+}
+
+$addTemplate = file_get_contents($pluginRoot . '/Template/config/add_custom_color.php');
+if (strpos($addTemplate, "form->checkbox(") === false || strpos($addTemplate, "'font_color'") === false) {
+    $failures[] = 'The custom text color opt-in control is missing.';
 }
 
 if (strpos($template, "'remove'") !== false || strpos($template, "'confirm'") === false) {

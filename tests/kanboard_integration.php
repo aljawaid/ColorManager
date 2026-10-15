@@ -52,13 +52,22 @@ foreach (array('api', 'webhook', 'downloadDb', 'saveUploadedDb') as $inheritedAc
 
 $colorModel = $container['colorModel'];
 $configModel = $container['configModel'];
-$colorModel->saveCustomColor('gantt_accent', 'Gantt Accent', '#123456', '#654321');
+$colorModel->saveCustomColor('gantt_accent', 'Gantt Accent', '#123456', '#654321', '#FFFFFF');
 $configModel->save(array('default_color' => 'gantt_accent'));
 $container['memoryCache']->flush();
 $properties = $colorModel->getColorProperties('gantt_accent');
 
-if ($properties['background'] !== '#123456' || $colorModel->getColorProperties('unknown')['background'] !== '#123456') {
+if (
+    $properties['background'] !== '#123456'
+    || $properties['font'] !== '#FFFFFF'
+    || $colorModel->getColorProperties('unknown')['background'] !== '#123456'
+) {
     $failures[] = 'Custom colors are not resolved for Gantt or as a configured default.';
+}
+
+$customCss = $colorModel->getCssExt();
+if (preg_match('/\.task-board\.color-gantt_accent,[^{]+\{[^}]*color: #FFFFFF;/', $customCss) !== 1) {
+    $failures[] = 'The optional custom text color was not included in shared CSS.';
 }
 
 $configModel->save(array(
@@ -69,7 +78,7 @@ $configModel->save(array(
 ));
 $container['memoryCache']->flush();
 
-$colorModel->saveCustomColor('safe_edit', 'Safe Edit', '#112233', '#445566');
+$colorModel->saveCustomColor('safe_edit', 'Safe Edit', '#112233', '#445566', '#FFFFFF');
 $container['memoryCache']->flush();
 if (strpos($configModel->get('kbcolour_ids'), 'hostile') === false) {
     $failures[] = 'Saving a safe color silently removed a quarantined legacy registry id.';
@@ -79,6 +88,9 @@ $colorModel->removeCustomColor('safe_edit');
 $container['memoryCache']->flush();
 if (strpos($configModel->get('kbcolour_ids'), 'hostile') === false) {
     $failures[] = 'Removing a safe color silently removed a quarantined legacy registry id.';
+}
+if ($configModel->exists('kbcolour_fontcolor_safe_edit')) {
+    $failures[] = 'Removing a custom color left its text color configuration behind.';
 }
 
 if (isset($colorModel->getCustomColors()['hostile']) || strpos($colorModel->getCssExt(), '</style>') !== false) {

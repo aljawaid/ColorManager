@@ -22,8 +22,24 @@ list($valid, $color) = $validator->validateCreation(array(
     'border_color' => '#0A0B0C',
 ));
 
-if (!$valid || $color !== array('id' => 'royal_accent', 'name' => 'Royal Accent', 'background' => '#A1B2C3', 'border' => '#0A0B0C')) {
+if (!$valid || $color !== array('id' => 'royal_accent', 'name' => 'Royal Accent', 'background' => '#A1B2C3', 'border' => '#0A0B0C', 'font' => null)) {
     $failures[] = 'A valid custom color was not normalized as expected.';
+}
+
+list($fontValid, $fontColor) = $validator->validateCreation(array(
+    'color_name' => 'High Contrast',
+    'background_color' => '#000000',
+    'border_color' => '#FFFFFF',
+    'use_font_color' => '1',
+    'font_color' => '#ffffff',
+));
+
+if (!$fontValid || $fontColor['font'] !== '#FFFFFF') {
+    $failures[] = 'A valid optional custom text color was not normalized.';
+}
+
+if (abs($validator->calculateContrastRatio('#FFFFFF', '#000000') - 21.0) > 0.001) {
+    $failures[] = 'The text contrast calculation is not using WCAG relative luminance.';
 }
 
 list($unicodeValid, $unicodeColor) = $validator->validateCreation(array(
@@ -41,6 +57,8 @@ $invalidCases = array(
     array('color_name' => "Line\nBreak", 'background_color' => '#123456', 'border_color' => '#654321'),
     array('color_name' => 'Unsafe CSS', 'background_color' => '#123456;}', 'border_color' => '#654321'),
     array('color_name' => 'Array input', 'background_color' => array('#123456'), 'border_color' => '#654321'),
+    array('color_name' => 'Invalid text', 'background_color' => '#000000', 'border_color' => '#654321', 'use_font_color' => '1', 'font_color' => '#FFFF'),
+    array('color_name' => 'Low contrast', 'background_color' => '#777777', 'border_color' => '#654321', 'use_font_color' => '1', 'font_color' => '#777777'),
 );
 
 foreach ($invalidCases as $case) {
