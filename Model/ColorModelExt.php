@@ -7,6 +7,8 @@ use Kanboard\Model\ColorModel;
 /**
  * ColorModelExt
  *
+ * Palette and resolver contracts are covered by tests/palette_integrity.php and tests/kanboard_integration.php.
+ *
  * @package  Kanboard\Model
  * @author   Craig Crosby, aljawaid
  */
@@ -405,45 +407,126 @@ class ColorModelExt extends ColorModel
         ),
     );
 
-    // phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
-    private function custom_colors()
+    private function loadCustomColors()
     {
-        // phpcs:enable
-        $custom_colors = $this->configModel->get('kbcolour_ids', '');
-        $custom_colors_array = explode(',', $custom_colors);
-        $new_colors = [];
+        $customColors = array();
+        $colorIds = $this->getCustomColorIds();
 
-        if ($this->configModel->get('kbcolour_ids', '') != '') {
-            foreach ($custom_colors_array as $color_id) {
-                $new_color = array(
-                    $color_id => array(
-                        'name' => $this->configModel->get('kbcolour_name_' . $color_id, ''),
-                        'background' => $this->configModel->get('kbcolour_backgroundcolor_' . $color_id, ''),
-                        'border' => $this->configModel->get('kbcolour_bordercolor_' . $color_id, ''),
-                    ),
-                );
-                $new_colors = array_merge($new_colors, $new_color);
+        foreach ($colorIds as $colorId) {
+            $name = $this->configModel->get('kbcolour_name_' . $colorId, '');
+            $background = $this->configModel->get('kbcolour_backgroundcolor_' . $colorId, '');
+            $border = $this->configModel->get('kbcolour_bordercolor_' . $colorId, '');
+
+            // Invalid legacy values are suppressed rather than rewritten because saved tasks may still reference their ids.
+            if (!$this->customColorValidator->isValidStoredColor($colorId, $name, $background, $border)) {
+                continue;
             }
 
-            return $new_colors;
+            $customColors[$colorId] = array(
+                'name' => $name,
+                'background' => strtoupper($background),
+                'border' => strtoupper($border),
+            );
         }
 
-        return $new_colors;
+        return $customColors;
+    }
+
+    private function getCustomColorIds()
+    {
+        return array_values(array_filter(
+            explode(',', $this->configModel->get('kbcolour_ids', '')),
+            function ($colorId) {
+                return $colorId !== '';
+            }
+        ));
     }
 
     public function getAllColors()
     {
-        $combine_colors = array_merge($this->default_colors, $this->static_colors, $this->text_colors, $this->custom_colors());
-        return $combine_colors;
+        return array_merge($this->default_colors, $this->static_colors, $this->text_colors, $this->loadCustomColors());
     }
 
     public function getCustomColors()
     {
-        if ($this->configModel->get('kbcolour_ids', '') != '') {
-            return $this->custom_colors();
+        return $this->loadCustomColors();
+    }
+
+    public function getCustomColor($colorId)
+    {
+        $colors = $this->loadCustomColors();
+        return isset($colors[$colorId]) ? $colors[$colorId] : null;
+    }
+
+    public function getCustomList()
+    {
+        $listing = array();
+
+        foreach ($this->loadCustomColors() as $colorId => $color) {
+            $listing[$colorId] = t($color['name']);
         }
 
-        return array();
+        return $listing;
+    }
+
+    public function saveCustomColor($colorId, $name, $background, $border)
+    {
+        if (!$this->customColorValidator->isValidStoredColor($colorId, $name, $background, $border)) {
+            return false;
+        }
+
+        // Keep quarantined legacy ids in the registry so a safe edit cannot silently discard recoverable data.
+        $colorIds = $this->getCustomColorIds();
+        $colorIds[] = $colorId;
+        $colorIds = array_values(array_unique($colorIds));
+
+        return $this->configModel->save(array(
+            'kbcolour_name_' . $colorId => $name,
+            'kbcolour_backgroundcolor_' . $colorId => strtoupper($background),
+            'kbcolour_bordercolor_' . $colorId => strtoupper($border),
+            'kbcolour_ids' => implode(',', $colorIds),
+        ));
+    }
+
+    public function removeCustomColor($colorId)
+    {
+        if ($this->getCustomColor($colorId) === null) {
+            return false;
+        }
+
+        $colorIds = array_values(array_filter(
+            $this->getCustomColorIds(),
+            function ($storedColorId) use ($colorId) {
+                return $storedColorId !== $colorId;
+            }
+        ));
+
+        if (!$this->configModel->save(array('kbcolour_ids' => implode(',', $colorIds)))) {
+            return false;
+        }
+
+        // Once the registry no longer references the color, failed cleanup can leave only harmless orphaned values.
+        $this->configModel->remove('kbcolour_name_' . $colorId);
+        $this->configModel->remove('kbcolour_backgroundcolor_' . $colorId);
+        $this->configModel->remove('kbcolour_bordercolor_' . $colorId);
+
+        return true;
+    }
+
+    public function getColorProperties($colorId)
+    {
+        $colors = $this->getAllColors();
+
+        if (isset($colors[$colorId])) {
+            return $colors[$colorId];
+        }
+
+        $defaultColorId = $this->getDefaultColor();
+        if (isset($colors[$defaultColorId])) {
+            return $colors[$defaultColorId];
+        }
+
+        return $this->default_colors['yellow'];
     }
 
     public function getStaticColors()
@@ -482,71 +565,57 @@ class ColorModelExt extends ColorModel
     {
         $buffer = '';
 
-        if ($this->configModel->get('kbcolour_ids', '') != '') {
-            foreach ($this->custom_colors() as $color => $values) {
-                $buffer .= '.task-board.color-' . $color . ', .task-summary-container.color-' . $color . ', .color-picker-square.color-' . $color . ', .task-board-category.color-' . $color . ', .table-list-category.color-' . $color . ', .task-tag.color-' . $color . ', .action-color-' . $color . ' {';
-                $buffer .= 'background-color: ' . $values['background'] . ';';
-                $buffer .= 'border-color: ' . $values['border'] . ';';
-                $buffer .= '}';
-                $buffer .= 'td.color-' . $color . ' { background-color: ' . $values['background'] . '; }';
-                $buffer .= '.table-list-row.color-' . $color . ' { border-left: 5px solid ' . $values['border'] . '; }';
-                $buffer .= 'select#form-default_color option[value="' . $color . '"], option[value="' . $color . '"] {';
-                $buffer .= 'background-color: ' . $values['background'] . ';';
-                $buffer .= 'border-color: ' . $values['border'] . ';';
-                $buffer .= '}';
-            }
+        foreach (array_merge($this->loadCustomColors(), $this->text_colors, $this->static_colors) as $color => $values) {
+            $buffer .= $this->buildColorCss($color, $values);
         }
-        foreach ($this->text_colors as $color => $values) {
-            $buffer .= '.task-board.color-' . $color . ', .task-summary-container.color-' . $color . ', .color-picker-square.color-' . $color . ', .task-board-category.color-' . $color . ', .table-list-category.color-' . $color . ', .task-tag.color-' . $color . ', .action-color-' . $color . ' {';
-            $buffer .= 'background-color: ' . $values['background'] . ';';
-            $buffer .= 'border-color: ' . $values['border'] . ';';
-            if (isset($values['font'])) {
-                $buffer .= 'color: ' . $values['font'] . '; position: relative; }';
-                $buffer .= 'select#form-default_color option[value="' . $color . '"], option[value="' . $color . '"] {';
-                $buffer .= 'color: ' . $values['font'] . ';';
-            }
-            $buffer .= '}';
-            if (isset($values['font'])) {
-                $buffer .= '.color-picker-square.color-' . $color . ':before { content: "\2609"; text-align: center; display: block; position: absolute; margin-top: -4px; margin-left: 1px; }';
-                $buffer .= '.task-summary-container.color-' . $color . ' .task-summary-columns .task-summary-column { color: ' . $values['font'] . '; }';
-                $buffer .= '.task-summary-container.color-' . $color . ' .task-summary-columns .task-summary-column span, .action-color-' . $color . ' { color: ' . $values['font'] . '; }';
-            }
-            $buffer .= 'td.color-' . $color . ' { background-color: ' . $values['background'] . '; }';
-            $buffer .= '.table-list-row.color-' . $color . ' { border-left: 5px solid ' . $values['border'] . '; }';
-            $buffer .= 'select#form-default_color option[value="' . $color . '"], option[value="' . $color . '"] {';
-            $buffer .= 'background-color: ' . $values['background'] . ';';
-            $buffer .= 'border-color: ' . $values['border'] . ';';
-            $buffer .= '}';
-        }
-        foreach ($this->static_colors as $color => $values) {
-            $buffer .= '.task-board.color-' . $color . ', .task-summary-container.color-' . $color . ', .color-picker-square.color-' . $color . ', .task-board-category.color-' . $color . ', .table-list-category.color-' . $color . ', .task-tag.color-' . $color . ', .action-color-' . $color . ' {';
-            $buffer .= 'background-color: ' . $values['background'] . ';';
-            $buffer .= 'border-color: ' . $values['border'] . ';';
-            if (isset($values['font'])) {
-                $buffer .= 'color: ' . $values['font'] . '; position: relative; }';
-                $buffer .= 'select#form-default_color option[value="' . $color . '"], option[value="' . $color . '"] {';
-                $buffer .= 'color: ' . $values['font'] . ';';
-            }
-            $buffer .= '}';
-            if (isset($values['font'])) {
-                $buffer .= '.color-picker-square.color-' . $color . ':before { content: "\2609"; text-align: center; display: block; position: absolute; margin-top: -4px; margin-left: 1px; }';
-                $buffer .= '.task-summary-container.color-' . $color . ' .task-summary-columns .task-summary-column { color: ' . $values['font'] . '; }';
-                $buffer .= '.task-summary-container.color-' . $color . ' .task-summary-columns .task-summary-column span, .action-color-' . $color . ' { color: ' . $values['font'] . '; }';
-            }
-            $buffer .= 'td.color-' . $color . ' { background-color: ' . $values['background'] . '; }';
-            $buffer .= '.table-list-row.color-' . $color . ' { border-left: 5px solid ' . $values['border'] . '; }';
-            $buffer .= 'select#form-default_color option[value="' . $color . '"], option[value="' . $color . '"] {';
-            $buffer .= 'background-color: ' . $values['background'] . ';';
-            $buffer .= 'border-color: ' . $values['border'] . ';';
-            $buffer .= '}';
-        }
+
         foreach ($this->default_colors as $color => $values) {
-            $buffer .= 'select#form-default_color option[value="' . $color . '"], option[value="' . $color . '"], .action-color-' . $color . ' {';
-            $buffer .= 'background-color: ' . $values['background'] . ';';
-            $buffer .= 'border-color: ' . $values['border'] . ';';
-            $buffer .= '}';
+            $buffer .= $this->buildOptionCss($color, $values, true);
         }
 
         return $buffer;
+    }
+
+    private function buildColorCss($color, array $values)
+    {
+        $buffer = '.task-board.color-' . $color . ', .task-summary-container.color-' . $color . ', .color-picker-square.color-' . $color . ', .task-board-category.color-' . $color . ', .table-list-category.color-' . $color . ', .task-tag.color-' . $color . ', .action-color-' . $color . ' {';
+        $buffer .= 'background-color: ' . $values['background'] . ';';
+        $buffer .= 'border-color: ' . $values['border'] . ';';
+
+        if (isset($values['font'])) {
+            $buffer .= 'color: ' . $values['font'] . '; position: relative;';
+        }
+
+        $buffer .= '}';
+
+        if (isset($values['font'])) {
+            $buffer .= '.color-picker-square.color-' . $color . ':before { content: "\2609"; text-align: center; display: block; position: absolute; margin-top: -4px; margin-left: 1px; }';
+            $buffer .= '.task-summary-container.color-' . $color . ' .task-summary-columns .task-summary-column { color: ' . $values['font'] . '; }';
+            $buffer .= '.task-summary-container.color-' . $color . ' .task-summary-columns .task-summary-column span, .action-color-' . $color . ' { color: ' . $values['font'] . '; }';
+        }
+
+        $buffer .= 'td.color-' . $color . ' { background-color: ' . $values['background'] . '; }';
+        $buffer .= '.table-list-row.color-' . $color . ' { border-left: 5px solid ' . $values['border'] . '; }';
+        $buffer .= $this->buildOptionCss($color, $values, false);
+
+        return $buffer;
+    }
+
+    private function buildOptionCss($color, array $values, $includeAction)
+    {
+        $selectors = 'select#form-default_color option[value="' . $color . '"], option[value="' . $color . '"]';
+        if ($includeAction) {
+            $selectors .= ', .action-color-' . $color;
+        }
+
+        $buffer = $selectors . ' {';
+        $buffer .= 'background-color: ' . $values['background'] . ';';
+        $buffer .= 'border-color: ' . $values['border'] . ';';
+
+        if (isset($values['font'])) {
+            $buffer .= 'color: ' . $values['font'] . ';';
+        }
+
+        return $buffer . '}';
     }
 }

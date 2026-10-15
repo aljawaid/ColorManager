@@ -19,6 +19,12 @@ return array(
     'Background Color' => '',
     'Border Color' => '',
     'Save Color' => '',
+    'Enter a color name of 80 characters or fewer without control characters or angle brackets.' => '',
+    'Enter a six-digit hexadecimal background color.' => '',
+    'Enter a six-digit hexadecimal border color.' => '',
+    'Color saved successfully' => '',
+    'Unable to save this color' => '',
+    'Color removed successfully' => '',
     //
     // config/colors.php
     //
@@ -41,6 +47,8 @@ return array(
     'This palette shows all user created colors. These colors are unique to your application.' => '',
     'Color names matching colors in other palettes will override those colors. Duplicate color names will not be created.' => '',
     'Delete Color' => '',
+    'Tasks and settings already using this color will keep its identifier but lose its custom styling.' => '',
+    'Do you really want to remove this color: "%s"?' => '',
     'This palette is empty' => '',
     //
     // model/ColorModelExt.php /// COLOR NAMES

@@ -3,16 +3,19 @@
 namespace Kanboard\Plugin\ColorManager\Controller;
 
 use Kanboard\Controller\BaseController;
-use Kanboard\Core\Plugin\Directory;
+use Kanboard\Core\Controller\AccessForbiddenException;
+use Kanboard\Core\Controller\PageNotFoundException;
 
 /**
  * Plugin ColorManager
  * Class ColorManagerController
  *
+ * Security and behaviour contracts are covered by tests/security_contract.php.
+ *
  * @author aljawaid, Craig Crosby
  */
 
-class ColorManagerController extends \Kanboard\Controller\ConfigController
+class ColorManagerController extends BaseController
 {
     /**
      * Display the Settings Page
@@ -26,15 +29,23 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
 
     public function show()
     {
+        $this->assertAdmin();
+
+        $defaultColorId = $this->colorModel->getDefaultColor();
         $this->response->html($this->helper->layout->config('colorManager:config/colors', array(
             'title' => t('Settings') . ' &#10562; ' . t('Color Manager'),
+            'defaultColors' => $this->colorModel->getDefaultColors(),
+            'staticColors' => $this->colorModel->getStaticColors(),
+            'textColors' => $this->colorModel->getTextColors(),
+            'customColors' => $this->colorModel->getCustomColors(),
+            'defaultColor' => $this->colorModel->getColorProperties($defaultColorId),
+            'colorCount' => count($this->colorModel->getList()),
         )));
     }
 
-    public function add()
+    public function add(array $values = array(), array $errors = array())
     {
-        $errors = [];
-        $values = [];
+        $this->assertAdmin();
 
         $this->response->html($this->helper->layout->config('colorManager:config/add_custom_color', [
             'errors' => $errors,
@@ -43,64 +54,84 @@ class ColorManagerController extends \Kanboard\Controller\ConfigController
          ]));
     }
 
+    public function confirm()
+    {
+        $this->assertAdmin();
+        $key = $this->request->getStringParam('key');
+
+        $color = $this->colorModel->getCustomColor($key);
+        if ($color === null) {
+            throw new PageNotFoundException();
+        }
+
+        $this->response->html($this->helper->layout->config('colorManager:config/remove', array(
+            'title' => t('Delete Color'),
+            'colorId' => $key,
+            'color' => $color,
+        )));
+    }
+
     public function remove()
     {
-        $key = $this->request->getStringParam('key');
-        $errors = [];
-        $values = [];
+        $this->assertAdmin();
+        $this->requirePostRequest();
+        $this->checkCSRFForm();
 
-        $custom_colors = $this->configModel->get('kbcolour_ids', '');
-        if ($custom_colors == '') {
-                    $custom_colors_array = array();
-        } else {
-                    $custom_colors_array = explode(',', $custom_colors);
-        }
-        if (($k = array_search($key, $custom_colors_array)) !== false) {
-            unset($custom_colors_array[$k]);
-        }
-        if (is_array($custom_colors_array)) {
-            $custom_colors_string = implode(',', $custom_colors_array);
-        } else {
-            $custom_colors_string = $color_id;
-        }
-        $this->configModel->save(['kbcolour_ids' => $custom_colors_string]);
+        $values = $this->request->getValues();
+        $key = isset($values['key']) && is_string($values['key']) ? $values['key'] : '';
 
-        $this->configModel->remove('kbcolour_name_' . $key);
-        $this->configModel->remove('kbcolour_backgroundcolor_' . $key);
-        $this->configModel->remove('kbcolour_bordercolor_' . $key);
+        if ($this->colorModel->getCustomColor($key) === null) {
+            throw new PageNotFoundException();
+        }
+
+        if (!$this->colorModel->removeCustomColor($key)) {
+            $this->flash->failure(t('Unable to remove this color'));
+            return $this->response->redirect($this->helper->url->to('ColorManagerController', 'show', ['plugin' => 'ColorManager', 'url' => t('color-manager')]));
+        }
+
+        $this->flash->success(t('Color removed successfully'));
 
         $this->response->redirect($this->helper->url->to('ColorManagerController', 'show', ['plugin' => 'ColorManager', 'url' => t('color-manager')]));
     }
 
     public function save()
     {
-        $errors = [];
-        $values = [];
+        $this->assertAdmin();
+        $this->requirePostRequest();
+        $this->checkCSRFForm();
 
-        if ($this->request->isPost()) {
-            $values = $this->request->getValues();
-            if (isset($values['color_name'])) {
-                $color_id = str_replace(' ', '_', strtolower($values['color_name']));
-                $custom_colors = $this->configModel->get('kbcolour_ids', '');
-                if ($custom_colors == '') {
-                    $custom_colors_array = array();
-                } else {
-                    $custom_colors_array = explode(',', $custom_colors);
-                }
-                array_push($custom_colors_array, $color_id);
-                $custom_colors_array = array_unique($custom_colors_array);
-                if (is_array($custom_colors_array)) {
-                    $custom_colors_string = implode(',', $custom_colors_array);
-                } else {
-                    $custom_colors_string = $color_id;
-                }
-                $this->configModel->save(['kbcolour_ids' => $custom_colors_string]);
-                $this->configModel->save(['kbcolour_name_' . $color_id => $values['color_name']]);
-                $this->configModel->save(['kbcolour_backgroundcolor_' . $color_id => $values['background_color']]);
-                $this->configModel->save(['kbcolour_bordercolor_' . $color_id => $values['border_color']]);
-            }
+        $values = $this->request->getValues();
+        $allowedFields = array('color_name', 'background_color', 'border_color');
+
+        if (array_diff(array_keys($values), $allowedFields) !== array()) {
+            throw new AccessForbiddenException();
         }
 
+        list($valid, $color, $errors) = $this->customColorValidator->validateCreation($values);
+        if (!$valid) {
+            return $this->add($values, $errors);
+        }
+
+        if (!$this->colorModel->saveCustomColor($color['id'], $color['name'], $color['background'], $color['border'])) {
+            $this->flash->failure(t('Unable to save this color'));
+            return $this->add($values, $errors);
+        }
+
+        $this->flash->success(t('Color saved successfully'));
         $this->response->redirect($this->helper->url->to('ColorManagerController', 'show', ['plugin' => 'ColorManager', 'url' => t('color-manager')]));
+    }
+
+    private function assertAdmin()
+    {
+        if (!$this->userSession->isAdmin()) {
+            throw new AccessForbiddenException();
+        }
+    }
+
+    private function requirePostRequest()
+    {
+        if (!$this->request->isPost()) {
+            throw new AccessForbiddenException();
+        }
     }
 }

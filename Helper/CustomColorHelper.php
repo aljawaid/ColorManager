@@ -3,7 +3,6 @@
 namespace Kanboard\Plugin\ColorManager\Helper;
 
 use Kanboard\Core\Base;
-use Kanboard\Plugin\ColorManager\Helper\ColorModelExt;
 
 /**
  * Asset Helper
@@ -13,7 +12,7 @@ use Kanboard\Plugin\ColorManager\Helper\ColorModelExt;
  */
 class CustomColorHelper extends Base
 {
-/**
+    /**
      * Get CSS for task colors
      *
      * @access public
@@ -21,6 +20,6 @@ class CustomColorHelper extends Base
      */
     public function colorCssExt()
     {
-        return '<style>' . $this->colorModelExt->getCssExt() . '</style>';
+        return '<style>' . $this->colorModel->getCssExt() . '</style>';
     }
 }

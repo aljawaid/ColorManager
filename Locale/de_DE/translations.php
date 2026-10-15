@@ -19,6 +19,12 @@ return array(
     'Background Color' => 'Hintergrundfarbe',
     'Border Color' => 'Rahmenfarbe',
     'Save Color' => 'Farbe speichern',
+    'Enter a color name of 80 characters or fewer without control characters or angle brackets.' => 'Geben Sie einen Farbnamen mit höchstens 80 Zeichen ohne Steuerzeichen oder spitze Klammern ein.',
+    'Enter a six-digit hexadecimal background color.' => 'Geben Sie eine sechsstellige hexadezimale Hintergrundfarbe ein.',
+    'Enter a six-digit hexadecimal border color.' => 'Geben Sie eine sechsstellige hexadezimale Rahmenfarbe ein.',
+    'Color saved successfully' => 'Farbe erfolgreich gespeichert',
+    'Unable to save this color' => 'Diese Farbe konnte nicht gespeichert werden',
+    'Color removed successfully' => 'Farbe erfolgreich entfernt',
     //
     // config/colors.php
     //
@@ -41,6 +47,8 @@ return array(
     'This palette shows all user created colors. These colors are unique to your application.' => 'Diese Palette zeigt alle vom Benutzer erstellten Farben. Diese Farben sind individuell für Ihre Anwendung.',
     'Color names matching colors in other palettes will override those colors. Duplicate color names will not be created.' => 'Farbnamen, die mit Farben in anderen Paletten übereinstimmen, setzen diese Farben außer Kraft. Doppelte Farbnamen werden nicht erstellt.',
     'Delete Color' => 'Farbe löschen',
+    'Tasks and settings already using this color will keep its identifier but lose its custom styling.' => 'Aufgaben und Einstellungen, die diese Farbe bereits verwenden, behalten ihre Kennung, verlieren jedoch ihre benutzerdefinierte Darstellung.',
+    'Do you really want to remove this color: "%s"?' => 'Möchten Sie diese Farbe wirklich entfernen: „%s“?',
     'This palette is empty' => 'Diese Palette ist leer',
     //
     // model/ColorModelExt.php /// COLOR NAMES

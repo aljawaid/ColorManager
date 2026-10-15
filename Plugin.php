@@ -3,13 +3,23 @@
 namespace Kanboard\Plugin\ColorManager;
 
 use Kanboard\Core\Plugin\Base;
+use Kanboard\Core\Security\Role;
 use Kanboard\Core\Translator;
-use Kanboard\Plugin\ColorManager\Model\ColorModelExt;
 
+/**
+ * Register ColorManager services, hooks, routes and administrator access.
+ *
+ * Related tests: tests/security_contract.php and tests/kanboard_integration.php.
+ */
 class Plugin extends Base
 {
     public function initialize()
     {
+        // Keep all global color configuration routes administrator-only; see tests/security_contract.php.
+        $this->applicationAccessMap->add('ColorManagerController', '*', Role::APP_ADMIN);
+
+        $this->replaceCoreColorModel();
+
         // CSS - Asset Hook
         //  - Keep filename lowercase
         $this->hook->on('template:layout:css', array('template' => 'plugins/ColorManager/Assets/css/color-manager.css'));
@@ -27,31 +37,11 @@ class Plugin extends Base
         $this->helper->register('customColorHelper', '\Kanboard\Plugin\ColorManager\Helper\CustomColorHelper');
 
         $this->hook->on('model:color:get-list', function (&$listing) {
-            $new_colors = [];
-            $custom_colors = $this->configModel->get('kbcolour_ids', '');
-            $custom_colors_array = explode(',', $custom_colors);
-
-            if ($custom_colors != '') {
-                foreach ($custom_colors_array as $val) {
-                    $new_color = array(
-                        $val => array(
-                            'name' => $this->configModel->get('kbcolour_name_' . $val, ''),
-                        ),
-                    );
-                    $new_colors = array_merge($new_colors, $new_color);
-                }
-
-                $new_list = array();
-                foreach ($new_colors as $color_id => $color) {
-                    $new_list[$color_id] = t($color['name']);
-                }
-            }
-
             $staticColors = $this->colorModelExt->getStaticList();
-
             $textColors = $this->colorModelExt->getTextColorList();
+            $customColors = $this->colorModelExt->getCustomList();
 
-            $listing = array_merge($listing, $staticColors, $textColors, isset($new_list) ? $new_list : array());
+            $listing = array_merge($listing, $staticColors, $textColors, $customColors);
 
             array_multisort($listing, SORT_ASC, SORT_NATURAL | SORT_FLAG_CASE);
 
@@ -61,6 +51,8 @@ class Plugin extends Base
 
     public function onStartup()
     {
+        // Reapply after all plugins initialize so a previously frozen core service cannot make resolution order-dependent.
+        $this->replaceCoreColorModel();
         Translator::load($this->languageModel->getCurrentLanguage(), __DIR__ . '/Locale');
     }
 
@@ -69,6 +61,9 @@ class Plugin extends Base
         return [
             'Plugin\ColorManager\Model' => [
                 'ColorModelExt',
+            ],
+            'Plugin\ColorManager\Validator' => [
+                'CustomColorValidator',
             ],
         ];
     }
@@ -91,14 +86,22 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '3.7.0';
+        return '3.8.0';
     }
 
     public function getCompatibleVersion()
     {
-        // Examples: '>=1.0.37' '<1.0.37' '<=1.0.37'
-        // Tested on KB v1.2.32+ from plugin v3.7.0
-        return '>=1.2.20';
+        // See tests/kanboard_integration.php for the supported core contract.
+        return '>=1.2.54';
+    }
+
+    private function replaceCoreColorModel()
+    {
+        // Pimple allows an existing frozen service to be safely redefined only after it has been removed.
+        unset($this->container['colorModel']);
+        $this->container['colorModel'] = function ($container) {
+            return $container['colorModelExt'];
+        };
     }
 
     public function getPluginHomepage()

@@ -1,17 +1,17 @@
 <?php
-$defaultColours = $this->task->colorModel->getDefaultColors();
-$staticColours = $this->task->colorModelExt->getStaticColors();
-$textColours = $this->task->colorModelExt->getTextColors();
-$customColors = $this->task->colorModelExt->getCustomColors();
-$defaultBackground = $this->task->colorModelExt->getAllColors()[$this->task->colorModel->getDefaultColor()]['background'];
-$defaultBorder = $this->task->colorModelExt->getAllColors()[$this->task->colorModel->getDefaultColor()]['border'];
-$customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ? 0 : count($this->task->colorModelExt->getCustomColors());
+// Palette output and used SVGs are protected by tests/palette_integrity.php and tests/security_contract.php.
+$defaultColours = $defaultColors;
+$staticColours = $staticColors;
+$textColours = $textColors;
+$defaultBackground = $defaultColor['background'];
+$defaultBorder = $defaultColor['border'];
+$customColours = count($customColors);
 ?>
 
 <div class="color-manager-page-header">
     <h2 class="">
         <span class="color-manager-section-icon-title"></span>
-        <?= t('Available Colors') ?> <span class="colour-total-count"><?= count($this->task->colorModel->getList()) ?></span>
+        <?= t('Available Colors') ?> <span class="colour-total-count"><?= $colorCount ?></span>
     </h2>
     <hr>
     <div class="color-manager-section">
@@ -27,8 +27,8 @@ $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ?
         <ul class="">
             <li class="">
                 <strong><?= t('Task Color') ?>:</strong>
-                <span class="default-box-colour" style="background-color: <?= $defaultBackground ?>; border-color: <?= $defaultBorder ?>;">
-                    <?= t(ucfirst($this->task->colorModel->getDefaultColor())); ?>
+                <span class="default-box-colour" style="background-color: <?= $this->text->e($defaultBackground) ?>; border-color: <?= $this->text->e($defaultBorder) ?>;">
+                    <?= $this->text->e(t($defaultColor['name'])) ?>
                 </span>
             </li>
             <li class="color-manager-note">
@@ -70,7 +70,7 @@ $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ?
     <div class="color-manager-section">
         <h3 id="ExtendedPalette" class="">
             <span class="color-manager-section-icon-extended"></span>
-            <?= t('Extended Color Palette') ?> <span class="colour-total-count-section"><?= count($this->task->colorModelExt->getStaticColors()); ?></span>
+            <?= t('Extended Color Palette') ?> <span class="colour-total-count-section"><?= count($staticColours); ?></span>
         </h3>
         <p class="cm-section-desc">
             <?= t('This palette shows a collection of colors different to those in the default palette.') ?>
@@ -115,7 +115,7 @@ $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ?
     <div class="color-manager-section">
         <h3 id="TextPalette" class="">
             <span class="color-manager-section-icon-text"></span>
-            <?= t('Text Color Palette') ?> <span class="colour-total-count-section"><?= count($this->task->colorModelExt->getTextColors()); ?></span>
+            <?= t('Text Color Palette') ?> <span class="colour-total-count-section"><?= count($textColours); ?></span>
         </h3>
         <p class="cm-section-desc">
             <?= t('This palette shows a collection of colors different to those in the default palette and enhances colors from the extended palette. This palette primarily uses alternative colors for text. These colors are particularly suitable for tags and categories.') ?>
@@ -167,10 +167,9 @@ $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ?
     </div>
     <hr>
 
-    <div class="color-manager-section relative">
+    <div class="color-manager-section color-manager-relative">
         <?php if (!empty($customColors)): ?>
-            <button id="AddColor" class="add-colour-btn">
-                <a href="<?= $this->url->href('ColorManagerController', 'add', ['plugin' => 'colorManager'], false, '', false) ?>" class="js-modal-small" title="<?=t('Add to this palette') ?>">
+            <a id="AddColor" href="<?= $this->url->href('ColorManagerController', 'add', ['plugin' => 'ColorManager'], false, '', false) ?>" class="add-colour-btn js-modal-small" title="<?= t('Add to this palette') ?>">
                     <svg width="20px" height="20px" viewBox="0 0 117 117" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" stroke="#000000">
                         <g id="" stroke-width="0"/>
                         <g id="">
@@ -183,8 +182,7 @@ $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ?
                         </g>
                     </svg>
                     <?= t('Add Color') ?>
-                </a>
-            </button>
+            </a>
         <?php endif ?>
         <h3 id="CustomPalette" class="">
             <span class="color-manager-section-icon-custom"></span>
@@ -203,19 +201,19 @@ $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ?
         <?php asort($customColors) ?>
         <?php if (!empty($customColors)): ?>
             <?php foreach ($customColors as $color_id => $color): ?>
-                <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
-                    <div class="colour-name"><?= $color['name'] ?>
-                    <span class="delete-icon-wrapper" style="border-color: <?= $color['border'] ?>;">
-                        <?= $this->url->icon('trash', '', 'ColorManagerController', 'remove', ['plugin' => 'colorManager', 'key' => $color_id], false, 'delete-icon', t('Delete Color')) ?>
+                <div class="colour-wrapper" style="background-color: <?= $this->text->e($color['background']) ?>; border-color: <?= $this->text->e($color['border']) ?>;" title="<?= $this->text->e($color['name']) ?>">
+                    <div class="colour-name"><?= $this->text->e($color['name']) ?>
+                    <span class="delete-icon-wrapper" style="border-color: <?= $this->text->e($color['border']) ?>;">
+                        <?= $this->url->icon('trash', '', 'ColorManagerController', 'confirm', ['plugin' => 'ColorManager', 'key' => $color_id], false, 'delete-icon js-modal-confirm', t('Delete Color')) ?>
                         </span>
                     </div>
                     <div class="colour-background">
                         <span class=""><?= t('Background Color') ?></span>
                         <code class="">
                             <?php if (strpos($color['background'], '#') !== false): ?>
-                                <?= strtoupper($color['background']) ?>
+                                <?= $this->text->e(strtoupper($color['background'])) ?>
                             <?php else: ?>
-                                <?= $color['background'] ?>
+                                <?= $this->text->e($color['background']) ?>
                             <?php endif ?>
                         </code>
                     </div>
@@ -223,9 +221,9 @@ $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ?
                         <span class=""><?= t('Border Color') ?></span>
                         <code class="">
                             <?php if (strpos($color['border'], '#') !== false): ?>
-                                <?= strtoupper($color['border']) ?>
+                                <?= $this->text->e(strtoupper($color['border'])) ?>
                             <?php else: ?>
-                                <?= $color['border'] ?>
+                                <?= $this->text->e($color['border']) ?>
                             <?php endif ?>
                         </code>
                     </div>
@@ -233,8 +231,7 @@ $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ?
             <?php endforeach ?>
         <?php else: ?>
             <p class="no-colours"><?= t('This palette is empty') ?>
-                <button id="AddColor" class="add-colour-btn">
-                    <a href="<?= $this->url->href('ColorManagerController', 'add', ['plugin' => 'colorManager'], false, '', false) ?>" class="js-modal-small" title="<?=t('Add to this palette') ?>">
+                <a id="AddColor" href="<?= $this->url->href('ColorManagerController', 'add', ['plugin' => 'ColorManager'], false, '', false) ?>" class="add-colour-btn js-modal-small" title="<?= t('Add to this palette') ?>">
                         <svg width="20px" height="20px" viewBox="0 0 117 117" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" stroke="#000000">
                             <g id="" stroke-width="0"/>
                             <g id="">
@@ -247,8 +244,7 @@ $customColours = is_null(count($this->task->colorModelExt->getCustomColors())) ?
                             </g>
                         </svg>
                         <?= t('Add Color') ?>
-                    </a>
-                </button>
+                </a>
             </p>
         <?php endif ?>
     </div>

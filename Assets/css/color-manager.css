@@ -1,55 +1,24 @@
-/* KANBOARD PLUGIN - CSS FILE */
+/* KANBOARD PLUGIN - CSS FILE
+ * Palette icons are protected by tests/palette_integrity.php.
+ */
 
 :root {
-    --pp-blue: #007AC9;
-    --pp-blue-alt: #00ADFF;
-    --pp-red: #B71234;
-    --pp-red-alt: #DA004C;
-    --pp-red-alt-2: #AE003D;
-    --pp-black: #000000;
-    --pp-light-grey: #8F8F8F;
-    --pp-grey: #4D4D4D;
-    --pp-white: #FFFFFF;
-    --pp-green: #2EA02E;
-    --pp-green-dark: #055D20;
-    --pp-orange: #FF6500;
-    --border-radius-color-manager: 3px;
-    --button-blue-gradient: linear-gradient(to bottom, #7892C2 80%, #476E9E 100%);
-    --blue-border-gradient-match: #476E9E;
-    --header-page-margin-color-manager: 5px 15px 50px 15px;
-    --page-margin-color-manager: 0 15px 0 15px;
-    --title-margin-color-manager: 0 15px 0 15px;
-    --button-background-delete: #D05C84;
-    --link-color-primary: #3366CC;
-    --blue-icon-dark: #034CA6;
-    --panel-background-color-manager: #EEEEEE;
-    --box-shadow-color-manager: 1px 1px 1px 0 #000000;
-    --transition-color-manager: ease-in-out all .3s;
+    --color-manager-black: #000000;
+    --color-manager-grey: #4D4D4D;
+    --color-manager-white: #FFFFFF;
+    --color-manager-green: #2EA02E;
+    --color-manager-green-dark: #055D20;
+    --color-manager-border-radius: 3px;
+    --color-manager-header-margin: 5px 15px 50px 15px;
+    --color-manager-blue-icon-dark: #034CA6;
+    --color-manager-box-shadow: 1px 1px 1px 0 #000000;
+    --color-manager-transition: ease-in-out all .3s;
 }
 
-.pp-blue { color: var(--pp-blue); fill: var(--pp-blue); }
-.pp-blue-alt { color: var(--pp-blue-alt); fill: var(--pp-blue-alt); }
-.pp-red { color: var(--pp-red); fill: var(--pp-red); }
-.pp-red-alt { color: var(--pp-red-alt); fill: var(--pp-red-alt); }
-.pp-red-alt-2 { color: var(--pp-red-alt-2); fill: var(--pp-red-alt-2); }
-.pp-black { color: var(--pp-black); fill: var(--pp-black); }
-.pp-light-grey { color: var(--pp-light-grey); fill: var(--pp-light-grey); }
-.pp-grey { color: var(--pp-grey); fill: var(--pp-grey); }
-.pp-white { color: var(--pp-white); fill: var(--pp-white); }
-.pp-green { color: var(--pp-green); fill: var(--pp-green); }
-.pp-dark-green { color: var(--pp-green-dark); fill: var(--pp-green-dark); }
-.pp-orange { color: var(--pp-orange); fill: var(--pp-orange); }
-
-.display-none, .d-none { display: none;}
-
-.font-weight-bold { font-weight: bold; }
-
-.text-center { text-align: center; }
-
-.relative { position: relative; }
+.color-manager-relative { position: relative; }
 
 .color-manager-page-header {
-    margin: var(--header-page-margin-color-manager);
+    margin: var(--color-manager-header-margin);
 }
 
 .color-manager-page-header h2, .color-manager-section h3 {
@@ -76,7 +45,7 @@
 }
 
 .color-manager-section .cm-section-desc-info-panel i {
-    color: var(--blue-icon-dark);
+    color: var(--color-manager-blue-icon-dark);
     margin-right: 3px;
 }
 
@@ -111,13 +80,13 @@
 }
 
 .cm-section-desc-info-panel {
-    border-radius: var(--border-radius-color-manager);
+    border-radius: var(--color-manager-border-radius);
     padding: 8px 35px 8px 10px;
     margin-top: 10px;
     margin-bottom: 15px;
-    border: 1px solid var(--blue-icon-dark);
+    border: 1px solid var(--color-manager-blue-icon-dark);
     color: var(--color-primary);
-    background-color: #FCFCFC;
+    background-color: var(--panel-background-color, #FCFCFC);
     overflow: auto;
 }
 
@@ -144,7 +113,7 @@
     width: auto;
     margin: 5px;
     display: inline-block;
-    border-radius: var(--border-radius-color-manager);
+    border-radius: var(--color-manager-border-radius);
     position: relative;
     vertical-align: middle;
     box-sizing: content-box;
@@ -155,15 +124,16 @@
     right: 0;
     top: 0;
     padding: 2px 0 2px 3px;
-    background-color: var(--pp-white);
-    border-bottom-left-radius: var(--border-radius-color-manager);
+    background-color: var(--panel-background-color, var(--color-manager-white));
+    border-bottom-left-radius: var(--color-manager-border-radius);
     border-left: 1px solid;
     border-bottom: 1px solid;
     opacity: 0;
-    transition: var(--transition-color-manager);
+    transition: var(--color-manager-transition);
 }
 
-.colour-wrapper:hover .delete-icon-wrapper {
+.colour-wrapper:hover .delete-icon-wrapper,
+.colour-wrapper:focus-within .delete-icon-wrapper {
     opacity: 1;
 }
 
@@ -195,13 +165,13 @@
     display: block;
     width: fit-content;
     margin: 3px 0 0 0 !important;
-    color: var(--pp-black) !important;
-    background-color: rgb(179, 179, 179) !important;
+    color: var(--input-focus-color, var(--color-manager-black)) !important;
+    background-color: var(--input-background-color, rgb(179, 179, 179)) !important;
     text-rendering: optimizelegibility;
     font-family: monospace !important;
     letter-spacing: .06rem;
     padding: 1px 3px 3px 3px !important;
-    border-radius: var(--border-radius-color-manager);
+    border-radius: var(--color-manager-border-radius);
     font-size: .9em !important;
 }
 
@@ -217,9 +187,9 @@
 
 .default-box-colour {
     padding: 2px 10px;
-    border-radius: var(--border-radius-color-manager);
-    border: 1px solid var(--pp-black);
-    box-shadow: var(--box-shadow-color-manager);
+    border-radius: var(--color-manager-border-radius);
+    border: 1px solid var(--color-manager-black);
+    box-shadow: var(--color-manager-box-shadow);
     margin-left: 5px;
 }
 
@@ -237,16 +207,16 @@ li.color-manager-note > a.note-link {
     vertical-align: super;
     margin-left: 5px;
     padding: 1px 4px 1px 4px;
-    border-radius: var(--border-radius-color-manager);
-    color: var(--pp-white);
+    border-radius: var(--color-manager-border-radius);
+    color: var(--color-manager-white);
 }
 
 .colour-total-count {
-    background-color: var(--pp-green-dark);
+    background-color: var(--color-manager-green-dark);
 }
 
 .colour-total-count-section {
-    background-color: var(--blue-icon-dark);
+    background-color: var(--color-manager-blue-icon-dark);
 }
 
 div.color-picker-square {
@@ -255,20 +225,17 @@ div.color-picker-square {
 
 .add-colour-btn {
     padding: 2px 8px 1px 5px;
-    background: var(--pp-white);
-    border: 2px solid var(--pp-green);
+    background: var(--panel-background-color, var(--color-manager-white));
+    border: 2px solid var(--color-manager-green);
     position: absolute;
     right: 0;
     font-size: 1.1em;
-    border-radius: var(--border-radius-color-manager);
+    border-radius: var(--color-manager-border-radius);
+    transition: var(--color-manager-transition);
 }
 
-.add-colour-btn a {
-    transition: var(--transition-color-manager);
-}
-
-.color-manager-section .add-colour-btn a:hover {
-    color: var(--pp-green) !important;
+.color-manager-section .add-colour-btn:hover {
+    color: var(--color-manager-green) !important;
 }
 
 .add-colour-btn svg {
@@ -285,10 +252,29 @@ div.color-picker-square {
 
 .colour-boxes .no-colours {
     margin: 2em auto;
-    color: var(--pp-grey);
+    color: var(--color-manager-grey);
     font-style: italic;
 }
 
 .select2-container--default .select2-results > #select2-form-color_id-results.select2-results__options {
     font-size: .85em;
+}
+
+@media (hover: none) {
+    .delete-icon-wrapper {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .colour-wrapper {
+        box-sizing: border-box;
+        width: calc(100% - 10px);
+    }
+
+    .color-manager-section > .add-colour-btn {
+        display: inline-block;
+        margin-bottom: 10px;
+        position: static;
+    }
 }
