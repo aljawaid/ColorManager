@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v3.8.0
+
+_(most recent changes are listed on top):_
+- NEW: Add optional custom text colours with accessible 4.5:1 contrast validation - fixes #39
+- SECURITY FIX: Restrict all ColorManager configuration actions to administrators and remove inherited core configuration actions
+- SECURITY FIX: Validate custom colour names and exact hexadecimal values before storage or CSS generation
+- SECURITY FIX: Suppress unsafe legacy custom-colour records and require CSRF-protected POST requests for deletion
+- FIX: Resolve extended and custom colours through Kanboard's core colour model so Gantt views remain stable - fixes #40
+- FIX: Display compound default colour names without identifier underscores - fixes #44
+- FIX: Preserve all palette values and used SVG icons with regression checks
+- FIX: Improve dark-theme contrast, narrow-screen wrapping and keyboard or touch access to custom-colour removal
+- FIX: Test Kanboard 1.2.54 with PHP 8.2–8.5 and modernise Stylelint and Super-Linter configuration
+- DOCS: Update compatibility, installation and production behaviour while preserving author and contributor credits
+
+
 ## v3.7
 
 _(most recent changes are listed on top):_

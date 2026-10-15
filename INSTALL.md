@@ -1,5 +1,9 @@
 # Plugin Installation
 
+> **Compatibility:** ColorManager 3.8.0 requires Kanboard 1.2.54 or later and PHP 8.2–8.5.
+
+> **Upgrade:** No database schema migration is required. Existing custom colours retain their current appearance unless an administrator enables a custom text colour.
+
 - **Install via the [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory**
   - _Go to:_
     - Kanboard: `Plugins` &#10562; `Plugin Directory`

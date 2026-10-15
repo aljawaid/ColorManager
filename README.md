@@ -1,37 +1,37 @@
 <h1 name="user-content-readme-top">ColorManager</h1>
 <p align="center">
-    <a href="https://github.com/aljawaid/ColorManager/releases">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/releases">
         <img src="https://img.shields.io/github/v/release/aljawaid/ColorManager?style=for-the-badge&color=brightgreen" alt="GitHub Latest Release (by date)" title="GitHub Latest Release (by date)">
     </a>
-    <a href="https://github.com/aljawaid/ColorManager/releases">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/releases">
         <img src="https://img.shields.io/github/downloads/aljawaid/ColorManager/total?style=for-the-badge&color=orange" alt="GitHub All Releases" title="GitHub All Downloads">
     </a>
-    <a href="https://github.com/aljawaid/ColorManager/releases">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/releases">
         <img src="https://img.shields.io/github/directory-file-count/aljawaid/ColorManager?style=for-the-badge&color=orange" alt="GitHub Repository File Count" title="GitHub Repository File Count">
     </a>
-    <a href="https://github.com/aljawaid/ColorManager/releases">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/releases">
         <img src="https://img.shields.io/github/repo-size/aljawaid/ColorManager?style=for-the-badge&color=orange" alt="GitHub Repository Size" title="GitHub Repository Size">
     </a>
-    <a href="https://github.com/aljawaid/ColorManager/releases">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/releases">
         <img src="https://img.shields.io/github/languages/code-size/aljawaid/ColorManager?style=for-the-badge&color=orange" alt="GitHub Code Size" title="GitHub Code Size">
     </a>
 </p>
 <p align="center">
-    <a href="https://github.com/aljawaid/ColorManager/discussions">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/discussions">
         <img src="https://img.shields.io/github/discussions/aljawaid/ColorManager?style=for-the-badge&color=blue" alt="GitHub Discussions" title="Read Discussions">
     </a>
-    <a href="https://github.com/aljawaid/ColorManager/compare">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/compare">
         <img src="https://img.shields.io/github/commits-since/aljawaid/ColorManager/latest?include_prereleases&style=for-the-badge&color=blue" alt="GitHub Commits Since Last Release" title="GitHub Commits Since Last Release">
     </a>
-    <a href="https://github.com/aljawaid/ColorManager/compare">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/compare">
         <img src="https://img.shields.io/github/commit-activity/m/aljawaid/ColorManager?style=for-the-badge&color=blue" alt="GitHub Commit Monthly Activity" title="GitHub Commit Monthly Activity">
     </a>
-    <a href="https://github.com/kanboard/kanboard" title="Kanboard - Kanban Project Management Software">
+    <a rel="noopener noreferrer" href="https://github.com/kanboard/kanboard" title="Kanboard - Kanban Project Management Software">
         <img src="https://img.shields.io/badge/Plugin%20for-kanboard-D40000?style=for-the-badge&labelColor=000000" alt="Kanboard">
     </a>
 </p>
 
-A new way to utilise colors to their full potential in Kanboard.  Choose from 3 color palettes or create your own. Combining all palettes, choose from **over 85 colors** to match your workflow across the interface.
+Use colours consistently across Kanboard with the default, extended, text and custom palettes. Choose from **over 85 colours**, create administrator-managed custom colours and use them throughout tasks, projects, categories, tags, automatic actions and Gantt views.
 
 <p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
@@ -42,6 +42,10 @@ A new way to utilise colors to their full potential in Kanboard.  Choose from 3 
 - Show total color counts
 - Sort all colors alphabetically
 - Pretty URL `mydomain.com/settings/color-manager`
+- Restrict global colour management to administrators
+- Validate custom colours before they can be used in shared page styles
+- Add optional custom text colours with a minimum 4.5:1 contrast ratio
+- Resolve extended and custom colours in Gantt views
 
 **Default Color Palette**  
 - Contains the 16 default application colors
@@ -63,7 +67,8 @@ A new way to utilise colors to their full potential in Kanboard.  Choose from 3 
 
 **Custom Color Palette**  
 - Create your own favorite colors
-- Display CSS properties for each color (background color, border color)
+- Optionally override the inherited text colour when it remains readable against the background
+- Display CSS properties for each color (background color, border color, optional text color)
 
 **Dropdown Color Lists**  
 - Sort colors from all palettes alphabetically
@@ -112,15 +117,20 @@ A new way to utilise colors to their full potential in Kanboard.  Choose from 3 
 
 Go to `Settings` &#10562; `Color Manager`
 
+- Select **Add Colour** to create an administrator-managed custom colour.
+- Set the background and border colours.
+- To override Kanboard's inherited text styling, select **Use a custom text colour** and choose a combination with a contrast ratio of at least `4.5:1`.
+- Existing custom colours continue to inherit Kanboard's text styling unless the option is enabled.
+
 <p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8592; Previous</a>] [<a href="#authors--contributors">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## Installation & Compatibility
 
 <p align="left">
-    <a href="https://github.com/aljawaid/ColorManager/actions/workflows/linter.yml">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/actions/workflows/linter.yml">
         <img src="https://github.com/aljawaid/ColorManager/actions/workflows/linter.yml/badge.svg?branch=master&event=push" alt="Code Scanning" title="View Test">
     </a>
-    <a href="https://github.com/aljawaid/ColorManager/actions/workflows/php-compatibility.yaml">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/actions/workflows/php-compatibility.yaml">
         <img src="https://github.com/aljawaid/ColorManager/actions/workflows/php-compatibility.yaml/badge.svg?branch=master&event=push" alt="PHP Compatibility Test" title="View Test">
     </a>
 </p>
@@ -135,13 +145,15 @@ Go to `Settings` &#10562; `Color Manager`
 <details>
     <summary><strong>Compatibility</strong></summary>
 
-- Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
+- Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.54`
+- Tested with PHP `8.2`–`8.5`
 - **Other Plugins & Action Plugins**
   - _No known issues_
   - Compatible with [AutomaticActionUX](https://github.com/aljawaid/AutomaticActionUX), [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [PluginManager](https://github.com/aljawaid/PluginManager), [TagManager](https://github.com/aljawaid/TagManager), [ThemeMaestro](https://github.com/JustFxDev/ThemeMaestro)
 - **Core Files & Templates**
   - _No template overrides_
-  - _No database changes_
+  - _No database schema changes_
+  - Optional custom text colours are stored in Kanboard's existing configuration table
 
 </details>
 <details>
@@ -169,25 +181,25 @@ Go to `Settings` &#10562; `Color Manager`
 ---
 
 <p align="center">
-    <a href="https://github.com/aljawaid/ColorManager/stargazers" title="View Stargazers">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/stargazers" title="View Stargazers">
         <img src="https://img.shields.io/github/stars/aljawaid/ColorManager?logo=github&style=flat-square" alt="ColorManager">
     </a>
-    <a href="https://github.com/aljawaid/ColorManager/forks" title="See Forks">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/forks" title="See Forks">
         <img src="https://img.shields.io/github/forks/aljawaid/ColorManager?logo=github&style=flat-square" alt="ColorManager">
     </a>
-    <a href="https://github.com/aljawaid/ColorManager/blob/master/LICENSE" title="Read License">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/blob/master/LICENSE" title="Read License">
         <img src="https://img.shields.io/github/license/aljawaid/ColorManager?style=flat-square" alt="ColorManager">
     </a>
-    <a href="https://github.com/aljawaid/ColorManager/issues" title="Open Issues">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/issues" title="Open Issues">
         <img src="https://img.shields.io/github/issues-raw/aljawaid/ColorManager?style=flat-square" alt="ColorManager">
     </a>
-    <a href="https://github.com/aljawaid/ColorManager/issues?q=is%3Aissue+is%3Aclosed" title="Closed Issues">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/issues?q=is%3Aissue+is%3Aclosed" title="Closed Issues">
         <img src="https://img.shields.io/github/issues-closed/aljawaid/ColorManager?style=flat-square" alt="ColorManager">
     </a>
-    <a href="https://github.com/aljawaid/ColorManager/discussions" title="Read Discussions">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/discussions" title="Read Discussions">
         <img src="https://img.shields.io/github/discussions/aljawaid/ColorManager?style=flat-square" alt="ColorManager">
     </a>
-    <a href="https://github.com/aljawaid/ColorManager/compare/" title="Latest Commits">
+    <a rel="noopener noreferrer" href="https://github.com/aljawaid/ColorManager/compare/" title="Latest Commits">
         <img alt="GitHub commits since latest release (by date)" src="https://img.shields.io/github/commits-since/aljawaid/ColorManager/latest?style=flat-square">
     </a>
 </p>
