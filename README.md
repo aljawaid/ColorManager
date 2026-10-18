@@ -67,8 +67,8 @@ Use colours consistently across Kanboard with the default, extended, text and cu
 
 **Custom Color Palette**  
 - Create your own favorite colors
-- Optionally override the inherited text colour when it remains readable against the background
-- Display CSS properties for each color (background color, border color, optional text color)
+- Use automatically selected accessible black or white text, or provide a readable custom text colour
+- Display CSS properties for each color (background color, border color, text color)
 
 **Dropdown Color Lists**  
 - Sort colors from all palettes alphabetically
@@ -153,7 +153,7 @@ Go to `Settings` &#10562; `Color Manager`
 - **Core Files & Templates**
   - _No template overrides_
   - _No database schema changes_
-  - Optional custom text colours are stored in Kanboard's existing configuration table
+  - Accessible custom text colours are stored in Kanboard's existing configuration table
 
 </details>
 <details>

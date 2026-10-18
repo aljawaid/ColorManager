@@ -1,6 +1,14 @@
 # Changelog
 
 
+## v3.8.2
+
+_(most recent changes are listed on top):_
+- FIX: Enforce WCAG AA text contrast across built-in, text and custom colour palettes in Light and Dark themes
+- FIX: Select accessible black or white text automatically when a custom colour does not request an override
+- FIX: Keep legacy text-colour identifiers compatible while correcting seven display names that now use black text
+
+
 ## v3.8.1
 
 _(most recent changes are listed on top):_

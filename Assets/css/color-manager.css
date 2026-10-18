@@ -119,6 +119,11 @@
     box-sizing: content-box;
 }
 
+.colour-wrapper-default,
+.default-box-colour {
+    color: var(--color-manager-black);
+}
+
 .delete-icon-wrapper {
     position: absolute;
     right: 0;

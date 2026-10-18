@@ -40,7 +40,7 @@ $customColours = count($customColors);
     <div class="colour-boxes">
         <?php asort($defaultColours) ?>
         <?php foreach ($defaultColours as $color_id => $color): ?>
-            <div class="colour-wrapper" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
+            <div class="colour-wrapper colour-wrapper-default" style="background-color: <?= $color['background'] ?>; border-color: <?= $color['border'] ?>;" title="<?= $color['name'] ?>">
                 <div class="colour-name"><?= t($color['name']) ?></div>
                 <div class="colour-background">
                     <span class=""><?= t('Background Color') ?></span>

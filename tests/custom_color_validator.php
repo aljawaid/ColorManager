@@ -22,8 +22,18 @@ list($valid, $color) = $validator->validateCreation(array(
     'border_color' => '#0A0B0C',
 ));
 
-if (!$valid || $color !== array('id' => 'royal_accent', 'name' => 'Royal Accent', 'background' => '#A1B2C3', 'border' => '#0A0B0C', 'font' => null)) {
+if (!$valid || $color !== array('id' => 'royal_accent', 'name' => 'Royal Accent', 'background' => '#A1B2C3', 'border' => '#0A0B0C', 'font' => '#000000')) {
     $failures[] = 'A valid custom color was not normalized as expected.';
+}
+
+list($automaticFontValid, $automaticFontColor) = $validator->validateCreation(array(
+    'color_name' => 'Automatic Contrast',
+    'background_color' => '#102030',
+    'border_color' => '#304050',
+));
+
+if (!$automaticFontValid || $automaticFontColor['font'] !== '#FFFFFF') {
+    $failures[] = 'A custom color without an override did not receive accessible automatic text.';
 }
 
 list($fontValid, $fontColor) = $validator->validateCreation(array(

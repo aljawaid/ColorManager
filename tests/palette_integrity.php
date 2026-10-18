@@ -31,8 +31,41 @@ namespace {
         $failures[] = 'The extended or text color palette count changed.';
     }
 
+    $relativeLuminance = function ($color) {
+        $channels = array(
+            hexdec(substr($color, 1, 2)) / 255,
+            hexdec(substr($color, 3, 2)) / 255,
+            hexdec(substr($color, 5, 2)) / 255,
+        );
+
+        foreach ($channels as &$channel) {
+            $channel = $channel <= 0.04045
+                ? $channel / 12.92
+                : (($channel + 0.055) / 1.055) ** 2.4;
+        }
+        unset($channel);
+
+        return (0.2126 * $channels[0]) + (0.7152 * $channels[1]) + (0.0722 * $channels[2]);
+    };
+
+    foreach ($palettes as $paletteName => $colors) {
+        foreach ($colors as $colorId => $color) {
+            if (!isset($color['font'])) {
+                $failures[] = $paletteName . ' color ' . $colorId . ' does not define a text color.';
+                continue;
+            }
+
+            $foreground = $relativeLuminance($color['font']);
+            $background = $relativeLuminance($color['background']);
+            $contrast = (max($foreground, $background) + 0.05) / (min($foreground, $background) + 0.05);
+            if ($contrast < 4.5) {
+                $failures[] = $paletteName . ' color ' . $colorId . ' has text contrast below 4.5:1.';
+            }
+        }
+    }
+
     $paletteHash = hash('sha256', json_encode($palettes, JSON_UNESCAPED_SLASHES));
-    if ($paletteHash !== '1966cfeb6c90fcf7c85743414db104415838544045b70aff5fac76769cfeacaa') {
+    if ($paletteHash !== '230c4a2e5b36f983237edab44538dee89f74320a8603c5a05878126cc1e8d532') {
         $failures[] = 'A preserved palette identifier, name or color value changed.';
     }
 

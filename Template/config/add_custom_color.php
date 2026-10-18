@@ -21,7 +21,7 @@ $colorValues = array_merge(
 
     <p class="alert alert-info">
         <i class="fa fa-info-circle" aria-hidden="true"></i>
-        <?= t("Enable this option to override Kanboard's inherited text color. Custom text colors must remain readable and require a contrast ratio of at least 4.5:1 against the background color.") ?>
+        <?= t("Leave this option off to select accessible black or white text automatically. Custom text colors must remain readable and require a contrast ratio of at least 4.5:1 against the background color.") ?>
     </p>
     <?= $this->form->checkbox(
         'use_font_color',

@@ -53,7 +53,9 @@ class CustomColorValidator
             'name' => $name,
             'background' => strtoupper($background),
             'border' => strtoupper($border),
-            'font' => $useFontColor && $this->isValidHexColor($font) ? strtoupper($font) : null,
+            'font' => $useFontColor && $this->isValidHexColor($font)
+                ? strtoupper($font)
+                : ($this->isValidHexColor($background) ? $this->getAccessibleTextColor($background) : null),
         );
 
         return array($errors === array(), $color, $errors);
@@ -88,6 +90,18 @@ class CustomColorValidator
         $darker = min($foregroundLuminance, $backgroundLuminance);
 
         return ($lighter + 0.05) / ($darker + 0.05);
+    }
+
+    public function getAccessibleTextColor($background)
+    {
+        if (!$this->isValidHexColor($background)) {
+            return null;
+        }
+
+        return $this->calculateContrastRatio('#000000', $background)
+            >= $this->calculateContrastRatio('#FFFFFF', $background)
+                ? '#000000'
+                : '#FFFFFF';
     }
 
     public function createColorId($name)

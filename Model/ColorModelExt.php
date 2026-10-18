@@ -19,27 +19,31 @@ class ColorModelExt extends ColorModel
             'name' => 'Aqua',
             'background' => '#1FE1E7',
             'border' => '#1FE1E7',
+            'font' => '#000000',
         ),
         'beige' => array(
             'name' => 'Beige',
             'background' => '#B59F84',
             'border' => '#A29380',
+            'font' => '#000000',
         ),
         'blood_red' => array(
             'name' => 'Blood Red',
             'background' => '#700000',
             'border' => '#700000',
-            'font' => '#000000',
+            'font' => '#FFFFFF',
         ),
         'blue_grey' => array(
             'name' => 'Blue Grey',
             'background' => '#5C7890',
             'border' => '#405364',
+            'font' => '#FFFFFF',
         ),
         'bright_green' => array(
             'name' => 'Bright Green',
             'background' => '#00E11A',
             'border' => '#04B318',
+            'font' => '#000000',
         ),
         'bright_red' => array(
             'name' => 'Bright Red',
@@ -57,122 +61,145 @@ class ColorModelExt extends ColorModel
             'name' => 'Bright Yellow',
             'background' => '#F7FF00',
             'border' => '#FFE407',
+            'font' => '#000000',
         ),
         'classic_silver' => array(
             'name' => 'Classic Silver',
             'background' => '#B1B8BA',
             'border' => '#B1B8BA',
+            'font' => '#000000',
         ),
         'copper' => array(
             'name' => 'Copper',
             'background' => '#B77729',
             'border' => '#38240C',
+            'font' => '#000000',
         ),
         'cream' => array(
             'name' => 'Cream',
             'background' => '#FDE7A6',
             'border' => '#FDD662',
+            'font' => '#000000',
         ),
         'crimson' => array(
             'name' => 'Crimson',
             'background' => '#DC143C',
             'border' => '#800000',
+            'font' => '#FFFFFF',
         ),
         'dark_brown' => array(
             'name' => 'Dark Brown',
             'background' => '#65463E',
             'border' => '#332623',
+            'font' => '#FFFFFF',
         ),
         'dark_gold' => array(
             'name' => 'Dark Gold',
             'background' => '#DBA40E',
             'border' => '#8E6A08',
+            'font' => '#000000',
         ),
         'dark_red' => array(
             'name' => 'Dark Red',
             'background' => '#951313',
             'border' => '#DC143C',
+            'font' => '#FFFFFF',
         ),
         'dark_pink' => array(
             'name' => 'Dark Pink',
             'background' => '#8C6070',
             'border' => '#F48FB1',
+            'font' => '#FFFFFF',
         ),
         'deep_amber' => array(
             'name' => 'Deep Amber',
             'background' => '#F0AD4E',
             'border' => '#BD7309',
+            'font' => '#000000',
         ),
         'deep_green' => array(
             'name' => 'Deep Green',
             'background' => '#0A7029',
             'border' => '#024015',
+            'font' => '#FFFFFF',
         ),
         'deep_grey' => array(
             'name' => 'Deep Grey',
             'background' => '#868B8E',
             'border' => '#646464',
+            'font' => '#000000',
         ),
         'deep_purple' => array(
             'name' => 'Deep Purple',
             'background' => '#8E44AD',
             'border' => '#610288',
+            'font' => '#FFFFFF',
         ),
         'dim_grey' => array(
             'name' => 'Dim Grey',
             'background' => '#6A6A6A',
             'border' => '#000000',
-            'font' => '#000000',
+            'font' => '#FFFFFF',
         ),
         'dirty_green' => array(
             'name' => 'Dirty Green',
             'background' => '#5CB85C',
             'border' => '#367936',
+            'font' => '#000000',
         ),
         'dirty_yellow' => array(
             'name' => 'Dirty Yellow',
             'background' => '#D1D100',
             'border' => '#6C6C0F',
+            'font' => '#000000',
         ),
         'gold' => array(
             'name' => 'Gold',
             'background' => '#F8D210',
             'border' => '#A48900',
+            'font' => '#000000',
         ),
         'khaki' => array(
             'name' => 'Khaki',
             'background' => '#A88C6A',
             'border' => '#755024',
+            'font' => '#000000',
         ),
         'lime_green' => array(
             'name' => 'Lime Green',
             'background' => '#63B83E',
             'border' => '#39771E',
+            'font' => '#000000',
         ),
         'lint' => array(
             'name' => 'Lint',
             'background' => '#BACC81',
             'border' => '#99A869',
+            'font' => '#000000',
         ),
         'magenta' => array(
             'name' => 'Magenta',
             'background' => '#FF00FF',
             'border' => '#B904B9',
+            'font' => '#000000',
         ),
         'mint_green' => array(
             'name' => 'Mint Green',
             'background' => '#2CF760',
             'border' => '#BDF4CB',
+            'font' => '#000000',
         ),
         'olive' => array(
             'name' => 'Olive',
             'background' => '#5E7345',
             'border' => '#252D1C',
+            'font' => '#FFFFFF',
         ),
         'pale_blue' => array(
             'name' => 'Pale Blue',
             'background' => '#90ADC6',
             'border' => '#646464',
+            'font' => '#000000',
         ),
         'pale_orange' => array(
             'name' => 'Pale Orange',
@@ -184,42 +211,49 @@ class ColorModelExt extends ColorModel
             'name' => 'Pale Purple',
             'background' => '#A16AE8',
             'border' => '#6B3AAA',
+            'font' => '#000000',
         ),
         'peach' => array(
             'name' => 'Peach',
             'background' => '#FC4F46',
             'border' => '#F22B2B',
+            'font' => '#000000',
         ),
         'pumpkin_orange' => array(
             'name' => 'Pumpkin Orange',
             'background' => '#FF6D36',
             'border' => '#F05216',
+            'font' => '#000000',
         ),
         'red_orange' => array(
             'name' => 'Red Orange',
             'background' => '#FF3F00',
             'border' => '#FF3F00',
+            'font' => '#000000',
         ),
         'royal_blue' => array(
             'name' => 'Royal Blue',
             'background' => '#1953BE',
             'border' => '#1953BE',
-            'font' => '#000000',
+            'font' => '#FFFFFF',
         ),
         'scarlet' => array(
             'name' => 'Scarlet',
             'background' => '#AE0000',
             'border' => '#6A0303',
+            'font' => '#FFFFFF',
         ),
         'white' => array(
             'name' => 'White',
             'background' => '#FFFFFF',
             'border' => '#EEEEEE',
+            'font' => '#000000',
         ),
         'yellow_green' => array(
             'name' => 'Yellow Green',
             'background' => '#C8DF52',
             'border' => '#A5BB32',
+            'font' => '#000000',
         ),
     );
 
@@ -292,16 +326,16 @@ class ColorModelExt extends ColorModel
             'font' => '#FFFFFF',
         ),
         'white_on_bright_red' => array(
-            'name' => 'White on Bright Red',
+            'name' => 'Black on Bright Red',
             'background' => '#F00000',
             'border' => '#F00000',
-            'font' => '#FFFFFF',
+            'font' => '#000000',
         ),
         'white_on_copper' => array(
-            'name' => 'White on Copper',
+            'name' => 'Black on Copper',
             'background' => '#B77729',
             'border' => '#38240C',
-            'font' => '#FFFFFF',
+            'font' => '#000000',
         ),
         'white_on_dark_brown' => array(
             'name' => 'White on Dark Brown',
@@ -334,10 +368,10 @@ class ColorModelExt extends ColorModel
             'font' => '#FFFFFF',
         ),
         'white_on_deep_grey' => array(
-            'name' => 'White on Deep Grey',
+            'name' => 'Black on Deep Grey',
             'background' => '#868B8E',
             'border' => '#646464',
-            'font' => '#FFFFFF',
+            'font' => '#000000',
         ),
         'white_on_deep_purple' => array(
             'name' => 'White on Deep Purple',
@@ -352,16 +386,16 @@ class ColorModelExt extends ColorModel
             'font' => '#FFFFFF',
         ),
         'white_on_green' => array(
-            'name' => 'White on Green',
+            'name' => 'Black on Green',
             'background' => '#06C200',
             'border' => '#015B2A',
-            'font' => '#FFFFFF',
+            'font' => '#000000',
         ),
         'white_on_lime_green' => array(
-            'name' => 'White on Lime Green',
+            'name' => 'Black on Lime Green',
             'background' => '#63B83E',
             'border' => '#39771E',
-            'font' => '#FFFFFF',
+            'font' => '#000000',
         ),
         'white_on_maroon' => array(
             'name' => 'White on Maroon',
@@ -376,10 +410,10 @@ class ColorModelExt extends ColorModel
             'font' => '#FFFFFF',
         ),
         'white_on_peach' => array(
-            'name' => 'White on Peach',
+            'name' => 'Black on Peach',
             'background' => '#FC4F46',
             'border' => '#F22B2B',
-            'font' => '#FFFFFF',
+            'font' => '#000000',
         ),
         'white_on_purple' => array(
             'name' => 'White on Purple',
@@ -388,10 +422,10 @@ class ColorModelExt extends ColorModel
             'font' => '#FFFFFF',
         ),
         'white_on_red_orange' => array(
-            'name' => 'White on Red Orange',
+            'name' => 'Black on Red Orange',
             'background' => '#FF3F00',
             'border' => '#FF3F00',
-            'font' => '#FFFFFF',
+            'font' => '#000000',
         ),
         'white_on_royal_blue' => array(
             'name' => 'White on Royal Blue',
@@ -429,9 +463,9 @@ class ColorModelExt extends ColorModel
                 'border' => strtoupper($border),
             );
 
-            if ($font !== '') {
-                $customColors[$colorId]['font'] = strtoupper($font);
-            }
+            $customColors[$colorId]['font'] = $font !== ''
+                ? strtoupper($font)
+                : $this->customColorValidator->getAccessibleTextColor($background);
         }
 
         return $customColors;
@@ -480,6 +514,10 @@ class ColorModelExt extends ColorModel
             return false;
         }
 
+        if ($font === null || $font === '') {
+            $font = $this->customColorValidator->getAccessibleTextColor($background);
+        }
+
         // Keep quarantined legacy ids in the registry so a safe edit cannot silently discard recoverable data.
         $colorIds = $this->getCustomColorIds();
         $colorIds[] = $colorId;
@@ -489,7 +527,7 @@ class ColorModelExt extends ColorModel
             'kbcolour_name_' . $colorId => $name,
             'kbcolour_backgroundcolor_' . $colorId => strtoupper($background),
             'kbcolour_bordercolor_' . $colorId => strtoupper($border),
-            'kbcolour_fontcolor_' . $colorId => $font === null ? '' : strtoupper($font),
+            'kbcolour_fontcolor_' . $colorId => strtoupper($font),
             'kbcolour_ids' => implode(',', $colorIds),
         ));
     }
