@@ -1,6 +1,12 @@
 # Changelog
 
 
+## v3.8.1
+
+_(most recent changes are listed on top):_
+- FIX: Package the hardened 3.8 line with its complete runtime files for live qualification
+
+
 ## v3.8.0
 
 _(most recent changes are listed on top):_
