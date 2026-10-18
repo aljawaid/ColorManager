@@ -1,6 +1,12 @@
 # Changelog
 
 
+## v3.8.3
+
+_(most recent changes are listed on top):_
+- FIX: Apply accessible task, summary, tag and action text colours to Kanboard's core colour palette
+
+
 ## v3.8.2
 
 _(most recent changes are listed on top):_

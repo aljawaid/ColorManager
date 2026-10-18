@@ -615,7 +615,8 @@ class ColorModelExt extends ColorModel
         }
 
         foreach ($this->default_colors as $color => $values) {
-            $buffer .= $this->buildOptionCss($color, $values, true);
+            $values['font'] = $this->customColorValidator->getAccessibleTextColor($values['background']);
+            $buffer .= $this->buildColorCss($color, $values);
         }
 
         return $buffer;

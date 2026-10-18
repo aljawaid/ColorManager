@@ -70,6 +70,10 @@ if (preg_match('/\.task-board\.color-gantt_accent,[^{]+\{[^}]*color: #FFFFFF;/',
     $failures[] = 'The optional custom text color was not included in shared CSS.';
 }
 
+if (preg_match('/\.task-board\.color-amber,[^{]+\{[^}]*color: #000000;/', $customCss) !== 1) {
+    $failures[] = 'The core color palette did not receive accessible task text CSS.';
+}
+
 $configModel->save(array(
     'kbcolour_ids' => 'gantt_accent,hostile',
     'kbcolour_name_hostile' => '</style><script>alert(1)</script>',
