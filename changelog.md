@@ -1,6 +1,12 @@
 # Changelog
 
 
+## v3.8.4
+
+_(most recent changes are listed on top):_
+- FIX: Correct version information for the accessible palette contrast update
+
+
 ## v3.8.3
 
 _(most recent changes are listed on top):_
